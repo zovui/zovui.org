@@ -1,0 +1,106 @@
+//$color-primary              :   #9131ff;
+$color-neutral              :   #9131ff;
+$color-neutral-saturate     :   6%;
+$outline-width              :   3px;
+//$border-radius-base         :   0px !default;
+//$border-radius-button       :   0px !default;
+// @import '@/assets/css/theme.scss';
+// @import 'zov/lib/zov.min.scss';
+/*
+* 以下是org站点样式表
+* ！可以用zov中的变量，如：$gap-base
+*/
+$pre: org;
+.#{$pre}{
+    &-home{
+
+    }
+    &-layout{
+        min-height: 100vh;
+        &-header{
+            // position: fixed;
+            // width: 100%;
+            border-color: transparent;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &-logo{
+                width: 80px;
+                height: 100%;
+                img{
+                    height: 100%;
+                }
+            }
+            &-title{
+                height: 100%;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .search-input {
+                width: 300px;
+                margin-left: 50px;
+                border: none;
+            }
+            &-nav{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                .nav-box {
+                    float: right;
+                    a {
+                        
+                    }
+                }
+            }
+            &-theme-btn{
+
+            }
+        }
+        &-main{
+            padding-top: 40px;
+            h1 {
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+            .anchor {
+                margin-bottom: 10px;
+                h2, h3 {
+                    display: inline;
+                    // font-weight: 400;
+                    margin-bottom: 10px;
+                }
+                a {
+                    font-size: 24px;
+                    margin-left: 5px;
+                    opacity: 0;
+                    transition: opacity .2s ease-in-out;
+                }
+                &:hover {
+                    a {
+                        opacity: 1;
+                    }
+                }
+            }
+            p {
+                margin: 0 0 15px 5px;
+            }
+            .bg {
+                height: auto;
+                margin: 0;
+                padding: 0;
+                .hljs {
+                    padding: 15px;
+                    // @include get-color-bg();
+                    // background-color: #F7F7F7;
+                }
+            }
+        }
+        &-footer {
+            height: 200px;
+            background: #333;
+        }
+    }
+}
