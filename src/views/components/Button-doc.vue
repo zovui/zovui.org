@@ -18,13 +18,9 @@
 				:demoCode="ANCC_code"
 			>
 				<div slot="demo">
-					<Button size="large" @click="size = 'large'"
-						>large</Button
-					>
+					<Button size="large" @click="size = 'large'">large</Button>
 					<Button @click="size = 'default'">middle</Button>
-					<Button size="small" @click="size = 'small'"
-						>small</Button
-					>
+					<Button size="small" @click="size = 'small'">small</Button>
 				</div>
 			</DemoBox>
 			<DemoBox
@@ -49,25 +45,15 @@
 				<div slot="demo">
 					<p>
 						<Button :size="size">default</Button>
-						<Button :size="size" looks="primary"
-							>primary</Button
-						>
-						<Button :size="size" looks="dashed"
-							>dashed</Button
-						>
+						<Button :size="size" looks="primary">primary</Button>
+						<Button :size="size" looks="dashed">dashed</Button>
 						<Button :size="size" looks="text">text</Button>
 					</p>
 					<p>
 						<Button :size="size" looks="info">info</Button>
-						<Button :size="size" looks="success"
-							>success</Button
-						>
-						<Button :size="size" looks="warning"
-							>warning</Button
-						>
-						<Button :size="size" looks="error"
-							>error</Button
-						>
+						<Button :size="size" looks="success">success</Button>
+						<Button :size="size" looks="warning">warning</Button>
+						<Button :size="size" looks="error">error</Button>
 					</p>
 				</div>
 			</DemoBox>
@@ -80,25 +66,14 @@
 			>
 				<div slot="demo">
 					<p>
-						<Button :size="size" :loading="true"
-							>default</Button
-						>
-						<Button
-							:size="size"
-							looks="primary"
-							:loading="true"
+						<Button :size="size" :loading="true">default</Button>
+						<Button :size="size" looks="primary" :loading="true"
 							>primary</Button
 						>
-						<Button
-							:size="size"
-							looks="dashed"
-							:loading="true"
+						<Button :size="size" looks="dashed" :loading="true"
 							>dashed</Button
 						>
-						<Button
-							:size="size"
-							looks="text"
-							:loading="true"
+						<Button :size="size" looks="text" :loading="true"
 							>text</Button
 						>
 					</p>
@@ -126,12 +101,8 @@
 			>
 				<div slot="demo">
 					<p>
-						<Button looks="info" iconname="wifi"
-							>自定义icon</Button
-						>
-						<Button loading iconname="download"
-							>自定义icon</Button
-						>
+						<Button looks="info" iconname="wifi">自定义icon</Button>
+						<Button loading iconname="download">自定义icon</Button>
 					</p>
 				</div>
 			</DemoBox>
@@ -146,9 +117,7 @@
 					<p>
 						<ButtonGroup :size="size">
 							<Button>default</Button>
-							<Button looks="primary" disabled
-								>primary</Button
-							>
+							<Button looks="primary" disabled>primary</Button>
 							<Button looks="dashed">dashed</Button>
 							<Button looks="info">info</Button>
 							<Button>default</Button>
@@ -172,11 +141,19 @@
 				<h3 class="demo-param-header">
 					Button props
 				</h3>
-				<Table class="demo-param-content" :columns="propsColumns" :data="buttonData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="propsColumns"
+					:data="buttonData"
+				></Table>
 				<h3 class="demo-param-header">
 					Button Group props
 				</h3>
-				<Table class="demo-param-content" :columns="propsColumns" :data="buttonGroupData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="propsColumns"
+					:data="buttonGroupData"
+				></Table>
 			</section>
 		</article>
 		<!-- <p>
@@ -338,8 +315,8 @@ export default {
 		Table
 	},
 	mounted() {
-		this.$emit('on-setAnchorNav', this.anchorNavList);
-		console.log('render', Render);
+		this.$emit('on-setAnchorNav', this.anchorNavList)
+		console.log('render', Render)
 	},
 	data() {
 		return {
@@ -381,8 +358,7 @@ export default {
 					title: 'API'
 				}
 			],
-			ANCC_code: 
-`<template>
+			ANCC_code: `<template>
     <div>
         <Button size="large">large</Button>
         <Button size="default">middle</Button>
@@ -394,8 +370,7 @@ export default {
 
     }
 <\/script>`,
-			ANXZ_code: 
-`<template> 
+			ANXZ_code: `<template> 
     <div>
         <Button shape="default">default</Button>
         <Button shape="circle">circle</Button>
@@ -406,8 +381,7 @@ export default {
     
     }
 <\/script>`,
-			ANLX_code:
-`<template>
+			ANLX_code: `<template>
     <div>
         <Button :size="size">default</Button> 
         <Button :size="size" looks="primary">primary</Button> 
@@ -424,8 +398,7 @@ export default {
 
 	} 
 <\/script>`,
-			LOADING_DD_code: 
-`<template> 
+			LOADING_DD_code: `<template> 
     <div>
         <Button looks="default" :loading="true">default</Button>
         <Button looks="primary" :loading="true">primary</Button>
@@ -438,8 +411,7 @@ export default {
     
     }
 <\/script>`,
-			JY_code: 
-`<template> 
+			JY_code: `<template> 
     <Button disabled>disabled</Button>
 </template> 
 <script> 
@@ -447,8 +419,7 @@ export default {
 
     } 
 <\/script>`,
-			ZDYTB_code:
-`<template> 
+			ZDYTB_code: `<template> 
     <div> 
         <Button looks="info" iconname="wifi">自定义icon</Button>
         <Button loading iconname="download">自定义icon</Button>
@@ -459,8 +430,7 @@ export default {
 
     }
 <\/script>`,
-			ANZH_code:
-`<template> 
+			ANZH_code: `<template> 
     <div> 
         <ButtonGroup :size="size"> 
             <Button>default</Button>
@@ -519,25 +489,30 @@ export default {
 			buttonData: [
 				{
 					property: 'looks',
-					explain: '设置按钮类型，可选值default,primary,dashed,text,info,success,warning,error',
+					explain:
+						'设置按钮类型，可选值default,primary,dashed,text,info,success,warning,error',
 					type: 'String',
 					default: 'default'
-				},{
+				},
+				{
 					property: 'shape',
 					explain: '设置按钮形状，可选值default,circle',
 					type: 'String',
 					default: 'default'
-				},{
+				},
+				{
 					property: 'loading',
 					explain: '设置按钮加载中状态',
 					type: 'Boolean',
 					default: 'false'
-				},{
+				},
+				{
 					property: 'spinname',
 					explain: '',
 					type: '',
 					default: ''
-				},{
+				},
+				{
 					property: 'iconname',
 					explain: '',
 					type: '',

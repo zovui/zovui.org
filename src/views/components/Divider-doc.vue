@@ -22,27 +22,27 @@
 			>
 				<div slot="demo">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 					<Divider />
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 					<Divider>With Text</Divider>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 					<Divider dashed />
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 				</div>
 			</DemoBox>
@@ -71,15 +71,15 @@
 				<div slot="demo">
 					<Divider orientation="left">Left Text</Divider>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 					<Divider orientation="right">Right Text</Divider>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						nonne merninisti licere mihi ista probare, quae sunt a te dicta?
-						Refert tamen, quo modo.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed nonne merninisti licere mihi ista probare, quae sunt
+						a te dicta? Refert tamen, quo modo.
 					</p>
 				</div>
 			</DemoBox>
@@ -91,7 +91,11 @@
 				<h3 class="demo-param-header">
 					Divider props
 				</h3>
-				<Table class="demo-param-content" :columns="propsColumns" :data="dividerPropsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="propsColumns"
+					:data="dividerPropsData"
+				></Table>
 			</section>
 		</article>
 		<!-- <div class="box">
@@ -171,8 +175,7 @@ export default {
 	},
 	data() {
 		return {
-			SPFGX_code: 
-`<template>
+			SPFGX_code: `<template>
 	<div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</p>
         <Divider />
@@ -188,8 +191,7 @@ export default {
 	
     }
 <\/script>`,
-			CZFGX_code: 
-`<template>
+			CZFGX_code: `<template>
     <div>
         <a href="#">Link</a>
         <Divider type="vertical" />
@@ -203,8 +205,7 @@ export default {
 	
     }
 <\/script>`,
-			BTWZ_code: 
-`<template>
+			BTWZ_code: `<template>
     <div>
         <Divider orientation="left">Left Text</Divider>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</p>
@@ -278,12 +279,12 @@ export default {
 					href: '#API',
 					title: 'API'
 				}
-			],
+			]
 		}
 	},
 	mounted() {
-		this.$emit('on-setAnchorNav', this.anchorNavList);
-	},
+		this.$emit('on-setAnchorNav', this.anchorNavList)
+	}
 }
 </script>
 <style type="text/css">

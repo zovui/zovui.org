@@ -65,11 +65,7 @@ body {
 				onlineHref="http://jsrun.net/8eyKp/edit"
 				:demoCode="HD_code"
 			>
-				<Affix
-					:offset-top="50"
-					slot="demo"
-					@on-change="handleChange"
-				>
+				<Affix :offset-top="50" slot="demo" @on-change="handleChange">
 					<div class="demo-affix">固定在距离顶部50px触发</div>
 				</Affix>
 			</DemoBox>
@@ -81,15 +77,19 @@ body {
 				<h3 class="demo-param-header">
 					Affix props
 				</h3>
-				<Table class="demo-param-content" 
-						:columns="affixPropsColumns" 
-						:data="affixPropsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="affixPropsColumns"
+					:data="affixPropsData"
+				></Table>
 				<h3 class="demo-param-header">
 					Affix events
 				</h3>
-				<Table class="demo-param-content" 
-						:columns="affixEventsColumns" 
-						:data="affixEventsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="affixEventsColumns"
+					:data="affixEventsData"
+				></Table>
 			</section>
 		</article>
 	</div>
@@ -142,7 +142,7 @@ export default {
 					explain: '浮动后原位置的占位块',
 					type: 'Boolean',
 					default: 'true'
-				},
+				}
 			],
 			affixEventsColumns: [
 				{
@@ -187,8 +187,7 @@ export default {
 					title: 'API'
 				}
 			],
-			JCYF_code: 
-`<template> 
+			JCYF_code: `<template> 
     <z-affix> 
         <div class="demo-affix">固定在最顶部</div>
     </z-affix> 
@@ -199,8 +198,7 @@ export default {
     } 
 <\/script>
 `,
-			PY_code:
-`<template> 
+			PY_code: `<template> 
     <Affix offset-top="100">
         <span class="demo-affix">固定在距离顶部100px触发</span>
     </Affix> 
@@ -211,8 +209,7 @@ export default {
     } 
 <\/script>
 `,
-			GDZDB_code:
-`<template>
+			GDZDB_code: `<template>
     <Affix offset-bottom="50">
         <span class="demo-affix">固定在距离底部50px触发</span>
     </Affix> 
@@ -223,8 +220,7 @@ export default {
     } 
 <\/script>
 `,
-			HD_code: 
-`<template> 
+			HD_code: `<template> 
     <Affix offset-bottom="50" @on-change="handleChange"> 
         <span class="demo-affix">固定在距离底部50px触发</span>
     </Affix> 
@@ -237,7 +233,7 @@ export default {
             } 
         } 
     }
-<\/script>`,
+<\/script>`
 		}
 	},
 	methods: {

@@ -1,11 +1,11 @@
 module.exports = {
 	// module: {
-		// rules: [
-		// 	{
-		// 		test: /\.txt$/,
-		// 		use: 'raw-loader'
-		// 	}
-		// ],
+	// rules: [
+	// 	{
+	// 		test: /\.txt$/,
+	// 		use: 'raw-loader'
+	// 	}
+	// ],
 	// },
 	publicPath: './',
 	outputDir: process.env.CORE_MIN === 'lib' ? 'lib' : 'docs',

@@ -278,8 +278,7 @@ export default {
 	},
 	data() {
 		return {
-			JCYF_code: 
-`<template>
+			JCYF_code: `<template>
 	<Badge :count="3">
 		<a href="#" class="demo-badge"></a>
 	</Badge>
@@ -289,8 +288,7 @@ export default {
 
 	}
 <\/script>`,
-			XHD_code: 
-`<template>
+			XHD_code: `<template>
 <div>
 	<Badge dot>
 		<Icon iconname="albums" />
@@ -308,8 +306,7 @@ export default {
 
 	}
 <\/script>`,
-			ZDZ_code:
-`<template>
+			ZDZ_code: `<template>
 	<div>
 		<Badge :count="100">
 			<a href="#" class="demo-badge"></a>
@@ -324,8 +321,7 @@ export default {
 
 	}
 <\/script>`,
-			DLSY_code:
-`<template>
+			DLSY_code: `<template>
 <div>
 	<Badge :count="10"></Badge>
 	<Badge :count="20" class-name="demo-badge-alone"></Badge>
@@ -336,8 +332,7 @@ export default {
 
 	}
 <\/script>`,
-			ZDY_code: 
-`<template>
+			ZDY_code: `<template>
 	<Badge text="new">
 		<a href="#" class="demo-badge"></a>
 	</Badge>
@@ -349,7 +344,7 @@ export default {
 	export default {
 
 	}
-<\/script>`,
+<\/script>`
 		}
 	}
 }

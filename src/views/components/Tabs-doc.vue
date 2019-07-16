@@ -1,22 +1,22 @@
 <template>
 	<article class="container">
 		<h1>Tabs 标签页</h1>
-			<div class="anchor">
-				<h2 id="GS">概述</h2>
-				<a href="#GS">#</a>
-			</div>
-			<p>
-				选项卡切换组件，常用于平级区域大块内容的的收纳和展现。
-			</p>
-			<h2>代码示例</h2>
+		<div class="anchor">
+			<h2 id="GS">概述</h2>
+			<a href="#GS">#</a>
+		</div>
+		<p>
+			选项卡切换组件，常用于平级区域大块内容的的收纳和展现。
+		</p>
+		<h2>代码示例</h2>
 		<h1>Tabs</h1>
 		<DemoBox
-				title="基础用法"
-				titleId="JCYF"
-				desc="Tabs的基础用法，默认激活第一项。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="JCYF_code"
-			>
+			title="基础用法"
+			titleId="JCYF"
+			desc="Tabs的基础用法，默认激活第一项。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="JCYF_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane label="Tab1" id="1">Content of tab 1</TabPane>
@@ -26,12 +26,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="滚动"
-				titleId="GD"
-				desc="当Tabs超出屏幕时，可滚动nav。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="GD_code"
-			>
+			title="滚动"
+			titleId="GD"
+			desc="当Tabs超出屏幕时，可滚动nav。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="GD_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane
@@ -45,12 +45,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="标签页位置"
-				titleId="BQYWZ"
-				desc="根据tabPosition属性控制标签页位置。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="BQYWZ_code"
-			>
+			title="标签页位置"
+			titleId="BQYWZ"
+			desc="根据tabPosition属性控制标签页位置。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="BQYWZ_code"
+		>
 			<div slot="demo">
 				<RadioGroup connected v-model="tabPosition">
 					<Radio
@@ -71,12 +71,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="排序"
-				titleId="PX"
-				desc="给TabPane指定order，可让渲染出来的tabs进行排序。TabPane的order配合v-if使用时非常有用。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="PX_code"
-			>
+			title="排序"
+			titleId="PX"
+			desc="给TabPane指定order，可让渲染出来的tabs进行排序。TabPane的order配合v-if使用时非常有用。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="PX_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane
@@ -91,12 +91,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="禁用"
-				titleId="JY"
-				desc="给TabPane指定disabled，可禁用某tab。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="JY_code"
-			>
+			title="禁用"
+			titleId="JY"
+			desc="给TabPane指定disabled，可禁用某tab。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="JY_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane
@@ -111,12 +111,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="懒加载"
-				titleId="LJZ"
-				desc="给TabPane指定lazy, 是否懒加载。给TabPane指定lazy为true，在tabs渲染时，只有当activeId等于TabPane.id时才会被挂载，当切换至别的tab时，其内容会被销毁。给TabPane指定lazy为false，在tabs渲染时，预渲染其内容。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="LJZ_code"
-			>
+			title="懒加载"
+			titleId="LJZ"
+			desc="给TabPane指定lazy, 是否懒加载。给TabPane指定lazy为true，在tabs渲染时，只有当activeId等于TabPane.id时才会被挂载，当切换至别的tab时，其内容会被销毁。给TabPane指定lazy为false，在tabs渲染时，预渲染其内容。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="LJZ_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane label="static" id="1" :lazy="false">
@@ -132,12 +132,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="卡片化"
-				titleId="KPH"
-				desc="卡片化Tabs，指定type属性为card, 默认为border-card。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="KPH_code"
-			>
+			title="卡片化"
+			titleId="KPH"
+			desc="卡片化Tabs，指定type属性为card, 默认为border-card。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="KPH_code"
+		>
 			<div slot="demo">
 				<Tabs type="card">
 					<TabPane
@@ -151,12 +151,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="可关闭"
-				titleId="KGB"
-				desc="通过设置属性 closable 可以关闭某一项。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="KGB_code"
-			>
+			title="可关闭"
+			titleId="KGB"
+			desc="通过设置属性 closable 可以关闭某一项。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="KGB_code"
+		>
 			<div slot="demo">
 				<Tabs type="card">
 					<TabPane label="Tab1" id="1" closable
@@ -172,12 +172,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="可关闭和beforeClose钩子"
-				titleId="KGBGZ"
-				desc="beforeClose需要返回值。若返回值为Promise,需要返回已经resolved的Promise，并且在resolved时传入true或false来指定是否关闭。若返回值为boolean类型，则通过true | false来选择是否可关闭。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="KGBGZ_code"
-			>
+			title="可关闭和beforeClose钩子"
+			titleId="KGBGZ"
+			desc="beforeClose需要返回值。若返回值为Promise,需要返回已经resolved的Promise，并且在resolved时传入true或false来指定是否关闭。若返回值为boolean类型，则通过true | false来选择是否可关闭。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="KGBGZ_code"
+		>
 			<div slot="demo">
 				<p>返回boolean值</p>
 				<Tabs type="card" :before-close="beforeClose">
@@ -206,12 +206,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="beforeChange钩子"
-				titleId="BCGZ"
-				desc="beforeChange需要返回值。若返回值为Promise,需要返回已经resolved的Promise，并且在resolved时传入true或false来指定是否跳转。若返回值为boolean类型，则通过true | false来选择是否跳转。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="BCGZ_code"
-			>
+			title="beforeChange钩子"
+			titleId="BCGZ"
+			desc="beforeChange需要返回值。若返回值为Promise,需要返回已经resolved的Promise，并且在resolved时传入true或false来指定是否跳转。若返回值为boolean类型，则通过true | false来选择是否跳转。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="BCGZ_code"
+		>
 			<div slot="demo">
 				<h3>返回boolean值</h3>
 				<Tabs type="card" :before-change="beforeChange">
@@ -243,12 +243,12 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="用slot添加按钮"
-				titleId="TJAN"
-				desc="使用slot: extra，添加按钮。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="TJAN_code"
-			>
+			title="用slot添加按钮"
+			titleId="TJAN"
+			desc="使用slot: extra，添加按钮。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="TJAN_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane
@@ -256,7 +256,8 @@
 						:label="'Tab' + i"
 						:id="'' + i"
 						:key="i"
-						>Content of tab {{ i }}</TabPane>
+						>Content of tab {{ i }}</TabPane
+					>
 					<template v-slot:extra>
 						<Button>Extra Button</Button>
 					</template>
@@ -264,18 +265,17 @@
 			</div>
 		</DemoBox>
 		<DemoBox
-				title="用slot自定义label内容"
-				titleId="ZDY"
-				desc="给TabPane使用slot: label自定义label内容。"
-				onlineHref="http://jsrun.net/IeyKp/edit"
-				:demoCode="ZDY_code"
-			>
+			title="用slot自定义label内容"
+			titleId="ZDY"
+			desc="给TabPane使用slot: label自定义label内容。"
+			onlineHref="http://jsrun.net/IeyKp/edit"
+			:demoCode="ZDY_code"
+		>
 			<div slot="demo">
 				<Tabs>
 					<TabPane id="1" :lazy="false">
 						<template #label>
-							<Icon iconname="chatboxes"></Icon
-							>{{ slotLabel }}
+							<Icon iconname="chatboxes"></Icon>{{ slotLabel }}
 						</template>
 						<ul v-for="item of items" :key="item">
 							<li>{{ item }}</li>
@@ -296,23 +296,43 @@
 			<h3 class="demo-param-header">
 				Tabs props
 			</h3>
-			<Table class="demo-param-content" :columns="propsColumns" :data="tabsPropsData"></Table>
+			<Table
+				class="demo-param-content"
+				:columns="propsColumns"
+				:data="tabsPropsData"
+			></Table>
 			<h3 class="demo-param-header">
 				Tabs events
 			</h3>
-			<Table class="demo-param-content" :columns="eventsColumns" :data="tabsEventsData"></Table>
+			<Table
+				class="demo-param-content"
+				:columns="eventsColumns"
+				:data="tabsEventsData"
+			></Table>
 			<h3 class="demo-param-header">
 				Tabs slot
 			</h3>
-			<Table class="demo-param-content" :columns="slotColumns" :data="tabsSlotData"></Table>
+			<Table
+				class="demo-param-content"
+				:columns="slotColumns"
+				:data="tabsSlotData"
+			></Table>
 			<h3 class="demo-param-header">
 				TabPane props
 			</h3>
-			<Table class="demo-param-content" :columns="propsColumns" :data="tabsPropsData"></Table>
+			<Table
+				class="demo-param-content"
+				:columns="propsColumns"
+				:data="tabsPropsData"
+			></Table>
 			<h3 class="demo-param-header">
 				TabPane slot
 			</h3>
-			<Table class="demo-param-content" :columns="slotColumns" :data="tabsSlotData"></Table>
+			<Table
+				class="demo-param-content"
+				:columns="slotColumns"
+				:data="tabsSlotData"
+			></Table>
 		</section>
 		<!-- <article class="article">
 			<section
@@ -820,12 +840,12 @@ export default {
 					href: '#BCGZ',
 					title: 'befareChange钩子'
 				},
-				
+
 				{
 					href: '#TJAN',
 					title: '用slot添加按钮'
 				},
-				
+
 				{
 					href: '#ZDY',
 					title: '用slot自定义label内容'
@@ -940,7 +960,7 @@ export default {
 					eventsName: 'on-next',
 					explain: '当tabs的nav可滚动时，点击下一页时触发。',
 					returnValue: '无'
-				},
+				}
 			],
 			tabsSlotData: [
 				{
@@ -1000,8 +1020,7 @@ export default {
 					explain: 'tab对应的内容'
 				}
 			],
-			JCYF_code: 
-`<template>
+			JCYF_code: `<template>
     <Tabs>
         <TabPane label="Tab1" id="1">Content of tab 1</TabPane>
         <TabPane label="Tab 2" id="2">Content of tab 2</TabPane>
@@ -1013,8 +1032,7 @@ export default {
 	
     }
 <\/script>`,
-			GD_code: 
-`<template>
+			GD_code: `<template>
     <Tabs>
         <TabPane
             v-for="i in 40"
@@ -1030,8 +1048,7 @@ export default {
 
 	}
 <\/script>`,
-			BQYWZ_code: 
-`<template>
+			BQYWZ_code: `<template>
 	<div>
 		<RadioGroup connected v-model="tabPosition">
 			<Radio
@@ -1056,8 +1073,7 @@ export default {
 
 }	
 <\/script>`,
-			PX_code:
-`<template>
+			PX_code: `<template>
 	<Tabs>
 		<TabPane
 			v-for="i in 3"
@@ -1074,8 +1090,7 @@ export default {
 
 	}	
 <\/script>`,
-			JY_code: 
-`<template>
+			JY_code: `<template>
 <Tabs>
 	<TabPane
 		v-for="i in 3"
@@ -1092,8 +1107,7 @@ export default {
 
 	}	
 <\/script>`,
-			LJZ_code:
-`<template>
+			LJZ_code: `<template>
 	<Tabs>
 		<TabPane label="static" id="1" :lazy="false">
 			<StaticTestComponent />
@@ -1111,8 +1125,7 @@ export default {
 
 	}	
 <\/script>`,
-			KPH_code: 
-`<template>
+			KPH_code: `<template>
 <Tabs type="card">
 	<TabPane
 		v-for="i in 3"
@@ -1128,8 +1141,7 @@ export default {
 
 	}	
 <\/script>`,
-			KGB_code:
-`<template>
+			KGB_code: `<template>
 <Tabs type="card">
 	<TabPane label="Tab1" id="1" closable
 		>Content of tab 1</TabPane
@@ -1147,8 +1159,7 @@ export default {
 
 	}	
 <\/script>`,
-			KGBGZ_code: 
-`<template>
+			KGBGZ_code: `<template>
 	<div slot="demo">
 		<p>返回boolean值</p>
 		<Tabs type="card" :before-close="beforeClose">
@@ -1192,8 +1203,7 @@ export default {
 		}
 	}	
 <\/script>`,
-			BCGZ_code: 
-`<template>
+			BCGZ_code: `<template>
 	<div>
 		<h3>返回boolean值</h3>
 		<Tabs type="card" :before-change="beforeChange">
@@ -1242,8 +1252,7 @@ export default {
 		}
 	}	
 <\/script>`,
-			TJAN_code: 
-`<template>
+			TJAN_code: `<template>
 	<Tabs>
 		<TabPane
 			v-for="i in 10"
@@ -1262,8 +1271,7 @@ export default {
 
 	}
 <\/script>`,
-			ZDY_code: 
-`<template>
+			ZDY_code: `<template>
 	<Tabs>
 		<TabPane id="1" :lazy="false">
 			<template #label>
@@ -1456,7 +1464,7 @@ export default {
 		}
 	},
 	mounted() {
-		this.$emit('on-setAnchorNav', this.anchorNavList);
+		this.$emit('on-setAnchorNav', this.anchorNavList)
 	},
 	methods: {
 		beforeClose(id) {

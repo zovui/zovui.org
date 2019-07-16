@@ -27,7 +27,9 @@
 			<Col span="12" class="example-col">
 				<div class="example-code" ref="code">
 					<div v-highlight>
-						<pre class="bg"><code class="xml" v-text="demoCode"></code></pre>
+						<pre
+							class="bg"
+						><code class="xml" v-text="demoCode"></code></pre>
 					</div>
 				</div>
 			</Col>
@@ -59,14 +61,15 @@ export default {
 	mounted() {
 		this.demoHeight = this.$refs.demo.offsetHeight
 		this.codeHeight = this.$refs.code.offsetHeight
-		this.$refs.example.style.height = `${parseInt(this.demoHeight)}px`;
-		this.showIconTip = parseInt(this.demoHeight) - parseInt(this.codeHeight) < 5
-			? true
-			: false
+		this.$refs.example.style.height = `${parseInt(this.demoHeight)}px`
+		this.showIconTip =
+			parseInt(this.demoHeight) - parseInt(this.codeHeight) < 5
+				? true
+				: false
 	},
 	methods: {
 		showAllCode() {
-			this.$refs.example.style.height = `${parseInt(this.codeHeight)}px`;
+			this.$refs.example.style.height = `${parseInt(this.codeHeight)}px`
 			this.showIconTip = false
 		}
 	}
@@ -122,8 +125,7 @@ export default {
 			height: 100%;
 		}
 	}
-	
-	
+
 	.show-all-code {
 		position: absolute;
 		bottom: 0;

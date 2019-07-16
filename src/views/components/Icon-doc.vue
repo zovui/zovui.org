@@ -17,13 +17,17 @@
 				使用&lt;Icon /&gt;组件，指定图标对应的type属性，示例代码：
 			</p>
 			<div v-highlight>
-				<pre class="bg"><code class="xml">&lt;Icon type="analytics"/&gt;</code></pre>
+				<pre
+					class="bg"
+				><code class="xml">&lt;Icon type="analytics"/&gt;</code></pre>
 			</div>
 			<p>
 				渲染后为：
 			</p>
 			<div v-highlight>
-				<pre class="bg"><code class="xml">&lt;i class="zov-icon zov-icon-analytics"&gt;&lt;/i&gt;</code></pre>
+				<pre
+					class="bg"
+				><code class="xml">&lt;i class="zov-icon zov-icon-analytics"&gt;&lt;/i&gt;</code></pre>
 			</div>
 			<div class="anchor">
 				<h2 id="GS">API</h2>
@@ -32,9 +36,9 @@
 			<div v-highlight>
 				<pre><code v-text="demoCode"></code></pre>
 			</div>
-			<Table ></Table>
+			<Table></Table>
 		</section>
-		
+
 		<div class="icon-header">
 			<Input
 				class="icon-search"
@@ -55,7 +59,7 @@
 		<h3>默认icon</h3>
 		<ul class="icon_lists" @click="copyIconCode">
 			<li v-for="(item, index) in searchResult" :key="index">
-				<Icon :iconname="item.name"/>
+				<Icon :iconname="item.name" />
 				<div class="name">{{ item.name }}</div>
 			</li>
 		</ul>
@@ -63,12 +67,12 @@
 </template>
 
 <script>
-import Table from '../../components/table';
+import Table from '../../components/table'
 export default {
 	methods: {
 		copyIconCode(e) {
-			if(e.target.nodeName.toLowerCase() === 'li') {
-				console.log(e.target, 'e.target');
+			if (e.target.nodeName.toLowerCase() === 'li') {
+				console.log(e.target, 'e.target')
 			}
 		}
 	},

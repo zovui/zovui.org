@@ -5,7 +5,9 @@
 			<h2 id="GS">概述</h2>
 			<a href="#GS">#</a>
 		</div>
-		<p>Zov栅格采用了24栅格系统，将区域进行24等分，这样可以轻松应对大部分布局问题。使用栅格系统进行网页布局，可以使页面排版美观、舒适。</p>
+		<p>
+			Zov栅格采用了24栅格系统，将区域进行24等分，这样可以轻松应对大部分布局问题。使用栅格系统进行网页布局，可以使页面排版美观、舒适。
+		</p>
 		<p>我们定义了两个概念，行row和列col，具体使用方法如下：</p>
 		<ul>
 			<li>使用row在水平方向创建一行</li>
@@ -22,13 +24,9 @@
 			onlineHref="http://jsrun.net/IeyKp/edit"
 		>
 			<div slot="demo">
-				<Button size="large" @click="size = 'large'"
-					>large</Button
-				>
+				<Button size="large" @click="size = 'large'">large</Button>
 				<Button @click="size = 'default'">middle</Button>
-				<Button size="small" @click="size = 'small'"
-					>small</Button
-				>
+				<Button size="small" @click="size = 'small'">small</Button>
 			</div>
 			<code class="xml" slot="code" v-text="ANCC_code"></code>
 		</DemoBox>
@@ -117,9 +115,7 @@
 </template>
 <script>
 export default {
-	data() {
-
-	}
+	data() {}
 }
 </script>
 <style lang="scss" scoped>

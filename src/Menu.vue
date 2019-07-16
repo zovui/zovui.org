@@ -89,7 +89,7 @@
 			<Content>
 				<Row>
 					<Col span="20">
-						<router-view @on-setAnchorNav="setAnchorNav"/>
+						<router-view @on-setAnchorNav="setAnchorNav" />
 					</Col>
 					<Col span="4">
 						<Affix>
@@ -112,7 +112,6 @@
 </template>
 <script>
 export default {
-	
 	data() {
 		return {
 			collapsed: false,
@@ -342,8 +341,8 @@ export default {
 	},
 	methods: {
 		setAnchorNav(list) {
-			console.log(list, 'list');
-			this.anchorNavList = list;
+			console.log(list, 'list')
+			this.anchorNavList = list
 		},
 		handleSelect(e) {
 			this.$router.push(e.text.toLowerCase() + '-doc')

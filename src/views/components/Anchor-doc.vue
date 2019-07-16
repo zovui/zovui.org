@@ -16,13 +16,19 @@
 				:demoCode="JCYF_code"
 			>
 				<Anchor show-ink slot="demo">
-        			<AnchorLink href="#API" title="API">
-						<AnchorLink ref="#Anchor_props" title="Anchor_props"/>
-						<AnchorLink href="#Anchor_events" title="Anchor_events"/>
-						<AnchorLink href="#Anchor_data" title="Anchor_data"/>
+					<AnchorLink href="#API" title="API">
+						<AnchorLink ref="#Anchor_props" title="Anchor_props" />
+						<AnchorLink
+							href="#Anchor_events"
+							title="Anchor_events"
+						/>
+						<AnchorLink href="#Anchor_data" title="Anchor_data" />
 					</AnchorLink>
-					<AnchorLink href="#Basic Usage" title="Basic Usage"/>
-					<AnchorLink href="#Static Position" title="Static Position"/>
+					<AnchorLink href="#Basic Usage" title="Basic Usage" />
+					<AnchorLink
+						href="#Static Position"
+						title="Static Position"
+					/>
 				</Anchor>
 			</DemoBox>
 			<DemoBox
@@ -33,13 +39,19 @@
 				:demoCode="JTWZ_code"
 			>
 				<Anchor show-ink :affix="false" slot="demo">
-        			<AnchorLink href="#API" title="API">
-						<AnchorLink ref="#Anchor_props" title="Anchor_props"/>
-						<AnchorLink href="#Anchor_events" title="Anchor_events"/>
-						<AnchorLink href="#Anchor_data" title="Anchor_data"/>
+					<AnchorLink href="#API" title="API">
+						<AnchorLink ref="#Anchor_props" title="Anchor_props" />
+						<AnchorLink
+							href="#Anchor_events"
+							title="Anchor_events"
+						/>
+						<AnchorLink href="#Anchor_data" title="Anchor_data" />
 					</AnchorLink>
-					<AnchorLink href="#Basic Usage" title="Basic Usage"/>
-					<AnchorLink href="#Static Position" title="Static Position"/>
+					<AnchorLink href="#Basic Usage" title="Basic Usage" />
+					<AnchorLink
+						href="#Static Position"
+						title="Static Position"
+					/>
 				</Anchor>
 			</DemoBox>
 			<div class="anchor">
@@ -50,21 +62,27 @@
 				<h3 class="demo-param-header">
 					Anchor props
 				</h3>
-				<Table class="demo-param-content" 
-						:columns="propsColumns" 
-						:data="anchorPropsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="propsColumns"
+					:data="anchorPropsData"
+				></Table>
 				<h3 class="demo-param-header">
 					Anchor events
 				</h3>
-				<Table class="demo-param-content" 
-						:columns="eventsColumns" 
-						:data="anchorEventsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="eventsColumns"
+					:data="anchorEventsData"
+				></Table>
 				<h3 class="demo-param-header">
 					AnchorLink props
 				</h3>
-				<Table class="demo-param-content" 
-						:columns="propsColumns" 
-						:data="anchorLinkEventsData"></Table>
+				<Table
+					class="demo-param-content"
+					:columns="propsColumns"
+					:data="anchorLinkEventsData"
+				></Table>
 			</section>
 		</article>
 		<div
@@ -333,7 +351,7 @@ export default {
 					eventsName: '@on-change',
 					explain: '链接改变时触发，返回新链接和旧链接。',
 					returnValue: 'newHref,oldHref'
-				},
+				}
 			],
 			anchorLinkEventsData: [
 				{
@@ -369,8 +387,7 @@ export default {
 					title: 'API'
 				}
 			],
-			JCYF_code: 
-`<template> 
+			JCYF_code: `<template> 
     <Anchor show-ink>
         <AnchorLink :href="#API" :title="API">
             <AnchorLink ref="#Anchor_props" title="Anchor_props"/>
@@ -386,8 +403,7 @@ export default {
     
     } 
 <\/script>`,
-			JTWZ_code:
-`<template> 
+			JTWZ_code: `<template> 
     <Anchor :affix="false" show-ink>
         <AnchorLink :href="#API" :title="API">
             <AnchorLink ref="#Anchor_props" title="Anchor_props"/>
@@ -402,7 +418,7 @@ export default {
     export default { 
     
     } 
-<\/script>`,
+<\/script>`
 		}
 	},
 	methods: {
