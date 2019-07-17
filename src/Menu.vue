@@ -87,23 +87,7 @@
 				</Menu>
 			</Sider>
 			<Content>
-				<Row>
-					<Col span="20">
-						<router-view @on-setAnchorNav="setAnchorNav" />
-					</Col>
-					<Col span="4">
-						<Affix>
-							<Anchor :show-ink="true">
-								<AnchorLink
-									v-for="(i, j) in anchorNavList"
-									:key="j + i.href"
-									:href="i.href"
-									:title="i.title"
-								/>
-							</Anchor>
-						</Affix>
-					</Col>
-				</Row>
+                <router-view @on-setAnchorNav="setAnchorNav" />
 			</Content>
 			<BackTop :bottom="90"></BackTop>
 		</Layout>
