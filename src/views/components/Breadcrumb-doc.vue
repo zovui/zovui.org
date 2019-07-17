@@ -1,11 +1,12 @@
 <template>
     <ComponentDemo component-name="Breadcrumb" desc="面包屑" :apiList="api">
-
+        <ComponentExample v-for="example of examples" :example="example" :key="example.__title"/>
     </ComponentDemo>
 </template>
 
 <script>
 import { ComponentDemo, ComponentExample } from '@/components/component-demo'
+import { Base, Separator, ReactItem } from '@/examples/breadcrumb'
 
 const api = [
     {
@@ -73,38 +74,14 @@ const api = [
 export default {
 	name: 'Breadcrumb-doc',
     components: {
-	    ComponentDemo
+	    ComponentDemo,
+        ComponentExample
     },
 	data() {
 		return {
-			routes: ['首页', '一级导航', '二级导航', '三级导航', '四级导航'],
+		    examples: [Base, Separator, ReactItem],
             api
-		}
-	},
-	methods: {
-		handleClick(index) {
-			this.routes.splice(index, 1)
 		}
 	}
 }
 </script>
-
-<style lang="scss" scoped>
-.container {
-	width: 1000px;
-	margin: 0 auto;
-}
-.section {
-	box-sizing: border-box;
-	margin: 20px 0;
-	border: 1px solid #f5f5f5;
-	padding: 20px 30px;
-	box-shadow: 0 0 5px 0 #7f7f7f;
-}
-.props {
-	margin: 20px 0;
-}
-.mg-10 {
-	margin-bottom: 10px;
-}
-</style>

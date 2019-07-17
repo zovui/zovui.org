@@ -73,6 +73,6 @@
 		]
 	},
   "vuePlugins": {
-    "service": ["./build/source-code"]
+    "service": ["./build/source-code", "./build/example-info-picker"]
   }
 }
