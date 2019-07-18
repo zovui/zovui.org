@@ -12,7 +12,7 @@ import Table from './table';
 import ComponentAnchor from './ComponentAnchor';
 import shortId from 'shortid';
 export default {
-    name: "component-api",
+    name: "ComponentApi",
     props: {
         title: {
             required: true,

@@ -3,7 +3,7 @@
     import ComponentAnchor from './ComponentAnchor';
     import shortId  from 'shortid';
     export default {
-        name: "component-example",
+        name: "ComponentExample",
         props: {
             example: {
                 type: Object,

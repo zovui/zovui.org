@@ -1,23 +1,23 @@
 <template>
     <Row>
         <Col span="20">
-            <article class="component-demo">
+            <article class="component-example-container">
                 <h1 class="component-name">{{ componentName }}</h1>
-                <section class="component-demo-section">
+                <section class="component-example-section">
                     <ComponentAnchor id="GS">
-                        <h2 class="component-demo-section-header" id="GS">概述</h2>
+                        <h2 class="component-demo-section-header">概述</h2>
                     </ComponentAnchor>
                     <p><slot name="desc">{{ desc }}</slot></p>
                 </section>
-                <section class="component-demo-section">
+                <section class="component-example-section">
                     <ComponentAnchor id="examples">
-                        <h2 class="component-demo-section-header" id="examples">代码示例</h2>
+                        <h2 class="component-demo-section-header">代码示例</h2>
                     </ComponentAnchor>
                     <slot />
                 </section>
-                <section class="component-demo-section">
+                <section class="component-example-section">
                     <ComponentAnchor id="API">
-                        <h2 class="component-demo-section-header" id="API">API</h2>
+                        <h2 class="component-demo-section-header">API</h2>
                     </ComponentAnchor>
                     <ComponentApi v-for="api of apiList" :key="api.title" :title="api.title" :columns="api.columns" :data="api.data"/>
                 </section>
@@ -46,18 +46,18 @@
     </Row>
 </template>
 <style lang="scss">
-    .component-demo {
+    .component-example-container {
         padding: 0 30px;
-        .component-name  {
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-        .component-demo-section {
-            margin: 20px 0;
-            &-header {
-                margin: 10px 0;
-                display: inline-block;
-            }
+    }
+    .component-name  {
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    .component-example-section {
+        margin: 20px 0;
+        &-header {
+            margin: 10px 0;
+            display: inline-block;
         }
     }
 </style>
@@ -66,7 +66,7 @@ import ComponentApi from './ComponentApi';
 import ComponentAnchor from './ComponentAnchor';
 
 export default {
-    name: "component-demo",
+    name: "ComponentExampleContainer",
     props: {
         // 组件名
         componentName: {

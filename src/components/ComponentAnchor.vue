@@ -29,7 +29,7 @@
 
 <script>
     export default {
-        name: "component-anchor",
+        name: "ComponentAnchor",
         props: {
             id: {
                 required: true,
