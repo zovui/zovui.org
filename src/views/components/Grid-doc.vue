@@ -95,7 +95,7 @@ const RowApi = [
 				prop: 'className',
 				type: 'string',
 				required: 'false',
-				default: 'undefined',
+				default: '-',
 				values: '无',
 				explain: '给Row组件根DOM元素添加的类名'
 			}
@@ -198,7 +198,7 @@ const ColApi = [
 				required: 'false',
 				default: '-',
 				values: '-',
-				explain: '-'
+				explain: '超小尺寸屏幕（<=480px）'
 			},
 			{
 				prop: 'sm',
@@ -206,7 +206,7 @@ const ColApi = [
 				required: 'false',
 				default: '-',
 				values: '-',
-				explain: '-'
+				explain: '小尺寸屏幕（<=768px）'
 			},
 			{
 				prop: 'md',
@@ -214,7 +214,7 @@ const ColApi = [
 				required: 'false',
 				default: '-',
 				values: '-',
-				explain: '-'
+				explain: '中等大小屏幕（<=992px）'
 			},
 			{
 				prop: 'lg',
@@ -222,7 +222,15 @@ const ColApi = [
 				required: 'false',
 				default: '-',
 				values: '-',
-				explain: '-'
+				explain: '大屏幕（<=1200px）'
+			},
+			{
+				prop: 'xl',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '超大屏幕（>=1600px）'
 			},
 			{
 				prop: 'className',
