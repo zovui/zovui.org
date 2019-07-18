@@ -1,21 +1,21 @@
 <template>
-    <div class="component-demo-anchor-ref">
-        <div class="component-demo-anchor-content">
+    <div class="component-anchor-container" :id="formatId">
+        <div class="component-anchor-content">
             <slot/>
         </div>
-        <a class="component-demo-anchor" :href="'#' + id">#</a>
+        <a v-if="!hiddenRef" class="component-anchor-ref" :href="formatId">#</a>
     </div>
 </template>
 
 <style lang="scss">
-    .component-demo-anchor-ref {
+    .component-anchor-container {
         display: flex;
         align-items: center;
     }
-    .component-demo-anchor-content {
+    .component-anchor-content {
         flex: 0 1 auto;
     }
-    .component-demo-anchor {
+    .component-anchor-ref {
         flex: 0 0 auto;
         font-size: 24px;
         margin-left: 5px;
@@ -34,6 +34,14 @@
             id: {
                 required: true,
                 type: String
+            },
+            hiddenRef: {
+                type: Boolean
+            }
+        },
+        computed: {
+            formatId() {
+                return `#${this.id}`;
             }
         }
     }

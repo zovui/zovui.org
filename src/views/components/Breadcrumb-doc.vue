@@ -1,11 +1,11 @@
 <template>
-    <ComponentDemo component-name="Breadcrumb" desc="面包屑" :apiList="api">
+    <ComponentExampleContainer component-name="Breadcrumb" desc="面包屑" :apiList="api">
         <ComponentExample v-for="example of examples" :example="example" :key="example.__title"/>
-    </ComponentDemo>
+    </ComponentExampleContainer>
 </template>
 
 <script>
-import { ComponentDemo, ComponentExample } from '@/components/component-demo'
+import { ComponentExampleContainer, ComponentExample } from '@/components'
 import { Base, Separator, ReactItem } from '@/examples/breadcrumb'
 
 const api = [
@@ -74,7 +74,7 @@ const api = [
 export default {
 	name: 'Breadcrumb-doc',
     components: {
-	    ComponentDemo,
+        ComponentExampleContainer,
         ComponentExample
     },
 	data() {

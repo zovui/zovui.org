@@ -62,8 +62,8 @@
     }
 </style>
 <script>
-import ComponentApi from './component-api';
-import ComponentAnchor from './component-anchor';
+import ComponentApi from './ComponentApi';
+import ComponentAnchor from './ComponentAnchor';
 
 export default {
     name: "component-demo",
@@ -84,7 +84,7 @@ export default {
     },
     provide() {
         return {
-            Demo: {
+            ComponentExample: {
                 addExampleAnchor: (anchor) => {
                     this.anchorList[1].children.push(anchor);
                 },

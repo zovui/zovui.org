@@ -1,15 +1,16 @@
 <template>
     <section>
         <ComponentAnchor :id="title">
-            <h3 :id="title">{{ title }}</h3>
+            <h3>{{ title }}</h3>
         </ComponentAnchor>
         <Table :columns="columns" :data="data" />
     </section>
 </template>
 
 <script>
-import Table from '../table';
-import ComponentAnchor from './component-anchor';
+import Table from './table';
+import ComponentAnchor from './ComponentAnchor';
+import shortId from 'shortid';
 export default {
     name: "component-api",
     props: {
@@ -40,19 +41,25 @@ export default {
             }
         }
     },
-    inject: {
-        Demo: {
-            default: null
-        }
-    },
     components: {
         Table,
         ComponentAnchor
     },
+    inject: {
+        ComponentExample: {
+            default: null
+        }
+    },
+    data() {
+        return {
+            anchorId: shortId.generate(),
+            anchorTitle: this.title
+        }
+    },
     created() {
-        this.Demo.addApiAnchor({
-            title: this.title,
-            href: '#' + this.title
+        this.ComponentExample.addApiAnchor({
+            title: this.anchorTitle,
+            href: `#${this.anchorId}`
         })
     }
 }
