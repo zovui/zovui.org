@@ -4,7 +4,7 @@
             <h3>{{ title }}</h3>
         </ComponentAnchor>
         <Table v-if="columns" :columns="columns" :data="data" />
-        <Component v-else :name="TypeTableMap[this.type]" :data="data" />
+        <component v-else :is="TypeTableMap[this.type]" :data="data" />
     </section>
 </template>
 
@@ -57,7 +57,11 @@ export default {
     },
     components: {
         Table,
-        ComponentAnchor
+        ComponentAnchor,
+        PropsTable,
+        SlotsTable,
+        MethodsTable,
+        EventsTable
     },
     inject: {
         ComponentExample: {

@@ -19,28 +19,7 @@ import { Base, Separator, ReactItem } from '@/examples/breadcrumb'
 const api = [
     {
         title: 'Breadcrumb props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'props',
         data: [
             {
                 prop: 'separator',
@@ -60,20 +39,12 @@ const api = [
     },
     {
         title: 'Breadcrumb 事件',
-        columns: [
-            {
-                title: '事件名',
-                key: 'event'
-            },
-            {
-                title: '回调参数',
-                key: 'callbackParam'
-            }
-        ],
+        type: 'events',
         data: [
             {
                 event: 'click',
-                callbackParam: 'event对象'
+                callbackParam: 'event对象',
+                explain: '点击事件'
             }
         ]
     }
