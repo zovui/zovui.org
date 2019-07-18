@@ -24,32 +24,7 @@ import ChangeDirection from '@/examples/drop/ChangeDirection.vue?demo'
 const DropApi = [
     {
         title: 'Drop props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '可选值',
-                key: 'values'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'props',
         data: [
             {
                 prop: 'value',
@@ -63,35 +38,18 @@ const DropApi = [
     },
     {
         title: 'Drop methods',
-        columns: [
-            {
-                title: '方法名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'methods',
         data: [
             {
                 event: 'dropUpdate',
+                returnValue: '-',
                 explain: '供组件更新popper的位置'
             }
         ]
     },
     {
         title: 'Drop slots',
-        columns: [
-            {
-                title: 'slot名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'slots',
         data: [
             {
                 name: 'default',

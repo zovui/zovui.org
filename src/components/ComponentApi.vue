@@ -3,7 +3,8 @@
         <ComponentAnchor :id="title">
             <h3>{{ title }}</h3>
         </ComponentAnchor>
-        <Table :columns="columns" :data="data" />
+        <Table v-if="columns" :columns="columns" :data="data" />
+        <component v-else :is="TypeTableMap[this.type]" :data="data" />
     </section>
 </template>
 
@@ -11,6 +12,18 @@
 import Table from './table'
 import ComponentAnchor from './ComponentAnchor'
 import shortId from 'shortid'
+import PropsTable from './PropsTable'
+import MethodsTable from './MethodsTable'
+import SlotsTable from './SlotsTable'
+import EventsTable from './EventsTable'
+
+const TypeTableMap = {
+    props: PropsTable.name,
+    methods: MethodsTable.name,
+    slots: SlotsTable.name,
+    events: EventsTable.name
+}
+
 export default {
     name: 'ComponentApi',
     props: {
@@ -19,12 +32,17 @@ export default {
             type: String
         },
         columns: {
-            required: true,
             type: Array,
             validator(columns) {
                 return columns.every(col => {
                     return typeof col === 'object' && col.title && col.key
                 })
+            }
+        },
+        type: {
+            type: String,
+            validator(type) {
+                return Object.keys(TypeTableMap).indexOf(type) !== -1
             }
         },
         data: {
@@ -39,7 +57,11 @@ export default {
     },
     components: {
         Table,
-        ComponentAnchor
+        ComponentAnchor,
+        PropsTable,
+        SlotsTable,
+        MethodsTable,
+        EventsTable
     },
     inject: {
         ComponentExample: {
@@ -48,6 +70,7 @@ export default {
     },
     data() {
         return {
+            TypeTableMap,
             anchorId: shortId.generate(),
             anchorTitle: this.title
         }
