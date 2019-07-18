@@ -1,18 +1,67 @@
 <template>
-    <div style="text-align: center">
-        <Button looks="primary" @click="$LoadingBar.start()">start</Button> |
-        <Button looks="success" @click="$LoadingBar.finish()">finish</Button> |
-        <Button looks="error" @click="$LoadingBar.error()">error</Button> |
-        <Button looks="warning" @click="$LoadingBar.warning()">waring</Button>
-    </div>
+    <ComponentExampleContainer
+        component-name="LoadingBar 加载进度条"
+        :api-list="apiList"
+    >
+        <template #desc>
+            顶部加载进度条，用于展示页面或者其他异步动作的载入进度<br /><br />
+            通过Vue原型上的$LoadingBar进行调用
+        </template>
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
+        />
+    </ComponentExampleContainer>
 </template>
 <script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/loading-bar/Base.vue?demo'
+
+const LoadingApi = [
+    {
+        title: 'LoadingBar methods',
+        columns: [
+            {
+                title: '方法名',
+                key: 'name'
+            },
+            {
+                title: '说明',
+                key: 'explain'
+            }
+        ],
+        data: [
+            {
+                event: 'start',
+                explain: '进度为0%，开始变化进度条进度'
+            },
+            {
+                event: 'finish',
+                explain: '进度变为100%'
+            },
+            {
+                event: 'warning',
+                explain: '进度变为100%，状态变为警告状态'
+            },
+            {
+                event: 'error',
+                explain: '进度变为100%，状态变为错误状态'
+            }
+        ]
+    }
+]
+
 export default {
-    mounted() {
-        this.$LoadingBar.start()
-        this.$LoadingBar.finish()
-        this.$LoadingBar.error()
-        this.$LoadingBar.start()
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
+    data() {
+        return {
+            examples: [Base],
+            apiList: [...LoadingApi]
+        }
     }
 }
 </script>
