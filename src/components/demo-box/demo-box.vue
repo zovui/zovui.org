@@ -62,7 +62,8 @@ export default {
 		this.demoHeight = this.$refs.demo.offsetHeight
 		this.codeHeight = this.$refs.code.offsetHeight
 		this.$refs.example.style.height = `${parseInt(this.demoHeight)}px`
-		this.showIconTip = parseInt(this.demoHeight) - parseInt(this.codeHeight) < 5
+		this.showIconTip =
+			parseInt(this.demoHeight) - parseInt(this.codeHeight) < 5
 	},
 	methods: {
 		showAllCode() {
