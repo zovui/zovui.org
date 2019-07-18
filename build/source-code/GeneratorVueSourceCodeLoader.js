@@ -19,7 +19,7 @@ function attrsToString(attrs) {
 }
 
 function genCode(tagName, attrs, content) {
-    return  `<${tagName} ${attrsToString(attrs)}>\n${content}\n</${tagName}>`;
+    return  `<${tagName} ${attrsToString(attrs)}>${content}</${tagName}>`;
 }
 
 module.exports = function (source) {

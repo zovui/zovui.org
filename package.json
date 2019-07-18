@@ -17,6 +17,7 @@
 		"lodash.debounce": "^4.0.8",
 		"popper.js": "^1.14.5",
 		"resize-observer-polyfill": "^1.5.1",
+		"shortid": "^2.2.14",
 		"tinycolor2": "^1.4.1",
 		"v-click-outside-x": "^3.5.5",
 		"vue": "^2.6.6",
@@ -72,7 +73,10 @@
 			"@commitlint/config-conventional"
 		]
 	},
-  "vuePlugins": {
-    "service": ["./build/source-code"]
-  }
+	"vuePlugins": {
+		"service": [
+			"./build/source-code",
+			"./build/example-info-picker"
+		]
+	}
 }
