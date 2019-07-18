@@ -26,32 +26,7 @@ import CenterAlign from '@/examples/grid/CenterAlign.vue?demo'
 const RowApi = [
     {
         title: 'Row props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '可选值',
-                key: 'values'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'props',
         data: [
             {
                 prop: 'type',
@@ -103,16 +78,7 @@ const RowApi = [
     },
     {
         title: 'Row slots',
-        columns: [
-            {
-                title: 'slot名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'slots',
         data: [
             {
                 name: 'default',
@@ -125,32 +91,7 @@ const RowApi = [
 const ColApi = [
     {
         title: 'Col props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '可选值',
-                key: 'values'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'props',
         data: [
             {
                 prop: 'span',
@@ -244,16 +185,7 @@ const ColApi = [
     },
     {
         title: 'Col slots',
-        columns: [
-            {
-                title: 'slot名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'slots',
         data: [
             {
                 name: 'default',

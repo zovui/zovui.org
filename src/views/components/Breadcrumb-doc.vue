@@ -26,6 +26,7 @@ const api = [
                 type: 'string',
                 required: 'false',
                 default: '/',
+                values: '-',
                 explain: '导航分隔符'
             },
             {
@@ -33,6 +34,7 @@ const api = [
                 type: 'string',
                 required: 'false',
                 default: '_self',
+                values: '-',
                 explain: 'a链接的target属性值'
             }
         ]

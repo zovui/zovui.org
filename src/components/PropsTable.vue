@@ -18,6 +18,10 @@ const columns = [
         key: 'default'
     },
     {
+        title: '可选值',
+        key: 'values'
+    },
+    {
         title: '说明',
         key: 'explain'
     }
