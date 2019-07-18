@@ -12,7 +12,7 @@ function attrsToString(attrs) {
 	return Object.keys(attrs)
 		.map(key => {
 			let value = attrs[key]
-			if (typeof key === 'boolean') {
+			if (typeof value === 'boolean') {
 				return key
 			}
 			return `${key}="${value}"`
