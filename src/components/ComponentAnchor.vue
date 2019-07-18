@@ -1,9 +1,9 @@
 <template>
-    <div class="component-anchor-container" :id="formatId">
+    <div class="component-anchor-container" :id="id">
         <div class="component-anchor-content">
             <slot/>
         </div>
-        <a v-if="!hiddenRef" class="component-anchor-ref" :href="formatId">#</a>
+        <a v-if="!hiddenRef" class="component-anchor-ref" :href="href">#</a>
     </div>
 </template>
 
@@ -40,7 +40,7 @@
             }
         },
         computed: {
-            formatId() {
+            href() {
                 return `#${this.id}`;
             }
         }

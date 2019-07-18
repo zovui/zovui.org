@@ -5,19 +5,19 @@
                 <h1 class="component-name">{{ componentName }}</h1>
                 <section class="component-example-section">
                     <ComponentAnchor id="GS">
-                        <h2 class="component-demo-section-header">概述</h2>
+                        <h2 class="component-example-section-header">概述</h2>
                     </ComponentAnchor>
                     <p><slot name="desc">{{ desc }}</slot></p>
                 </section>
                 <section class="component-example-section">
                     <ComponentAnchor id="examples">
-                        <h2 class="component-demo-section-header">代码示例</h2>
+                        <h2 class="component-example-section-header">代码示例</h2>
                     </ComponentAnchor>
                     <slot />
                 </section>
                 <section class="component-example-section">
                     <ComponentAnchor id="API">
-                        <h2 class="component-demo-section-header">API</h2>
+                        <h2 class="component-example-section-header">API</h2>
                     </ComponentAnchor>
                     <ComponentApi v-for="api of apiList" :key="api.title" :title="api.title" :columns="api.columns" :data="api.data"/>
                 </section>
@@ -57,7 +57,6 @@
         margin: 20px 0;
         &-header {
             margin: 10px 0;
-            display: inline-block;
         }
     }
 </style>
