@@ -30,7 +30,7 @@
         render(h) {
             const example = this.example;
             return (
-                <ComponentAnchor id={this.anchorId}>
+                <ComponentAnchor id={this.anchorId} hidden-ref>
                     <DemoBox
                         title={example.__title}
                         desc={example.__desc}

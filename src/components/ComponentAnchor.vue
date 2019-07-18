@@ -1,6 +1,6 @@
 <template>
     <div class="component-anchor-container" :id="id">
-        <div class="component-anchor-content">
+        <div :class="contentClasses">
             <slot/>
         </div>
         <a v-if="!hiddenRef" class="component-anchor-ref" :href="href">#</a>
@@ -14,6 +14,11 @@
     }
     .component-anchor-content {
         flex: 0 1 auto;
+        min-width: 1px;
+    }
+    .component-anchor-content--full-width {
+        flex: 1 1 auto;
+        min-width: 1px;
     }
     .component-anchor-ref {
         flex: 0 0 auto;
@@ -42,6 +47,11 @@
         computed: {
             href() {
                 return `#${this.id}`;
+            },
+            contentClasses() {
+                const classes = [];
+                classes.push(this.hiddenRef ? 'component-anchor-content--full-width' : 'component-anchor-content');
+                return classes;
             }
         }
     }
