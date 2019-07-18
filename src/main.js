@@ -14,5 +14,5 @@ Vue.config.productionTip = false // 去除production环境下vue警告
 console.log(Vue.version)
 new Vue({
 	router,
-	render: h => (<router-view />)
+	render: h => <router-view />
 }).$mount('#app')

@@ -87,7 +87,7 @@
 				</Menu>
 			</Sider>
 			<Content>
-                <router-view @on-setAnchorNav="setAnchorNav" />
+				<router-view @on-setAnchorNav="setAnchorNav" />
 			</Content>
 			<BackTop :bottom="90"></BackTop>
 		</Layout>

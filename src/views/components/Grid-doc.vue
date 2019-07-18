@@ -1,275 +1,280 @@
 <template>
-	<ComponentExampleContainer component-name="Grid 栅格" desc="布局组件，将布局分为12份来进行布局" :api-list="apiList">
-        <ComponentExample v-for="example of examples" :example="example" :key="example.__title"/>
-    </ComponentExampleContainer>
+	<ComponentExampleContainer
+		component-name="Grid 栅格"
+		desc="布局组件，将布局分为12份来进行布局"
+		:api-list="apiList"
+	>
+		<ComponentExample
+			v-for="example of examples"
+			:example="example"
+			:key="example.__title"
+		/>
+	</ComponentExampleContainer>
 </template>
 <script>
-import { ComponentExampleContainer, ComponentExample } from '@/components';
-import Base from '@/examples/grid/Base.vue?demo';
-import Gutter from '@/examples/grid/Gutter.vue?demo';
-import Order from '@/examples/grid/Order.vue?demo';
-import Offset from '@/examples/grid/Offset.vue?demo';
-import Sort from '@/examples/grid/Sort.vue?demo';
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/grid/Base.vue?demo'
+import Gutter from '@/examples/grid/Gutter.vue?demo'
+import Order from '@/examples/grid/Order.vue?demo'
+import Offset from '@/examples/grid/Offset.vue?demo'
+import Sort from '@/examples/grid/Sort.vue?demo'
 import Responsive from '@/examples/grid/Responsive.vue?demo'
-import TopAlign from '@/examples/grid/TopAlign.vue?demo';
-import BottomAlign from '@/examples/grid/BottomAlign.vue?demo';
-import CenterAlign from '@/examples/grid/CenterAlign.vue?demo';
+import TopAlign from '@/examples/grid/TopAlign.vue?demo'
+import BottomAlign from '@/examples/grid/BottomAlign.vue?demo'
+import CenterAlign from '@/examples/grid/CenterAlign.vue?demo'
 
 const RowApi = [
-    {
-        title: 'Row props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '可选值',
-                key: 'values'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
-        data: [
-            {
-                prop: 'type',
-                type: 'string',
-                required: 'false',
-                default: '-',
-                values: 'flex',
-                explain: '布局类型'
-            },
-            {
-                prop: 'align',
-                type: 'string',
-                required: 'false',
-                default: '-',
-                values: ['top', 'middle', 'bottom'].join(' | '),
-                explain: '垂直对齐方式'
-            },
-            {
-                prop: 'justify',
-                type: 'string',
-                required: 'false',
-                default: '-',
-                values: [
-                    'start',
-                    'end',
-                    'center',
-                    'space-around',
-                    'space-between'
-                ].join(' | '),
-                explain: '水平对齐方式'
-            },
-            {
-                prop: 'gutter',
-                type: 'number',
-                required: 'false',
-                default: '0',
-                values: '无',
-                explain: '列之间的间隔大小'
-            },
-            {
-                prop: 'className',
-                type: 'string',
-                required: 'false',
-                default: 'undefined',
-                values: '无',
-                explain: '给Row组件根DOM元素添加的类名'
-            }
-        ]
-    },
-    {
-        title: 'Row slots',
-        columns: [
-            {
-                title: 'slot名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
-        data: [
-            {
-                name: 'default',
-                explain: '内容'
-            }
-        ]
-    }
-];
+	{
+		title: 'Row props',
+		columns: [
+			{
+				title: '属性',
+				key: 'prop'
+			},
+			{
+				title: '类型',
+				key: 'type'
+			},
+			{
+				title: '是否必传',
+				key: 'required'
+			},
+			{
+				title: '默认值',
+				key: 'default'
+			},
+			{
+				title: '可选值',
+				key: 'values'
+			},
+			{
+				title: '说明',
+				key: 'explain'
+			}
+		],
+		data: [
+			{
+				prop: 'type',
+				type: 'string',
+				required: 'false',
+				default: '-',
+				values: 'flex',
+				explain: '布局类型'
+			},
+			{
+				prop: 'align',
+				type: 'string',
+				required: 'false',
+				default: '-',
+				values: ['top', 'middle', 'bottom'].join(' | '),
+				explain: '垂直对齐方式'
+			},
+			{
+				prop: 'justify',
+				type: 'string',
+				required: 'false',
+				default: '-',
+				values: [
+					'start',
+					'end',
+					'center',
+					'space-around',
+					'space-between'
+				].join(' | '),
+				explain: '水平对齐方式'
+			},
+			{
+				prop: 'gutter',
+				type: 'number',
+				required: 'false',
+				default: '0',
+				values: '无',
+				explain: '列之间的间隔大小'
+			},
+			{
+				prop: 'className',
+				type: 'string',
+				required: 'false',
+				default: 'undefined',
+				values: '无',
+				explain: '给Row组件根DOM元素添加的类名'
+			}
+		]
+	},
+	{
+		title: 'Row slots',
+		columns: [
+			{
+				title: 'slot名',
+				key: 'name'
+			},
+			{
+				title: '说明',
+				key: 'explain'
+			}
+		],
+		data: [
+			{
+				name: 'default',
+				explain: '内容'
+			}
+		]
+	}
+]
 
 const ColApi = [
-    {
-        title: 'Col props',
-        columns: [
-            {
-                title: '属性',
-                key: 'prop'
-            },
-            {
-                title: '类型',
-                key: 'type'
-            },
-            {
-                title: '是否必传',
-                key: 'required'
-            },
-            {
-                title: '默认值',
-                key: 'default'
-            },
-            {
-                title: '可选值',
-                key: 'values'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
-        data: [
-            {
-                prop: 'span',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '列占位大小'
-            },
-            {
-                prop: 'order',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '对应flex的order属性'
-            },
-            {
-                prop: 'offset',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '偏移量'
-            },
-            {
-                prop: 'push',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'pull',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'xs',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'sm',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'md',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'lg',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '-'
-            },
-            {
-                prop: 'className',
-                type: 'string|number',
-                required: 'false',
-                default: '-',
-                values: '-',
-                explain: '给ow组件根DOM元素添加的类名'
-            }
-        ]
-    },
-    {
-        title: 'Col slots',
-        columns: [
-            {
-                title: 'slot名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
-        data: [
-            {
-                name: 'default',
-                explain: '内容'
-            }
-        ]
-    }
+	{
+		title: 'Col props',
+		columns: [
+			{
+				title: '属性',
+				key: 'prop'
+			},
+			{
+				title: '类型',
+				key: 'type'
+			},
+			{
+				title: '是否必传',
+				key: 'required'
+			},
+			{
+				title: '默认值',
+				key: 'default'
+			},
+			{
+				title: '可选值',
+				key: 'values'
+			},
+			{
+				title: '说明',
+				key: 'explain'
+			}
+		],
+		data: [
+			{
+				prop: 'span',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '列占位大小'
+			},
+			{
+				prop: 'order',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '对应flex的order属性'
+			},
+			{
+				prop: 'offset',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '偏移量'
+			},
+			{
+				prop: 'push',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'pull',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'xs',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'sm',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'md',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'lg',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '-'
+			},
+			{
+				prop: 'className',
+				type: 'string|number',
+				required: 'false',
+				default: '-',
+				values: '-',
+				explain: '给ow组件根DOM元素添加的类名'
+			}
+		]
+	},
+	{
+		title: 'Col slots',
+		columns: [
+			{
+				title: 'slot名',
+				key: 'name'
+			},
+			{
+				title: '说明',
+				key: 'explain'
+			}
+		],
+		data: [
+			{
+				name: 'default',
+				explain: '内容'
+			}
+		]
+	}
 ]
 
 export default {
-    components: {
-        ComponentExampleContainer,
-        ComponentExample
-    },
+	components: {
+		ComponentExampleContainer,
+		ComponentExample
+	},
 	data() {
-        return {
-            examples: [
-                Base,
-                Gutter,
-                Order,
-                Offset,
-                Sort,
-                Responsive,
-                TopAlign,
-                BottomAlign,
-                CenterAlign
-            ],
-            apiList: [
-                ...RowApi,
-                ...ColApi
-            ]
-        }
-    }
+		return {
+			examples: [
+				Base,
+				Gutter,
+				Order,
+				Offset,
+				Sort,
+				Responsive,
+				TopAlign,
+				BottomAlign,
+				CenterAlign
+			],
+			apiList: [...RowApi, ...ColApi]
+		}
+	}
 }
 </script>
