@@ -27,6 +27,7 @@
                         v-for="api of apiList"
                         :key="api.title"
                         :title="api.title"
+                        :type="api.type"
                         :columns="api.columns"
                         :data="api.data"
                     />
