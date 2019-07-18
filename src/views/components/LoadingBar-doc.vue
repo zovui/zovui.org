@@ -21,31 +21,26 @@ import Base from '@/examples/loading-bar/Base.vue?demo'
 const LoadingApi = [
     {
         title: 'LoadingBar methods',
-        columns: [
-            {
-                title: '方法名',
-                key: 'name'
-            },
-            {
-                title: '说明',
-                key: 'explain'
-            }
-        ],
+        type: 'methods',
         data: [
             {
                 event: 'start',
+                returnValue: '-',
                 explain: '进度为0%，开始变化进度条进度'
             },
             {
                 event: 'finish',
+                returnValue: '-',
                 explain: '进度变为100%'
             },
             {
                 event: 'warning',
+                returnValue: '-',
                 explain: '进度变为100%，状态变为警告状态'
             },
             {
                 event: 'error',
+                returnValue: '-',
                 explain: '进度变为100%，状态变为错误状态'
             }
         ]
