@@ -21,6 +21,7 @@ import Range from '@/examples/slider/Range.vue?demo'
 import Step from '@/examples/slider/Step.vue?demo'
 import Marks from '@/examples/slider/Marks.vue?demo'
 import MarksWithStep from '@/examples/slider/MarksWithStep.vue?demo'
+import MarksWithOnlyMarks from '@/examples/slider/MarksWithOnlyMarks.vue?demo'
 
 const SliderApi = [
     {
@@ -138,7 +139,8 @@ export default {
                 Range,
                 Step,
                 Marks,
-                MarksWithStep
+                MarksWithStep,
+                MarksWithOnlyMarks
             ],
             apiList: [...SliderApi]
         }
