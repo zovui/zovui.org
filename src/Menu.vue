@@ -308,7 +308,6 @@ export default {
                     text: i.routerOptions.discEn
                 })
             )
-            console.log('arr', arr)
             return arr
         }
     },
@@ -325,7 +324,6 @@ export default {
     },
     methods: {
         setAnchorNav(list) {
-            console.log(list, 'list')
             this.anchorNavList = list
         },
         handleSelect(e) {
@@ -333,7 +331,6 @@ export default {
             this.menuActiveName = this.$route.path
         },
         handleNavChange(e) {
-            console.log('eee', e)
             switch (e) {
                 case '0':
                     this.$router.push('/')
