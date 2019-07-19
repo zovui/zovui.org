@@ -15,6 +15,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/spin/Base.vue?demo'
 import Cover from '@/examples/spin/Cover.vue?demo'
+import Directive from '@/examples/spin/Directive.vue?demo'
 
 const SpinApi = [
     {
@@ -48,7 +49,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Cover],
+            examples: [Base, Cover, Directive],
             apiList: [...SpinApi]
         }
     }
