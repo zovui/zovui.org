@@ -20,6 +20,7 @@ import TipFormatter from '@/examples/slider/TipFormatter.vue?demo'
 import Range from '@/examples/slider/Range.vue?demo'
 import Step from '@/examples/slider/Step.vue?demo'
 import Marks from '@/examples/slider/Marks.vue?demo'
+import MarksWithStep from '@/examples/slider/MarksWithStep.vue?demo'
 
 const SliderApi = [
     {
@@ -136,7 +137,8 @@ export default {
                 TipFormatter,
                 Range,
                 Step,
-                Marks
+                Marks,
+                MarksWithStep
             ],
             apiList: [...SliderApi]
         }
