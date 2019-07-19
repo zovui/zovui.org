@@ -13,6 +13,7 @@
 </template>
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/spin/Base.vue?demo'
 
 const SpinApi = [
     {
@@ -46,7 +47,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             apiList: [...SpinApi]
         }
     }
