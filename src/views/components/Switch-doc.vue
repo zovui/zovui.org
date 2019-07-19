@@ -15,6 +15,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/switch/Base.vue?demo'
 import Disabled from '@/examples/switch/Disabled.vue?demo'
+import Slot from '@/examples/switch/Slot.vue?demo'
 
 const SwitchApi = [
     {
@@ -81,7 +82,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled],
+            examples: [Base, Disabled, Slot],
             apiList: [...SwitchApi]
         }
     }
