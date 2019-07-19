@@ -16,6 +16,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/page/Base.vue?demo'
 import ShowTotalPage from '@/examples/page/ShowTotalPage.vue?demo'
 import Elevator from '@/examples/page/Elevator.vue?demo'
+import Sizer from '@/examples/page/Sizer.vue?demo'
 
 const PageApi = [
     {
@@ -153,7 +154,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, ShowTotalPage, Elevator],
+            examples: [Base, ShowTotalPage, Elevator, Sizer],
             apiList: [...PageApi]
         }
     }
