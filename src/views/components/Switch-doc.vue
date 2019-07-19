@@ -1,51 +1,87 @@
 <template>
-    <div style="text-align: center">
-        <Switcher :value="v">
-            <span slot="open">开</span>
-            <span slot="close">关</span>
-        </Switcher>
-        <Switcher v-model="v">
-            <span slot="open">这是开的状态</span>
-            <span slot="close">这是关的状态</span>
-        </Switcher>
-        <Switcher v-model="v" @on-change="change">
-            <Icon slot="open" iconname="unlock" />
-            <Icon slot="close" iconname="lock" />
-        </Switcher>
-        <p>
-            disabled
-            <Switcher v-model="v" disabled>
-                <span slot="open">on</span>
-                <span slot="close">off</span>
-            </Switcher>
-            <Switcher v-model="v" :disabled="false"></Switcher>
-        </p>
-        <p>
-            size
-            <Switcher v-model="v" size="large"></Switcher>
-            <Switcher v-model="v"></Switcher>
-            <Switcher v-model="v" size="small"></Switcher>
-        </p>
-    </div>
+    <ComponentExampleContainer
+        component-name="Switch 开关"
+        desc="在两种状态间切换时用到的开关选择器。"
+        :api-list="apiList"
+    >
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
+        />
+    </ComponentExampleContainer>
 </template>
 <script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+
+const SwitchApi = [
+    {
+        title: 'Switch props',
+        type: 'props',
+        data: [
+            {
+                prop: 'value',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '用于指定switch开关状态，v-model对应的prop'
+            },
+            {
+                prop: 'disabled',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否禁用switch'
+            },
+            {
+                prop: 'size',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: ['small', 'default', 'large'].join(' | '),
+                explain: '控制switch的大小'
+            }
+        ]
+    },
+    {
+        title: 'Switch events',
+        type: 'events',
+        data: [
+            {
+                name: 'on-change',
+                callbackParam: 'switch当前的开关状态',
+                explain: '当switch状态发生变化时的触发的事件'
+            }
+        ]
+    },
+    {
+        title: 'Switch slots',
+        type: 'slots',
+        data: [
+            {
+                name: 'open',
+                explain: '内嵌至switch打开状态时的内容插槽'
+            },
+            {
+                name: 'close',
+                explain: '内嵌至switch关闭状态时的内容插槽'
+            }
+        ]
+    }
+]
+
 export default {
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
     data() {
         return {
-            v: true
-        }
-    },
-    methods: {
-        change(val) {
-            console.log(val)
+            examples: [],
+            apiList: [...SwitchApi]
         }
     }
 }
 </script>
-<style lang="scss" scoped>
-div {
-    & .zov-switch {
-        margin: 15px;
-    }
-}
-</style>
