@@ -14,6 +14,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/slider/Base.vue?demo'
+import MinMax from '@/examples/slider/MInMax.vue?demo'
 
 const SliderApi = [
     {
@@ -123,7 +124,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, MinMax],
             apiList: [...SliderApi]
         }
     }
