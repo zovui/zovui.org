@@ -14,7 +14,8 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/slider/Base.vue?demo'
-import MinMax from '@/examples/slider/MInMax.vue?demo'
+import MinMax from '@/examples/slider/MinMax.vue?demo'
+import TooltipVisible from '@/examples/slider/TooltipVisible.vue?demo'
 
 const SliderApi = [
     {
@@ -124,7 +125,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, MinMax],
+            examples: [Base, MinMax, TooltipVisible],
             apiList: [...SliderApi]
         }
     }
