@@ -13,6 +13,7 @@
 </template>
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/switch/Base.vue?demo'
 
 const SwitchApi = [
     {
@@ -79,7 +80,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             apiList: [...SwitchApi]
         }
     }
