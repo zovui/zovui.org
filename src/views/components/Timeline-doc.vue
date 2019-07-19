@@ -16,6 +16,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/timeline/Base.vue?demo'
 import Pending from '@/examples/timeline/Pending.vue?demo'
+import Mode from '@/examples/timeline/Mode.vue?demo'
 
 const TimelineApi = [
     {
@@ -108,7 +109,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Pending],
+            examples: [Base, Pending, Mode],
             apiList: [...TimelineApi]
         }
     }
