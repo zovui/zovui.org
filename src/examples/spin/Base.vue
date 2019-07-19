@@ -13,7 +13,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .zov-spin {
     font-size: 12 * 3px;
     margin-right: 20px;
