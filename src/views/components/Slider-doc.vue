@@ -22,6 +22,7 @@ import Step from '@/examples/slider/Step.vue?demo'
 import Marks from '@/examples/slider/Marks.vue?demo'
 import MarksWithStep from '@/examples/slider/MarksWithStep.vue?demo'
 import MarksWithOnlyMarks from '@/examples/slider/MarksWithOnlyMarks.vue?demo'
+import Vertical from '@/examples/slider/Vertical.vue?demo'
 
 const SliderApi = [
     {
@@ -140,7 +141,8 @@ export default {
                 Step,
                 Marks,
                 MarksWithStep,
-                MarksWithOnlyMarks
+                MarksWithOnlyMarks,
+                Vertical
             ],
             apiList: [...SliderApi]
         }
