@@ -16,6 +16,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/slider/Base.vue?demo'
 import MinMax from '@/examples/slider/MinMax.vue?demo'
 import TooltipVisible from '@/examples/slider/TooltipVisible.vue?demo'
+import TipFormatter from '@/examples/slider/TipFormatter.vue?demo'
 
 const SliderApi = [
     {
@@ -125,7 +126,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, MinMax, TooltipVisible],
+            examples: [Base, MinMax, TooltipVisible, TipFormatter],
             apiList: [...SliderApi]
         }
     }
