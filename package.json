@@ -22,7 +22,7 @@
 		"v-click-outside-x": "^3.5.5",
 		"vue": "^2.6.6",
 		"vue-hljs": "^1.1.2",
-		"zov": "^0.7.0"
+		"zov": "^0.9.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^7.5.2",
@@ -65,13 +65,16 @@
 	},
 	"husky": {
 		"hooks": {
-      "pre-commit": "lint-staged",
+			"pre-commit": "lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
-  "lint-staged": {
-    "**/*.{js,vue,json}": ["prettier --write", "git add"]
-  },
+	"lint-staged": {
+		"**/*.{js,vue,json}": [
+			"prettier --write",
+			"git add"
+		]
+	},
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
