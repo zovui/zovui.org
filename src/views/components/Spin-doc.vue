@@ -14,6 +14,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/spin/Base.vue?demo'
+import Cover from '@/examples/spin/Cover.vue?demo'
 
 const SpinApi = [
     {
@@ -47,7 +48,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Cover],
             apiList: [...SpinApi]
         }
     }
