@@ -21,54 +21,80 @@ const TimelineApi = [
         type: 'props',
         data: [
             {
-                prop: 'separator',
+                prop: 'mode',
                 type: 'string',
                 required: 'false',
-                default: '/',
-                values: '-',
-                explain: '导航分隔符'
+                default: 'left',
+                values: [
+                    'left',
+                    'right',
+                    'alternate-left',
+                    'alternate-right'
+                ].join(' | '),
+                explain: '展现模式'
             },
             {
-                prop: 'target',
-                type: 'string',
+                prop: 'pending',
+                type: 'boolean',
                 required: 'false',
-                default: '_self',
+                default: 'false',
                 values: '-',
-                explain: 'a链接的target属性值'
+                explain: '是否处于pending状态'
             }
         ]
     },
     {
         title: 'Timeline slots',
         type: 'slots',
-        data: []
+        data: [
+            {
+                name: 'default',
+                explain: 'TimelineItem存放处'
+            },
+            {
+                name: 'ghost-dot',
+                explain: '自定义pending状态时幽灵节点的图标'
+            },
+            {
+                name: 'ghost-content',
+                explain: '自定义pending状态时幽灵节点的内容'
+            }
+        ]
     },
     {
         title: 'TimelineItem props',
         type: 'props',
         data: [
             {
-                prop: 'separator',
+                prop: 'color',
                 type: 'string',
                 required: 'false',
-                default: '/',
-                values: '-',
-                explain: '导航分隔符'
-            },
-            {
-                prop: 'target',
-                type: 'string',
-                required: 'false',
-                default: '_self',
-                values: '-',
-                explain: 'a链接的target属性值'
+                default: 'primary',
+                values: [
+                    'primary',
+                    'info',
+                    'success',
+                    'warning',
+                    'error',
+                    '其他合法的css色值字符串'
+                ].join(' | '),
+                explain: 'dot的边框颜色'
             }
         ]
     },
     {
         title: 'TimelineItem slots',
         type: 'slots',
-        data: []
+        data: [
+            {
+                name: 'default',
+                explain: 'TimelineItem内容'
+            },
+            {
+                name: 'ghost-dot',
+                explain: '自定义节点的图标'
+            }
+        ]
     }
 ]
 
@@ -81,7 +107,7 @@ export default {
     data() {
         return {
             examples: [],
-            apiList: []
+            apiList: [...TimelineApi]
         }
     }
 }
