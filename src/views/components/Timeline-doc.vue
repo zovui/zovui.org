@@ -18,6 +18,7 @@ import Base from '@/examples/timeline/Base.vue?demo'
 import Pending from '@/examples/timeline/Pending.vue?demo'
 import Mode from '@/examples/timeline/Mode.vue?demo'
 import Reverse from '@/examples/timeline/Reverse.vue?demo'
+import DotColor from '@/examples/timeline/DotColor.vue?demo'
 
 const TimelineApi = [
     {
@@ -110,7 +111,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Pending, Mode, Reverse],
+            examples: [Base, Pending, Mode, Reverse, DotColor],
             apiList: [...TimelineApi]
         }
     }
