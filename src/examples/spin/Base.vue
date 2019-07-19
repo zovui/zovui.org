@@ -2,6 +2,10 @@
     基础使用
 </title>
 
+<desc>
+    可以指定spinname属性，切换Spin的样式
+</desc>
+
 <template>
     <div>
         <Spin />
