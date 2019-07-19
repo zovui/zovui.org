@@ -1,7 +1,7 @@
 <title>基础使用</title>
 
 <template>
-    <Page />
+    <Page :total="100" />
 </template>
 
 <script>
