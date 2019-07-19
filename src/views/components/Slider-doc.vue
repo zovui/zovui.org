@@ -19,6 +19,7 @@ import TooltipVisible from '@/examples/slider/TooltipVisible.vue?demo'
 import TipFormatter from '@/examples/slider/TipFormatter.vue?demo'
 import Range from '@/examples/slider/Range.vue?demo'
 import Step from '@/examples/slider/Step.vue?demo'
+import Marks from '@/examples/slider/Marks.vue?demo'
 
 const SliderApi = [
     {
@@ -128,7 +129,15 @@ export default {
     },
     data() {
         return {
-            examples: [Base, MinMax, TooltipVisible, TipFormatter, Range, Step],
+            examples: [
+                Base,
+                MinMax,
+                TooltipVisible,
+                TipFormatter,
+                Range,
+                Step,
+                Marks
+            ],
             apiList: [...SliderApi]
         }
     }
