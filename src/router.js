@@ -58,7 +58,6 @@ let router = new Router(routerObject)
 router.beforeEach((to, from, next) => {
     Zov.LoadingBar.start()
     document.title = to.name || to.path.substr(1)
-    console.log('to', to)
     next()
 })
 router.afterEach((to, from, next) => {
