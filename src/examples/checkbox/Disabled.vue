@@ -5,6 +5,11 @@
 <template>
     <article>
         <section>
+            <h3>禁用单个选项</h3>
+            <Checkbox :indeterminate="true" disabled>A</Checkbox>
+        </section>
+        <section>
+            <h3>禁用部分选项</h3>
             <CheckboxGroup v-model="list">
                 <Checkbox label="A"></Checkbox>
                 <Checkbox label="B" disabled></Checkbox>
@@ -12,7 +17,12 @@
             </CheckboxGroup>
         </section>
         <section>
-            <Checkbox :indeterminate="true" disabled>A</Checkbox>
+            <h3>禁用全部选项</h3>
+            <CheckboxGroup v-model="list" disabled>
+                <Checkbox label="A"></Checkbox>
+                <Checkbox label="B"></Checkbox>
+                <Checkbox label="C"></Checkbox>
+            </CheckboxGroup>
         </section>
     </article>
 </template>
