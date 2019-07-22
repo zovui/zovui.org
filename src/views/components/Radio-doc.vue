@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/radio/Base.vue?demo'
 import Name from '@/examples/radio/Name.vue?demo'
 import WithRadioGroup from '@/examples/radio/WithRadioGroup.vue?demo'
+import Border from '@/examples/radio/Border.vue?demo'
 
 const RadioApi = [
     {
@@ -137,7 +138,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Name, WithRadioGroup],
+            examples: [Base, Name, WithRadioGroup, Border],
             apiList: [...RadioApi, ...RadioGroupApi]
         }
     }
