@@ -52,11 +52,13 @@ $logo-animate-duration: 1s;
     .logo-line {
         position: absolute;
         border-radius: ($logo-line-height / 2);
-        width: $logo-line-width;
+        width: $logo-line-height;
         height: $logo-line-height;
         animation-name: logo-line-in;
         animation-duration: $logo-animate-duration;
+        animation-delay: 0.3s;
         animation-timing-function: $logo-cubic-bezier;
+        animation-fill-mode: forwards;
         &-orange {
             top: 0;
             left: 0;
