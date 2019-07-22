@@ -14,6 +14,7 @@
 
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/checkbox/Base.vue?demo'
 
 const CheckboxApi = [
     {
@@ -118,7 +119,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             apiList: [...CheckboxApi, ...CheckboxGroupApi]
         }
     }
