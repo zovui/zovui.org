@@ -20,6 +20,7 @@ import WithRadioGroup from '@/examples/radio/WithRadioGroup.vue?demo'
 import Border from '@/examples/radio/Border.vue?demo'
 import Connected from '@/examples/radio/Connected.vue?demo'
 import Disabled from '@/examples/radio/Disabled.vue?demo'
+import Size from '@/examples/radio/Size.vue?demo'
 
 const RadioApi = [
     {
@@ -140,7 +141,15 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Name, WithRadioGroup, Border, Connected, Disabled],
+            examples: [
+                Base,
+                Name,
+                WithRadioGroup,
+                Border,
+                Connected,
+                Disabled,
+                Size
+            ],
             apiList: [...RadioApi, ...RadioGroupApi]
         }
     }
