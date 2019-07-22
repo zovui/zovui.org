@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/radio/Base.vue?demo'
+import Name from '@/examples/radio/Name.vue?demo'
 
 const RadioApi = [
     {
@@ -135,7 +136,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Name],
             apiList: [...RadioApi, ...RadioGroupApi]
         }
     }
