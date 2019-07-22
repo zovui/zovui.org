@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Zov from 'zov'
-import Home from './Home'
+import Home from './pages/home'
 import Menu from './Menu'
 Vue.use(Router)
 let routerObject = {
