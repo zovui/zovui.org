@@ -11,10 +11,10 @@
 
 <style lang="scss" scoped>
 $logo-line-width: 142px * 1.2;
-$logo-line-height: 32px * 1.2;
+$logo-line-height: 32px * 1.4;
 $cos54: 0.59;
 $sin54: 0.81;
-$logo-dot-offset: -108px + ($logo-line-height / 2);
+$logo-dot-offset: -110px + ($logo-line-height / 2);
 $logo-cubic-bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
 $logo-animate-duration: 1s;
 
@@ -29,7 +29,7 @@ $logo-animate-duration: 1s;
         border-radius: 50%;
         width: $logo-line-height;
         height: $logo-line-height;
-        background: rgb(223, 73, 78);
+        background: rgba(223, 73, 78, 0.9);
         transform-origin: center center;
         transform: translate3d($logo-dot-offset, 0, 0);
         animation-name: logo-dot-in;
@@ -62,7 +62,7 @@ $logo-animate-duration: 1s;
         &-orange {
             top: 0;
             left: 0;
-            background: rgb(224, 127, 61);
+            background: rgba(224, 127, 61, 0.9);
             transform-origin: ($logo-line-width - ($logo-line-height / 2))
                 ($logo-line-height / 2);
             transform: translateX(-1 * ($logo-line-width - $logo-line-height))
@@ -71,12 +71,12 @@ $logo-animate-duration: 1s;
         &-green {
             top: 0;
             left: 0;
-            background: rgb(94, 188, 58);
+            background: rgba(94, 188, 58, 0.9);
         }
         &-blue {
             top: 0;
             left: 0;
-            background: rgb(80, 132, 206);
+            background: rgba(80, 132, 206, 0.9);
             transform-origin: ($logo-line-width - ($logo-line-height / 2))
                 ($logo-line-height / 2);
             transform: rotate(90deg - 15deg);
