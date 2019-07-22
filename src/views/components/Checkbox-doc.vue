@@ -18,6 +18,7 @@ import Base from '@/examples/checkbox/Base.vue?demo'
 import WithCheckboxGroup from '@/examples/checkbox/WithCheckboxGroup.vue?demo'
 import Disabled from '@/examples/checkbox/Disabled.vue?demo'
 import Chain from '@/examples/checkbox/Chain.vue?demo'
+import Vertical from '@/examples/checkbox/Vertical.vue?demo'
 
 const CheckboxApi = [
     {
@@ -122,7 +123,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, WithCheckboxGroup, Disabled, Chain],
+            examples: [Base, WithCheckboxGroup, Disabled, Chain, Vertical],
             apiList: [...CheckboxApi, ...CheckboxGroupApi]
         }
     }
