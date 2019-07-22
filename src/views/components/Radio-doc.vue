@@ -21,6 +21,7 @@ import Border from '@/examples/radio/Border.vue?demo'
 import Connected from '@/examples/radio/Connected.vue?demo'
 import Disabled from '@/examples/radio/Disabled.vue?demo'
 import Size from '@/examples/radio/Size.vue?demo'
+import Vertical from '@/examples/radio/Vertical.vue?demo'
 
 const RadioApi = [
     {
@@ -148,7 +149,8 @@ export default {
                 Border,
                 Connected,
                 Disabled,
-                Size
+                Size,
+                Vertical
             ],
             apiList: [...RadioApi, ...RadioGroupApi]
         }
