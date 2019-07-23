@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/select/Base.vue?demo'
 import Filterable from '@/examples/select/Filterable.vue?demo'
 import Disabled from '@/examples/select/Disabled.vue?demo'
+import Multiple from '@/examples/select/Multiple.vue?demo'
 
 const SelectApi = [
     {
@@ -155,7 +156,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Filterable, Disabled],
+            examples: [Base, Filterable, Disabled, Multiple],
             apiList: [...SelectApi]
         }
     }
