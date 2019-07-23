@@ -19,6 +19,7 @@ import Disabled from '@/examples/input/Disabled.vue?demo'
 import Readonly from '@/examples/input/Readonly.vue?demo'
 import Decoration from '@/examples/input/Decoration.vue?demo'
 import Clearable from '@/examples/input/Clearable.vue?demo'
+import EnhancedPassword from '@/examples/input/EnhancedPassword.vue?demo'
 
 const InputApi = [
     {
@@ -142,7 +143,14 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Readonly, Decoration, Clearable],
+            examples: [
+                Base,
+                Disabled,
+                Readonly,
+                Decoration,
+                Clearable,
+                EnhancedPassword
+            ],
             apiList: [...InputApi]
         }
     }
