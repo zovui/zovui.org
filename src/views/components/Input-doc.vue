@@ -20,7 +20,7 @@ import Readonly from '@/examples/input/Readonly.vue?demo'
 import Decoration from '@/examples/input/Decoration.vue?demo'
 import Clearable from '@/examples/input/Clearable.vue?demo'
 import EnhancedPassword from '@/examples/input/EnhancedPassword.vue?demo'
-
+import Size from '@/examples/input/Size.vue?demo'
 const InputApi = [
     {
         title: 'Input props',
@@ -149,7 +149,8 @@ export default {
                 Readonly,
                 Decoration,
                 Clearable,
-                EnhancedPassword
+                EnhancedPassword,
+                Size
             ],
             apiList: [...InputApi]
         }
