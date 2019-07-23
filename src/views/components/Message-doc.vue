@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/message/Base.vue?demo'
 import Render from '@/examples/message/Render.vue?demo'
 import Closable from '@/examples/message/Closable.vue?demo'
+import AlwaysShow from '@/examples/message/AlwaysShow.vue?demo'
 
 const apiList = [
     {
@@ -83,7 +84,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Render, Closable],
+            examples: [Base, Render, Closable, AlwaysShow],
             apiList
         }
     }
