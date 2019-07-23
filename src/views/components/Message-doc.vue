@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/message/Base.vue?demo'
+import Render from '@/examples/message/Render.vue?demo'
 
 const apiList = [
     {
@@ -81,7 +82,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Render],
             apiList
         }
     }
