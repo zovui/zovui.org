@@ -16,6 +16,8 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/input/Base.vue?demo'
 import Disabled from '@/examples/input/Disabled.vue?demo'
+import Readonly from '@/examples/input/Readonly.vue?demo'
+
 const InputApi = [
     {
         title: 'Input props',
@@ -138,7 +140,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled],
+            examples: [Base, Disabled, Readonly],
             apiList: [...InputApi]
         }
     }
