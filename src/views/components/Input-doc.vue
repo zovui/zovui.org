@@ -18,6 +18,8 @@ import Base from '@/examples/input/Base.vue?demo'
 import Disabled from '@/examples/input/Disabled.vue?demo'
 import Readonly from '@/examples/input/Readonly.vue?demo'
 import Decoration from '@/examples/input/Decoration.vue?demo'
+import Clearable from '@/examples/input/Clearable.vue?demo'
+
 const InputApi = [
     {
         title: 'Input props',
@@ -140,7 +142,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Readonly, Decoration],
+            examples: [Base, Disabled, Readonly, Decoration, Clearable],
             apiList: [...InputApi]
         }
     }
