@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .home-desc {
-    font-size: 32px;
+    font-size: 56px;
     font-weight: bold;
     text-align: center;
     visibility: hidden;

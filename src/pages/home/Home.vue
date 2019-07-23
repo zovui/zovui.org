@@ -1,21 +1,24 @@
 <template>
-    <article>
-        <div id="home">
-            <div class="home-mid">
-                <Logo class="home-section" />
-                <Description class="home-section" />
-                <Actions class="home-section" />
-            </div>
+    <div id="home">
+        <Shape />
+        <div class="home-mid">
+            <Logo class="home-section" />
+            <Description class="home-section" />
+            <Actions class="home-section" />
         </div>
-    </article>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 #home {
+    min-width: 1200px;
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
     .home-section {
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
     }
     .home-mid {
@@ -31,13 +34,15 @@
 import Logo from './Logo'
 import Actions from './Actions'
 import Description from './Description'
+import Shape from './Shape'
 
 export default {
     name: 'Home',
     components: {
         Logo,
         Actions,
-        Description
+        Description,
+        Shape
     }
 }
 </script>
