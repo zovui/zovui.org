@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/select/Base.vue?demo'
+import Filterable from '@/examples/select/Filterable.vue?demo'
 
 const SelectApi = [
     {
@@ -153,7 +154,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Filterable],
             apiList: [...SelectApi]
         }
     }
