@@ -17,7 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/input/Base.vue?demo'
 import Disabled from '@/examples/input/Disabled.vue?demo'
 import Readonly from '@/examples/input/Readonly.vue?demo'
-
+import Decoration from '@/examples/input/Decoration.vue?demo'
 const InputApi = [
     {
         title: 'Input props',
@@ -93,7 +93,7 @@ const InputApi = [
                 required: 'false',
                 default: "''",
                 values: '-',
-                explain: '输入框的前缀修饰'
+                explain: '输入框的前缀修饰iconname'
             },
             {
                 prop: 'suffix',
@@ -101,7 +101,7 @@ const InputApi = [
                 required: 'false',
                 default: "''",
                 values: '-',
-                explain: '输入框的后缀修饰'
+                explain: '输入框的后缀修饰iconname'
             }
         ]
     },
@@ -140,7 +140,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Readonly],
+            examples: [Base, Disabled, Readonly, Decoration],
             apiList: [...InputApi]
         }
     }
