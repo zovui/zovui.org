@@ -14,6 +14,7 @@
 
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/input/Base.vue?demo'
 
 const InputApi = [
     {
@@ -37,6 +38,30 @@ const InputApi = [
                 explain: '指定输入框的类型'
             },
             {
+                prop: 'disabled',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否禁用输入框'
+            },
+            {
+                prop: 'readonly',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '输入框是否只读'
+            },
+            {
+                prop: 'placeholder',
+                type: 'string',
+                required: 'false',
+                default: "''",
+                values: '-',
+                explain: '占位文字'
+            },
+            {
                 prop: 'clearable',
                 type: 'boolean',
                 required: 'false',
@@ -51,6 +76,14 @@ const InputApi = [
                 default: 'false',
                 values: '-',
                 explain: '当输入框类型为password时，是否启用可见密码的交互'
+            },
+            {
+                prop: 'size',
+                type: 'string',
+                required: 'false',
+                default: 'default',
+                values: ['small', 'default', 'large'].join(' | '),
+                explain: '选择不同大小的输入框'
             },
             {
                 prop: 'prefix',
@@ -105,7 +138,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             apiList: [...InputApi]
         }
     }
