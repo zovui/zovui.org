@@ -15,7 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/input/Base.vue?demo'
-
+import Disabled from '@/examples/input/Disabled.vue?demo'
 const InputApi = [
     {
         title: 'Input props',
@@ -138,7 +138,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Disabled],
             apiList: [...InputApi]
         }
     }
