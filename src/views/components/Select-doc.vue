@@ -1,9 +1,12 @@
 <template>
     <ComponentExampleContainer
-        component-name="Checkbox"
-        desc="多选框；主要用于一组可选项多项选择，或者单独用于标记切换某种状态。"
+        component-name="Select 选择器"
         :apiList="apiList"
     >
+        <template #desc>
+            使用模拟的增强下拉选择器来代替浏览器原生的选择器。<br />
+            选择器支持单选、多选、搜索操作。
+        </template>
         <ComponentExample
             v-for="example of examples"
             :example="example"
@@ -18,6 +21,7 @@ import Base from '@/examples/select/Base.vue?demo'
 import Filterable from '@/examples/select/Filterable.vue?demo'
 import Disabled from '@/examples/select/Disabled.vue?demo'
 import Multiple from '@/examples/select/Multiple.vue?demo'
+import Group from '@/examples/select/Group.vue?demo'
 
 const SelectApi = [
     {
@@ -156,7 +160,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Filterable, Disabled, Multiple],
+            examples: [Base, Filterable, Disabled, Multiple, Group],
             apiList: [...SelectApi]
         }
     }
