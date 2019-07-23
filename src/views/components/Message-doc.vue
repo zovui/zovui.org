@@ -16,6 +16,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/message/Base.vue?demo'
 import Render from '@/examples/message/Render.vue?demo'
+import Closable from '@/examples/message/Closable.vue?demo'
 
 const apiList = [
     {
@@ -82,7 +83,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Render],
+            examples: [Base, Render, Closable],
             apiList
         }
     }
