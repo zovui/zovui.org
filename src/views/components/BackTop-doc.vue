@@ -14,6 +14,7 @@
 
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/back-top/Base.vue?demo'
 
 const apiList = [
     {
@@ -75,7 +76,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             apiList
         }
     }
