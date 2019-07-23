@@ -1,103 +1,91 @@
 <template>
-    <div style="text-align: center">
-        <p>
-            全配置项
-            <Button @click="test">open</Button>
-        </p>
-        <p>
-            无配置
-            <Button @click="$Message.open()">open</Button> |
-            <Button looks="info" @click="$Message.info()">info</Button> |
-            <Button looks="success" @click="$Message.success()">success</Button>
-            | <Button looks="error" @click="$Message.error()">error</Button> |
-            <Button looks="warning" @click="$Message.warning()">waring</Button>
-        </p>
-        <p>
-            灵活配置
-            <Button
-                @click="
-                    $Message.open({
-                        title: '提示',
-                        text: '您打开了一条 普通 的notice消息！'
-                    })
-                "
-                >open</Button
-            >
-            |
-            <Button
-                looks="info"
-                @click="
-                    $Message.info({
-                        title: '提示',
-                        text: '您打开了一条 info 的notice消息！不自动关闭',
-                        duration: 0
-                    })
-                "
-                >info</Button
-            >
-            |
-            <Button
-                looks="success"
-                @click="
-                    $Message.success({
-                        text:
-                            '您打开了一条 success 的notice消息！10s，没有关闭按钮',
-                        duration: 10000,
-                        closable: false
-                    })
-                "
-                >success</Button
-            >
-            |
-            <Button
-                looks="error"
-                @click="
-                    $Message.error({
-                        text: '您打开了一条 error 的notice消息！不自动关闭',
-                        duration: 0
-                    })
-                "
-                >error</Button
-            >
-            |
-            <Button
-                looks="warning"
-                @click="
-                    $Message.warning({
-                        text: '您打开了一条 waring 的notice消息！不自动关闭',
-                        duration: 0
-                    })
-                "
-                >waring</Button
-            >
-        </p>
-    </div>
+    <ComponentExampleContainer
+        component-name="Message 全局消息"
+        desc="轻量级的信息反馈组件，在顶部居中显示，并自动消失。有多种不同的提示状态可选择。"
+        :apiList="apiList"
+    >
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
+        />
+    </ComponentExampleContainer>
 </template>
+
 <script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/message/Base.vue?demo'
+import Render from '@/examples/message/Render.vue?demo'
+import Closable from '@/examples/message/Closable.vue?demo'
+import AlwaysShow from '@/examples/message/AlwaysShow.vue?demo'
+
+const apiList = [
+    {
+        title: 'Message 参数',
+        type: 'props',
+        data: [
+            {
+                prop: 'title',
+                type: 'string',
+                required: 'false',
+                default: '消息',
+                values: '-',
+                explain: '标题'
+            },
+            {
+                prop: 'text',
+                type: 'string',
+                required: 'false',
+                default: "''",
+                values: '-',
+                explain: '内容'
+            },
+            {
+                prop: 'duration',
+                type: 'number',
+                required: 'false',
+                default: '3000ms',
+                values: '-',
+                explain: '消息停留时间，设为0则一直停留'
+            },
+            {
+                prop: 'onClose',
+                type: 'Function',
+                required: 'false',
+                default: '-',
+                values: '-',
+                explain: '消息消失时的回调函数'
+            },
+            {
+                prop: 'render',
+                type: 'Function',
+                required: 'false',
+                default: '-',
+                values: '-',
+                explain: '返回vnode来渲染消息内容'
+            },
+            {
+                prop: 'closable',
+                type: 'boolean',
+                required: 'false',
+                default: 'true',
+                values: '-',
+                explain: '是否显示关闭按钮'
+            }
+        ]
+    }
+]
+
 export default {
-    methods: {
-        test() {
-            this.$Message.open({
-                // 标题
-                title: 'test info标题',
-                // 说明
-                text: 'test info文案info文案info文案info文案info文案',
-                // 停留时间，为 0 时则长久停留
-                duration: Math.random() * 10000,
-                // 关闭的回调
-                onClose: function() {
-                    console.log('close')
-                },
-                // 自定义描述
-                render: h => {
-                    return h('div', [
-                        '这是render出来的',
-                        h('div', ['1', h('br'), '2'])
-                    ])
-                },
-                // 是否提供关闭按钮 默认true
-                closable: true
-            })
+    name: 'Message-doc',
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
+    data() {
+        return {
+            examples: [Base, Render, Closable, AlwaysShow],
+            apiList
         }
     }
 }
