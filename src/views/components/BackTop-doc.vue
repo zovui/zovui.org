@@ -56,6 +56,16 @@ const apiList = [
         ]
     },
     {
+        title: 'BackTop slots',
+        type: 'slots',
+        data: [
+            {
+                name: 'default',
+                explain: '可自定义back-top按钮的内容'
+            }
+        ]
+    },
+    {
         title: 'BackTop events',
         type: 'events',
         data: [
