@@ -18,6 +18,7 @@ import Base from '@/examples/color-picker/Base.vue?demo'
 import Disabled from '@/examples/color-picker/Disabled.vue?demo'
 import Format from '@/examples/color-picker/Format.vue?demo'
 import RecommendColor from '@/examples/color-picker/RecommendColor.vue?demo'
+import Size from '@/examples/color-picker/Size.vue?demo'
 
 const ColorPickerApi = [
     {
@@ -146,7 +147,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Format, RecommendColor],
+            examples: [Base, Disabled, Format, RecommendColor, Size],
             apiList: [...ColorPickerApi]
         }
     }
