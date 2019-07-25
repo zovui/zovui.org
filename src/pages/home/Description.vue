@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .home-desc {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: bold;
     text-align: center;
     visibility: hidden;
@@ -15,6 +15,7 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
+    color: rgba(0, 0, 0, 0.4);
 }
 @keyframes home-desc-in {
     0% {

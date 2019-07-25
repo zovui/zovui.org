@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <Shape />
+        <Background />
         <div class="home-mid">
             <Logo class="home-section" />
             <Description class="home-section" />
@@ -25,7 +25,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -70%);
+        transform: translate(-50%, -50%);
     }
 }
 </style>
@@ -34,7 +34,7 @@
 import Logo from './Logo'
 import Actions from './Actions'
 import Description from './Description'
-import Shape from './Shape'
+import Background from './Background'
 
 export default {
     name: 'Home',
@@ -42,7 +42,7 @@ export default {
         Logo,
         Actions,
         Description,
-        Shape
+        Background
     }
 }
 </script>
