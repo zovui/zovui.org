@@ -12,6 +12,11 @@
 <style lang="scss" scoped>
 .background-symbol {
     position: absolute;
+    transition: 0.3s transform ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
+    }
     .background-symbol-svg {
         width: 100px;
         height: 100px;
