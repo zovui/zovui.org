@@ -14,8 +14,9 @@
     position: absolute;
     transition: 0.3s transform ease;
     cursor: pointer;
+    transform: scale(0.5);
     &:hover {
-        transform: scale(1.2);
+        transform: scale(0.8);
     }
     .background-symbol-svg {
         width: 100px;
