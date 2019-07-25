@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/color-picker/Base.vue?demo'
+import Disabled from '@/examples/color-picker/Disabled.vue?demo'
 
 const ColorPickerApi = [
     {
@@ -143,7 +144,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Disabled],
             apiList: [...ColorPickerApi]
         }
     }
