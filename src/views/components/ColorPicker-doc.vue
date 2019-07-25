@@ -1,100 +1,150 @@
 <template>
-    <div class="box">
-        <p style="margin-bottom: 30px">
-            size
-            <Button size="large" @click="size = 'large'">large</Button>
-            <Button @click="size = 'default'">default</Button>
-            <Button size="small" @click="size = 'small'">small</Button>
-            <Button @click="disabled = !disabled"> disabled </Button>
-        </p>
-        <ColorPicker
-            autofocus
-            :no-arrow="false"
-            :size="size"
-            :disabled="disabled"
-            v-model="c"
-            recommend
-            @on-open-change="open"
-            @on-change="change"
-            @on-active-change="active"
+    <ComponentExampleContainer
+        component-name="ColorPicker 颜色选择器"
+        desc="用于颜色选择，支持多种颜色格式，支持颜色预设。"
+        :apiList="apiList"
+    >
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
         />
-        <ColorPicker
-            :size="size"
-            :disabled="disabled"
-            v-model="c1"
-            format="hsv"
-            recommend
-            :colors="['red', 'green', '#ccc', 'rgba(12,211,12,0.2)']"
-        />
-        <ColorPicker
-            :size="size"
-            :disabled="disabled"
-            v-model="c2"
-            format="hsl"
-        />
-        <ColorPicker
-            :size="size"
-            :disabled="disabled"
-            v-model="c3"
-            format="hex"
-        />
-        <div
-            style="border: 3px dashed; text-align: left; margin: 15px;padding: 15px"
-        >
-            <h3>参数</h3>
-            <p>@v-model 必传，String && ColorString，组件输出的值</p>
-            <p>@no-arrow 非必传，Boolean，drop容器的尖角，默认:true</p>
-            <p>@autofocus 非必传，Boolean，自动获取焦点，默认:false</p>
-            <p>@disabled 非必传，Boolean，disabled，默认:false</p>
-            <p>@format 非必传，String，组件输出值得格式，默认: rgb</p>
-            <p>@recommend 非必传，Boolean，是否显示推荐色，默认: false</p>
-            <p>@colors 非必传，Array，推荐的颜色，默认[...]</p>
-            <p>@size 非必传，String，form元素的size，默认:'default</p>
-            <h3>回调事件</h3>
-            <p>@on-open-change 组件drop呼出、收起的回调，形参：Boolean</p>
-            <p>
-                @on-change 组件值发生变化后的回调，形参为<a
-                    href="https://www.npmjs.com/package/tinycolor2"
-                    >tinycolor</a
-                >对象
-            </p>
-            <p>
-                @on-active-change
-                面板中当前显示的颜色发生改变时触发的回调，形参：形参为<a
-                    href="https://www.npmjs.com/package/tinycolor2"
-                    >tinycolor</a
-                >对象
-            </p>
-        </div>
-    </div>
+    </ComponentExampleContainer>
 </template>
+
 <script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+
+const ColorPickerApi = [
+    {
+        title: 'ColorPicker props',
+        type: 'props',
+        data: [
+            {
+                prop: 'value',
+                type: 'string',
+                required: 'true',
+                default: "''",
+                values: '-',
+                explain: '当前颜色的值，可用v-model'
+            },
+            {
+                prop: 'disabled',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否禁用'
+            },
+            {
+                prop: 'format',
+                type: 'string',
+                required: 'false',
+                default: 'rgb',
+                values: ['hsl', 'hsv', 'hex', 'rgb'].join(' | '),
+                explain: '组件输出值的格式'
+            },
+            {
+                prop: 'recommend',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否显示推荐色'
+            },
+            {
+                prop: 'colors',
+                type: 'Array',
+                required: 'false',
+                default: [
+                    '#2d8cf0',
+                    '#19be6b',
+                    '#ff9900',
+                    '#ed3f14',
+                    '#00b5ff',
+                    '#19c919',
+                    '#f9e31c',
+                    '#ea1a1a',
+                    '#9b1dea',
+                    '#00c2b1',
+                    '#ac7a33',
+                    '#1d35ea',
+                    '#8bc34a',
+                    '#f16b62',
+                    '#ea4ca3',
+                    '#0d94aa',
+                    '#febd79',
+                    '#5d4037',
+                    '#00bcd4',
+                    '#f06292',
+                    '#cddc39',
+                    '#607d8b',
+                    '#000000',
+                    '#ffffff'
+                ],
+                values: '-',
+                explain: '推荐的颜色'
+            },
+            {
+                prop: 'size',
+                type: 'string',
+                required: 'false',
+                default: 'default',
+                values: ['small', 'default', 'large'].join(' | '),
+                explain: '组件尺寸'
+            },
+            {
+                prop: 'autofocus',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否自动获取焦点'
+            },
+            {
+                prop: 'no-arrow',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否显示drop容器的尖角'
+            }
+        ]
+    },
+    {
+        title: 'ColorPicker events',
+        type: 'events',
+        data: [
+            {
+                event: 'on-change',
+                callbackParam: 'tinycolor对象',
+                explain: '组件值发生变化后的回调，形参为tinycolor对象'
+            },
+            {
+                event: 'on-open-change',
+                callbackParam: '是否收起',
+                explain: '组件drop呼出、收起的回调'
+            },
+            {
+                event: 'on-active-change',
+                callbackParam: 'tinycolor对象',
+                explain: '面板中当前显示的颜色发生改变时触发的回调'
+            }
+        ]
+    }
+]
+
 export default {
+    name: 'Checkbox-doc',
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
     data() {
         return {
-            size: 'default',
-            disabled: false,
-            c: 'rgba(23, 11, 123, 1)',
-            c1: 'red',
-            c2: 'green',
-            c3: '#fff'
-        }
-    },
-    methods: {
-        open(b) {
-            console.log(b)
-        },
-        change(c) {
-            console.log(c)
-        },
-        active(c) {
-            console.log(c)
+            examples: [],
+            apiList: [...ColorPickerApi]
         }
     }
 }
 </script>
-<style lang="scss" scoped>
-.box > div {
-    margin: 5px;
-}
-</style>
