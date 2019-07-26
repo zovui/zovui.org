@@ -10,12 +10,12 @@
 </template>
 
 <style lang="scss" scoped>
-$logo-scale: 1.5;
+$logo-scale: 1.4;
 $logo-line-width: 142px * $logo-scale;
 $logo-line-height: 32px * $logo-scale * 1.2;
 $cos54: 0.59;
 $sin54: 0.81;
-$logo-dot-offset: -90px * $logo-scale + ($logo-line-height / 2);
+$logo-dot-offset: -92px * $logo-scale + ($logo-line-height / 2);
 $logo-cubic-bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
 $logo-animate-duration: 1s;
 
