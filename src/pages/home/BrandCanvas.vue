@@ -45,9 +45,7 @@
 .brand-canvas {
     width: 100px * 4 + 15px * 5;
     height: 50px * 2 + 15px * 2;
-    position: absolute;
-    top: 30px;
-    left: 30px;
+    position: relative;
 }
 .brand-svg-defs {
     display: none;

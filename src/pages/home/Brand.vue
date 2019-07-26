@@ -1,9 +1,9 @@
 <template>
     <BrandCanvas>
-        <BrandSymbol symbol="L" color="red" left="15px" top="15px" />
-        <BrandSymbol symbol="O" color="orange" left="80px" top="15px" />
-        <BrandSymbol symbol="C" color="blue" left="145px" top="15px" />
-        <BrandSymbol symbol="O" color="green" left="210px" top="15px" />
+        <BrandSymbol symbol="L" color="red" left="15px" top="0" />
+        <BrandSymbol symbol="O" color="orange" left="80px" top="0px" />
+        <BrandSymbol symbol="C" color="blue" left="145px" top="0px" />
+        <BrandSymbol symbol="O" color="green" left="210px" top="0px" />
     </BrandCanvas>
 </template>
 
@@ -35,7 +35,7 @@ import BrandCanvas from './BrandCanvas'
 import BrandSymbol from './BrandSymbol'
 
 export default {
-    name: 'Background',
+    name: 'Brand',
     components: {
         BrandCanvas,
         BrandSymbol

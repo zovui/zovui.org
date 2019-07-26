@@ -1,6 +1,10 @@
 <template>
     <div id="home">
-        <Brand />
+        <Header>
+            <template #left>
+                <Brand />
+            </template>
+        </Header>
         <div class="home-mid">
             <Logo class="home-section" />
             <Description class="home-section" />
@@ -35,6 +39,7 @@ import Logo from './Logo'
 import Actions from './Actions'
 import Description from './Description'
 import Brand from './Brand'
+import Header from './Header'
 
 export default {
     name: 'Home',
@@ -42,7 +47,8 @@ export default {
         Logo,
         Actions,
         Description,
-        Brand
+        Brand,
+        Header
     }
 }
 </script>
