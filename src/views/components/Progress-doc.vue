@@ -14,8 +14,9 @@
 
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Base from '@/examples/progress/Base.vue?demo'
 
-const CheckboxApi = [
+const ProgressApi = [
     {
         title: 'Progress props',
         type: 'props',
@@ -98,8 +99,8 @@ export default {
     },
     data() {
         return {
-            examples: [],
-            apiList: [...CheckboxApi]
+            examples: [Base],
+            apiList: [...ProgressApi]
         }
     }
 }
