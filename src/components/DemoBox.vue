@@ -25,12 +25,8 @@
                 </a>
             </div>
         </div>
-        <div class="example-code">
-            <div v-highlight ref="code">
-                <pre
-                    class="bg"
-                ><code class="xml" v-text="demoCode"></code></pre>
-            </div>
+        <div class="example-code" ref="code">
+            <pre v-highlight><code class="xml" v-text="demoCode"></code></pre>
         </div>
         <div class="show-all-code" v-if="showIconTip" @click="showAllCode">
             <Icon iconname="arrow-down" />
@@ -118,6 +114,12 @@ export default {
         box-sizing: border-box;
         border-left: 1px solid #ddd;
         flex: 0 0 50%;
+        pre {
+            margin: 0;
+        }
+        .hljs {
+            padding: 15px;
+        }
     }
     .show-all-code {
         position: absolute;
