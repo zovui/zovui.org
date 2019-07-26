@@ -6,6 +6,7 @@
             </template>
             <template #right>
                 <Button
+                    class="home-nav-button"
                     looks="primary"
                     size="large"
                     shape="circle"
@@ -54,6 +55,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .home-nav-button {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
     }
 }
 </style>
