@@ -16,6 +16,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/progress/Base.vue?demo'
 import StrokeWidth from '@/examples/progress/StrokeWidth.vue?demo'
+import StrokeColor from '@/examples/progress/StrokeColor.vue?demo'
 
 const ProgressApi = [
     {
@@ -100,7 +101,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, StrokeWidth],
+            examples: [Base, StrokeWidth, StrokeColor],
             apiList: [...ProgressApi]
         }
     }
