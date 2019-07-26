@@ -18,6 +18,7 @@ import Base from '@/examples/progress/Base.vue?demo'
 import StrokeWidth from '@/examples/progress/StrokeWidth.vue?demo'
 import StrokeColor from '@/examples/progress/StrokeColor.vue?demo'
 import TextPosition from '@/examples/progress/TextPosition.vue?demo'
+import Format from '@/examples/progress/Format.vue?demo'
 
 const ProgressApi = [
     {
@@ -102,7 +103,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, StrokeWidth, StrokeColor, TextPosition],
+            examples: [Base, StrokeWidth, StrokeColor, TextPosition, Format],
             apiList: [...ProgressApi]
         }
     }
