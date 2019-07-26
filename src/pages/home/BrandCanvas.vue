@@ -1,6 +1,6 @@
 <template>
-    <div class="background-canvas">
-        <svg class="background-svg-defs" xmlns="http://www.w3.org/2000/svg">
+    <div class="brand-canvas">
+        <svg class="brand-svg-defs" xmlns="http://www.w3.org/2000/svg">
             <symbol id="O">
                 <circle
                     cx="50"
@@ -42,12 +42,14 @@
 </template>
 
 <style lang="scss" scoped>
-.background-canvas {
-    width: 100%;
-    height: 100%;
-    position: relative;
+.brand-canvas {
+    width: 100px * 4 + 15px * 5;
+    height: 50px * 2 + 15px * 2;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
-.background-svg-defs {
+.brand-svg-defs {
     display: none;
     width: 0;
     height: 0;
@@ -56,6 +58,6 @@
 
 <script>
 export default {
-    name: 'BackgroundCanvas'
+    name: 'BrandCanvas'
 }
 </script>

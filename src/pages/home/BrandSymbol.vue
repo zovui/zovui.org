@@ -1,47 +1,41 @@
 <template>
-    <div class="background-symbol" :class="classes" :style="styles">
-        <svg class="background-symbol-svg">
-            <use
-                class="background-symbol-svg-user"
-                :xlink:href="'#' + symbol"
-            ></use>
+    <div class="brand-symbol" :class="classes" :style="styles">
+        <svg class="brand-symbol-svg">
+            <use class="brand-symbol-svg-user" :xlink:href="'#' + symbol"></use>
         </svg>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.background-symbol {
+.brand-symbol {
     position: absolute;
-    transition: 0.3s transform ease;
     cursor: pointer;
-    transform: scale(0.5);
-    &:hover {
-        transform: scale(0.8);
-    }
-    .background-symbol-svg {
+    transition: 0.3s transform ease;
+    .brand-symbol-svg {
         width: 100px;
         height: 100px;
+        transform: scale(0.5);
     }
     &--orange {
-        .background-symbol-svg-user {
+        .brand-symbol-svg-user {
             fill: rgba(224, 127, 61, 0.9);
             color: rgba(224, 127, 61, 0.9);
         }
     }
     &--red {
-        .background-symbol-svg-user {
+        .brand-symbol-svg-user {
             fill: rgba(223, 73, 78, 0.9);
             color: rgba(223, 73, 78, 0.9);
         }
     }
     &--green {
-        .background-symbol-svg-user {
+        .brand-symbol-svg-user {
             fill: rgba(94, 188, 58, 0.9);
             color: rgba(94, 188, 58, 0.9);
         }
     }
     &--blue {
-        .background-symbol-svg-user {
+        .brand-symbol-svg-user {
             fill: rgba(80, 132, 206, 0.9);
             color: rgba(80, 132, 206, 0.9);
         }
@@ -51,7 +45,7 @@
 
 <script>
 export default {
-    name: 'BackgroundSymbol',
+    name: 'BrandSymbol',
     props: {
         symbol: {
             type: String,
@@ -73,7 +67,7 @@ export default {
     computed: {
         classes() {
             const classes = []
-            classes.push('background-symbol--' + this.color)
+            classes.push('brand-symbol--' + this.color)
             return classes
         },
         styles() {
