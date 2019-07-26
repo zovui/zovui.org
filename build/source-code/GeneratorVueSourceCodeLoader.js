@@ -18,10 +18,16 @@ function attrsToString(attrs) {
             return `${key}="${value}"`
         })
         .join(' ')
+        .trim()
 }
 
 function genCode(tagName, attrs, content) {
-    return `<${tagName} ${attrsToString(attrs)}>${content}</${tagName}>`
+    attrs = attrsToString(attrs)
+    attrs = attrs === '' ? '' : ' ' + attrs
+    if (!content) {
+        return ''
+    }
+    return `<${tagName}${attrs}>\n${content}\n</${tagName}>`
 }
 
 module.exports = function(source) {
@@ -37,18 +43,19 @@ module.exports = function(source) {
         templateCode = genCode(
             'template',
             descriptor.template.attrs,
-            descriptor.template.content
+            descriptor.template.content.replace(/^\n+/, '').replace(/\n+$/, '')
         )
-        templateCode = templateCode.replace(/^\n+/, '')
     }
     if (descriptor.styles.length) {
         stylesCode = descriptor.styles
             .map(styleDescriptor => {
-                let normalizeContent = styleDescriptor.content.replace(
-                    /^\n+/,
-                    ''
+                return genCode(
+                    'style',
+                    styleDescriptor.attrs,
+                    styleDescriptor.content
+                        .replace(/^\n+/, '')
+                        .replace(/\n+$/, '')
                 )
-                return genCode('style', styleDescriptor.attrs, normalizeContent)
             })
             .join('')
     }
@@ -57,13 +64,17 @@ module.exports = function(source) {
             'script',
             descriptor.script.attrs,
             descriptor.script.content
+                .replace(/(\/\/\n)+/g, '')
+                .replace(/^\n+/, '')
+                .replace(/\n+$/, '')
         )
-        scriptCode = scriptCode.replace(/(\/\/\n)+/g, '')
     }
     source += `${genCode(
         'sourcecode',
         null,
-        `${templateCode}\n${stylesCode}\n${scriptCode}`
+        [templateCode, stylesCode, scriptCode]
+            .filter(code => code !== '')
+            .join('\n\n')
     )}`
     return source
 }
