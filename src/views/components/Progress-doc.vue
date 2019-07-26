@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/progress/Base.vue?demo'
+import StrokeWidth from '@/examples/progress/StrokeWidth.vue?demo'
 
 const ProgressApi = [
     {
@@ -99,7 +100,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, StrokeWidth],
             apiList: [...ProgressApi]
         }
     }
