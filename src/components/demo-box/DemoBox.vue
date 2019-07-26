@@ -9,11 +9,16 @@
                 <slot name="demo"></slot>
             </div>
             <div class="example-tools">
-                <a :href="onlineHref" target="_blank">
+                <a
+                    class="example-online-run"
+                    :href="onlineHref"
+                    target="_blank"
+                >
                     <ToolTip
-                        class="example-link-tip"
+                        class="example-online-run-tooltip"
                         title="在线演示"
-                        placement="bottom"
+                        placement="top"
+                        high-color
                     >
                         <Icon iconname="code-working" />
                     </ToolTip>
@@ -89,12 +94,14 @@ export default {
             position: absolute;
             right: 15px;
             top: 10px;
-            .example-link-tip {
+            .example-online-run {
                 font-size: 20px;
-                .zov-tooltip-body {
-                    width: auto;
-                    .zov-tooltip-title {
-                        margin: 0;
+                .example-online-run-tooltip {
+                    .zov-tooltip-body {
+                        width: auto;
+                        .zov-tooltip-title {
+                            margin: 0;
+                        }
                     }
                 }
             }
