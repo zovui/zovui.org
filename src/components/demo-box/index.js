@@ -1,2 +1,2 @@
-import DemoBox from './demo-box.vue'
+import DemoBox from './DemoBox.vue'
 export default DemoBox
