@@ -1,5 +1,5 @@
 <script>
-import DemoBox from './demo-box'
+import DemoBox from './DemoBox'
 import ComponentAnchor from './ComponentAnchor'
 import shortId from 'shortid'
 export default {

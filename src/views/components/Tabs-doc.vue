@@ -746,7 +746,7 @@
 </style>
 
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     name: 'TabsDemo',
@@ -1029,7 +1029,7 @@ export default {
 </template>
 <script>
     export default {
-	
+
     }
 <\/script>`,
             GD_code: `<template>
@@ -1041,7 +1041,7 @@ export default {
             :key="i"
             >Content of tab {{ i }}</TabPane
         >
-    </Tabs>	
+    </Tabs>
 </template>
 <script>
 	export default {
@@ -1071,7 +1071,7 @@ export default {
 <script>
 export default {
 
-}	
+}
 <\/script>`,
             PX_code: `<template>
 	<Tabs>
@@ -1083,12 +1083,12 @@ export default {
 			:order="3 - i"
 			>Content of tab {{ i }}</TabPane
 		>
-	</Tabs>	
+	</Tabs>
 </template>
 <script>
 	export default {
 
-	}	
+	}
 <\/script>`,
             JY_code: `<template>
 <Tabs>
@@ -1100,12 +1100,12 @@ export default {
 		:key="i"
 		>Content of tab {{ i }}</TabPane
 	>
-</Tabs>	
+</Tabs>
 </template>
 <script>
 	export default {
 
-	}	
+	}
 <\/script>`,
             LJZ_code: `<template>
 	<Tabs>
@@ -1118,12 +1118,12 @@ export default {
 		<TabPane label="lazy" id="3">
 			<LazyTestComponent />
 		</TabPane>
-	</Tabs>	
+	</Tabs>
 </template>
 <script>
 	export default {
 
-	}	
+	}
 <\/script>`,
             KPH_code: `<template>
 <Tabs type="card">
@@ -1139,7 +1139,7 @@ export default {
 <script>
 	export default {
 
-	}	
+	}
 <\/script>`,
             KGB_code: `<template>
 <Tabs type="card">
@@ -1152,12 +1152,12 @@ export default {
 	<TabPane label="Tab 3" id="3" closable
 		>Content of tab 3</TabPane
 	>
-</Tabs>	
+</Tabs>
 </template>
 <script>
 	export default {
 
-	}	
+	}
 <\/script>`,
             KGBGZ_code: `<template>
 	<div slot="demo">
@@ -1185,7 +1185,7 @@ export default {
 				>Content of tab 3</TabPane
 			>
 		</Tabs>
-	</div>	
+	</div>
 </template>
 <script>
 	export default {
@@ -1201,7 +1201,7 @@ export default {
 				})
 			},
 		}
-	}	
+	}
 <\/script>`,
             BCGZ_code: `<template>
 	<div>
@@ -1231,8 +1231,8 @@ export default {
 			<TabPane label="Tab 4" id="4" closable disabled
 				>Content of tab 4</TabPane
 			>
-		</Tabs>	
-	</div>		
+		</Tabs>
+	</div>
 </template>
 <script>
 	export default {
@@ -1250,7 +1250,7 @@ export default {
 				})
 			},
 		}
-	}	
+	}
 <\/script>`,
             TJAN_code: `<template>
 	<Tabs>
@@ -1264,7 +1264,7 @@ export default {
 		<template v-slot:extra
 			><Button>Extra Button</Button></template
 		>
-	</Tabs>	
+	</Tabs>
 </template>
 <script>
 	export default {
@@ -1286,11 +1286,11 @@ export default {
 		<TabPane label="static" id="2" :lazy="false">
 			<StaticTestComponent />
 		</TabPane>
-	</Tabs>	
+	</Tabs>
 </template>
 <script>
 	export default {
-		
+
 	}
 <\/script>`,
             componentIntroduction: [

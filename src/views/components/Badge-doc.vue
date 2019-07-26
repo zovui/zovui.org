@@ -269,7 +269,7 @@
     </div>
 </template>
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     components: {

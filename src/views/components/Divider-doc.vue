@@ -166,7 +166,7 @@
     </div>
 </template>
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     components: {
@@ -188,7 +188,7 @@ export default {
 </template>
 <script>
     export default {
-	
+
     }
 <\/script>`,
             CZFGX_code: `<template>
@@ -202,7 +202,7 @@ export default {
 </template>
 <script>
     export default {
-	
+
     }
 <\/script>`,
             BTWZ_code: `<template>

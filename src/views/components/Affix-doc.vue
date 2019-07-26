@@ -95,7 +95,7 @@ body {
     </div>
 </template>
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     components: {
@@ -187,51 +187,51 @@ export default {
                     title: 'API'
                 }
             ],
-            JCYF_code: `<template> 
-    <z-affix> 
+            JCYF_code: `<template>
+    <z-affix>
         <div class="demo-affix">固定在最顶部</div>
-    </z-affix> 
-</template> 
+    </z-affix>
+</template>
 <script>
     export default {
-        
-    } 
+
+    }
 <\/script>
 `,
-            PY_code: `<template> 
+            PY_code: `<template>
     <Affix offset-top="100">
         <span class="demo-affix">固定在距离顶部100px触发</span>
-    </Affix> 
-</template> 
+    </Affix>
+</template>
 <script>
     export default {
-    
-    } 
+
+    }
 <\/script>
 `,
             GDZDB_code: `<template>
     <Affix offset-bottom="50">
         <span class="demo-affix">固定在距离底部50px触发</span>
-    </Affix> 
-</template> 
+    </Affix>
+</template>
 <script>
     export default {
-    
-    } 
+
+    }
 <\/script>
 `,
-            HD_code: `<template> 
-    <Affix offset-bottom="50" @on-change="handleChange"> 
+            HD_code: `<template>
+    <Affix offset-bottom="50" @on-change="handleChange">
         <span class="demo-affix">固定在距离底部50px触发</span>
-    </Affix> 
-</template> 
+    </Affix>
+</template>
 <script>
     export default {
-        methods: { 
+        methods: {
             handleChange(state) {
-                this.$Message.info(\`Status: \${state}\`); 
-            } 
-        } 
+                this.$Message.info(\`Status: \${state}\`);
+            }
+        }
     }
 <\/script>`
         }

@@ -307,7 +307,7 @@
     </div>
 </template>
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     components: {
@@ -370,87 +370,87 @@ export default {
 
     }
 <\/script>`,
-            ANXZ_code: `<template> 
+            ANXZ_code: `<template>
     <div>
         <Button shape="default">default</Button>
         <Button shape="circle">circle</Button>
-    </div> 
-</template> 
-<script> 
+    </div>
+</template>
+<script>
     export default {
-    
+
     }
 <\/script>`,
             ANLX_code: `<template>
     <div>
-        <Button :size="size">default</Button> 
-        <Button :size="size" looks="primary">primary</Button> 
+        <Button :size="size">default</Button>
+        <Button :size="size" looks="primary">primary</Button>
         <Button :size="size" looks="dashed">dashed</Button>
         <Button :size="size" looks="text">text</Button>
         <Button :size="size" looks="info">info</Button>
         <Button :size="size" looks="success">success</Button>
         <Button :size="size" looks="warning">warning</Button>
-        <Button :size="size" looks="error">error</Button> 
+        <Button :size="size" looks="error">error</Button>
     </div>
-</template> 
-<script> 
+</template>
+<script>
     export default {
 
-	} 
+	}
 <\/script>`,
-            LOADING_DD_code: `<template> 
+            LOADING_DD_code: `<template>
     <div>
         <Button looks="default" :loading="true">default</Button>
         <Button looks="primary" :loading="true">primary</Button>
         <Button looks="dashed" :loading="true">dashed</Button>
         <Button looks="text" :loading="true">text</Button>
     </div>
-</template> 
-<script> 
-    export default { 
-    
-    }
-<\/script>`,
-            JY_code: `<template> 
-    <Button disabled>disabled</Button>
-</template> 
-<script> 
+</template>
+<script>
     export default {
 
-    } 
+    }
 <\/script>`,
-            ZDYTB_code: `<template> 
-    <div> 
+            JY_code: `<template>
+    <Button disabled>disabled</Button>
+</template>
+<script>
+    export default {
+
+    }
+<\/script>`,
+            ZDYTB_code: `<template>
+    <div>
         <Button looks="info" iconname="wifi">自定义icon</Button>
         <Button loading iconname="download">自定义icon</Button>
-    </div> 
-</template> 
-<script> 
-    export default { 
+    </div>
+</template>
+<script>
+    export default {
 
     }
 <\/script>`,
-            ANZH_code: `<template> 
-    <div> 
-        <ButtonGroup :size="size"> 
+            ANZH_code: `<template>
+    <div>
+        <ButtonGroup :size="size">
             <Button>default</Button>
-            <Button looks="primary" disabled>primary</Button> 
-            <Button looks="dashed">dashed</Button> 
+            <Button looks="primary" disabled>primary</Button>
+            <Button looks="dashed">dashed</Button>
             <Button looks="info">info</Button>
             <Button>default</Button>
-        </ButtonGroup> 
-        <ButtonGroup :size="size" shape="circle"> 
-            <Button shape="circle">default</Button> 
-            <Button looks="primary">primary</Button> 
-            <Button looks="dashed">dashed</Button> 
+        </ButtonGroup>
+        <ButtonGroup :size="size" shape="circle">
+            <Button shape="circle">default</Button>
+            <Button looks="primary">primary</Button>
+            <Button looks="dashed">dashed</Button>
             <Button looks="info">info</Button>
-        </ButtonGroup> 
-    </div> 
+        </ButtonGroup>
+    </div>
 </template>
-<script> 
+<script>
     export default {
-	
-    } 
+
+    }
 <\/script>`,
             size: 'default',
             loading: false,

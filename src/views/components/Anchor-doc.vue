@@ -252,7 +252,7 @@
     </div>
 </template>
 <script>
-import DemoBox from '../../components/demo-box'
+import DemoBox from '../../components/DemoBox'
 import Table from '../../components/table'
 export default {
     components: {
@@ -387,7 +387,7 @@ export default {
                     title: 'API'
                 }
             ],
-            JCYF_code: `<template> 
+            JCYF_code: `<template>
     <Anchor show-ink>
         <AnchorLink :href="#API" :title="API">
             <AnchorLink ref="#Anchor_props" title="Anchor_props"/>
@@ -397,13 +397,13 @@ export default {
         <AnchorLink href="#Basic Usage" title="Basic Usage"/>
         <AnchorLink href="#Static Position" title="Static Position"/>
 	</Anchor>
-</template> 
+</template>
 <script>
-    export default { 
-    
-    } 
+    export default {
+
+    }
 <\/script>`,
-            JTWZ_code: `<template> 
+            JTWZ_code: `<template>
     <Anchor :affix="false" show-ink>
         <AnchorLink :href="#API" :title="API">
             <AnchorLink ref="#Anchor_props" title="Anchor_props"/>
@@ -413,11 +413,11 @@ export default {
         <AnchorLink href="#Basic Usage" title="Basic Usage"/>
         <AnchorLink href="#Static Position" title="Static Position"/>
 	</Anchor>
-</template> 
+</template>
 <script>
-    export default { 
-    
-    } 
+    export default {
+
+    }
 <\/script>`
         }
     },
