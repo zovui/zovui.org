@@ -124,7 +124,9 @@ export default {
                         <h3 class="example-title">{example.__title}</h3>
                         <div class="example-desc">{example.__desc}</div>
                         <div class="example-case">{h(example)}</div>
-                        <ComponentExampleTools />
+                        <ComponentExampleTools
+                            sourceCode={example.__sourceCode}
+                        />
                     </div>
                     <ComponentExampleCode
                         class="example-code"
