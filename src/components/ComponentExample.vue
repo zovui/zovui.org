@@ -1,5 +1,6 @@
 <style lang="scss" scoped>
 .example {
+    box-sizing: content-box;
     position: relative;
     margin-bottom: 40px;
     padding-bottom: 24px;
@@ -8,6 +9,7 @@
     overflow: hidden;
     display: flex;
     align-items: flex-start;
+    transition: 0.3s height ease;
     .example-info {
         position: relative;
         box-sizing: border-box;
@@ -71,6 +73,7 @@ export default {
             anchorId: shortId.generate(),
             anchorTitle: this.example.__title,
             minHeight: 0,
+            maxHeight: 0,
             containerStyles: null,
             // 是否展开
             isExpand: true,
@@ -80,7 +83,9 @@ export default {
     watch: {
         isExpand(isExpand) {
             if (isExpand) {
-                this.containerStyles = null
+                this.containerStyles = {
+                    height: `${this.maxHeight}px`
+                }
                 this.expandButtonIcon = 'arrow-up'
             } else {
                 this.containerStyles = {
@@ -98,10 +103,10 @@ export default {
     },
     mounted() {
         this.$nextTick(() => {
-            this.minHeight = Math.min(
-                this.$refs.info.scrollHeight,
-                this.$refs.code.$el.scrollHeight
-            )
+            const infoHeight = this.$refs.info.scrollHeight
+            const codeHeight = this.$refs.code.$el.scrollHeight
+            this.minHeight = Math.min(infoHeight, codeHeight)
+            this.maxHeight = Math.max(infoHeight, codeHeight)
             this.isExpand = false
         })
     },
