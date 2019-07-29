@@ -1,26 +1,26 @@
 <template>
-    <div class="component-anchor-container" :id="id">
+    <div class="document-anchor" :id="id">
         <div :class="contentClasses">
             <slot />
         </div>
-        <a v-if="!hiddenRef" class="component-anchor-ref" :href="href">#</a>
+        <a v-if="!hiddenRef" class="document-anchor-ref" :href="href">#</a>
     </div>
 </template>
 
 <style lang="scss">
-.component-anchor-container {
+.document-anchor {
     display: flex;
     align-items: center;
 }
-.component-anchor-content {
+.document-anchor-content {
     flex: 0 1 auto;
     min-width: 1px;
 }
-.component-anchor-content--full-width {
+.document-anchor-content--full-width {
     flex: 1 1 auto;
     min-width: 1px;
 }
-.component-anchor-ref {
+.document-anchor-ref {
     flex: 0 0 auto;
     font-size: 24px;
     margin-left: 5px;
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: 'ComponentAnchor',
+    name: 'DocumentAnchor',
     props: {
         id: {
             required: true,
@@ -52,8 +52,8 @@ export default {
             const classes = []
             classes.push(
                 this.hiddenRef
-                    ? 'component-anchor-content--full-width'
-                    : 'component-anchor-content'
+                    ? 'document-anchor-content--full-width'
+                    : 'document-anchor-content'
             )
             return classes
         }

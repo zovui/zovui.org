@@ -1,8 +1,8 @@
 <template>
     <section>
-        <ComponentAnchor :id="title">
+        <DocumentAnchor :id="anchor.id">
             <h3>{{ title }}</h3>
-        </ComponentAnchor>
+        </DocumentAnchor>
         <Table v-if="columns" :columns="columns" :data="data" />
         <component v-else :is="TypeTableMap[this.type]" :data="data" />
     </section>
@@ -10,7 +10,8 @@
 
 <script>
 import Table from './table'
-import ComponentAnchor from './ComponentAnchor'
+import DocumentAnchorCollector from './DocumentAnchorCollector'
+import DocumentAnchor from './DocumentAnchor'
 import shortId from 'shortid'
 import PropsTable from './PropsTable'
 import MethodsTable from './MethodsTable'
@@ -26,6 +27,7 @@ const TypeTableMap = {
 
 export default {
     name: 'ComponentApi',
+    mixins: [DocumentAnchorCollector],
     props: {
         title: {
             required: true,
@@ -57,29 +59,20 @@ export default {
     },
     components: {
         Table,
-        ComponentAnchor,
+        DocumentAnchor,
         PropsTable,
         SlotsTable,
         MethodsTable,
         EventsTable
     },
-    inject: {
-        ComponentExample: {
-            default: null
-        }
-    },
     data() {
         return {
             TypeTableMap,
-            anchorId: shortId.generate(),
-            anchorTitle: this.title
+            anchor: {
+                id: shortId.generate(),
+                title: this.title
+            }
         }
-    },
-    created() {
-        this.ComponentExample.addApiAnchor({
-            title: this.anchorTitle,
-            href: `#${this.anchorId}`
-        })
     }
 }
 </script>
