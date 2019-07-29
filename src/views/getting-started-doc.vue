@@ -16,69 +16,41 @@
         </DocumentSection>
         <DocumentSection title="引用zov">
             <p>一般在 webpack 入口页面 main.js 中如下配置：</p>
-            <pre>
-                <code>
-                    import Vue from 'vue'
-                    import vueRouter from 'vue-router'
-                    import App from './App.vue'
-                    import Routers from './router.js';
-                    import Zov from 'zov'
-                    import 'zov/dist/styles/zov.css';
-
-                    Vue.use(vueRouter)
-                    Vue.use(Zov)
-
-                    const RouterConfig = {
-                        routes: Routers
-                    };
-                    const router = new VueRouter(RouterConfig);
-
-                    new Vue({
-                        el: '#app',
-                        router: router,
-                        render: h => h(App)
-                    });
-                </code>
-            </pre>
+            <DocumentCode lang="javascript">
+                import Vue from 'vue' import vueRouter from 'vue-router' import
+                App from './App.vue' import Routers from './router.js'; import
+                Zov from 'zov' import 'zov/dist/styles/zov.css';
+                Vue.use(vueRouter) Vue.use(Zov) const RouterConfig = { routes:
+                Routers }; const router = new VueRouter(RouterConfig); new Vue({
+                el: '#app', router: router, render: h => h(App) });
+            </DocumentCode>
         </DocumentSection>
         <DocumentSection title="按需引用">
-            <pre>
-                <code>
-                    npm install babel-plugin-import --save-dev
-                    // .babelrc
-                    {
-                      "plugins": [["import", {
-                        "libraryName": "zov",
-                        "libraryDirectory": "src/components"
-                      }]]
-                    }
-                </code>
-            </pre>
+            <DocumentCode lang="bash">
+                npm install babel-plugin-import --save-dev
+            </DocumentCode>
+            <DocumentCode lang="json">
+                // .babelrc { "plugins": [["import", { "libraryName": "zov",
+                "libraryDirectory": "src/components" }]] }
+            </DocumentCode>
             <p>
                 然后这样按需引入组件，就可以减小体积了(按需引入仍需要导入样式)：
             </p>
-            <pre>
-                <code>
-                    import { Button, Table } from 'zov';
-                    Vue.component('Button', Button);
-                    Vue.component('Table', Table);
-                </code>
-            </pre>
+            <DocumentCode lang="javascript">
+                import { Button, Table } from 'zov'; Vue.component('Button',
+                Button); Vue.component('Table', Table);
+            </DocumentCode>
         </DocumentSection>
         <DocumentSection title="使用规范">
             <p>
                 使用 prop 传递数据格式为
                 数字、布尔值或函数时，必须带:(兼容String除外，具体看组件文档)，比如：
             </p>
-            <pre>
-                <code>
-                    Correct:
-                    &lt;Page :current="1" :total="100"&gt;&lt;/Page&gt;
-
-                    Incorrect:
-                    &lt;Page current="1" total="100"&gt;&lt;/Page&gt;
-                </code>
-            </pre>
+            <DocumentCode lang="html">
+                &lt;!-- Correct: --&gt; &lt;Page :current="1"
+                :total="100"&gt;&lt;/Page&gt; &lt;!-- Incorrect: --&gt; &lt;Page
+                current="1" total="100"&gt;&lt;/Page&gt;
+            </DocumentCode>
             <p>
                 在非 template/render 模式下（例如使用 CDN
                 引用时），组件名要分隔，例如 DatePicker 必须要写成 date-picker。
@@ -103,38 +75,13 @@
 </style>
 
 <script>
-import { Document, DocumentSection } from '@/components'
+import { Document, DocumentSection, DocumentCode } from '@/components'
 export default {
     name: 'GettingStart-doc',
     components: {
         Document,
-        DocumentSection
-    },
-    data() {
-        return {
-            anchorNavList: [
-                {
-                    href: '#SYZQ',
-                    title: '使用之前'
-                },
-                {
-                    href: '#SY_VUE_CLI_3',
-                    title: '使用Vue Cli 3'
-                },
-                {
-                    href: '#YY_zov',
-                    title: '引用zov'
-                },
-                {
-                    href: '#AXYY',
-                    title: '按需引用'
-                },
-                {
-                    href: '#SYGF',
-                    title: '使用规范'
-                }
-            ]
-        }
+        DocumentSection,
+        DocumentCode
     },
     routerOptions: {
         order: 2,
