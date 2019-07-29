@@ -34,8 +34,8 @@ export default {
                 <DemoBox
                     title={example.__title}
                     desc={example.__desc}
-                    demoCode={example.__sourceCode}>
-                    <div slot="demo">{h(example)}</div>
+                    highlightedSourceCode={example.__highlightedSourceCode}>
+                    {h(example)}
                 </DemoBox>
             </ComponentAnchor>
         )

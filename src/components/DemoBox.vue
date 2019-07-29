@@ -6,7 +6,7 @@
                 <slot name="desc">{{ desc }}</slot>
             </div>
             <div class="example-case">
-                <slot name="demo"></slot>
+                <slot />
             </div>
             <div class="example-tools">
                 <a
@@ -25,12 +25,8 @@
                 </a>
             </div>
         </div>
-        <div class="example-code">
-            <div v-highlight ref="code">
-                <pre
-                    class="bg"
-                ><code class="xml" v-text="demoCode"></code></pre>
-            </div>
+        <div class="example-code" ref="code">
+            <pre><code class="xml hljs" v-html="highlightedSourceCode"></code></pre>
         </div>
         <div class="show-all-code" v-if="showIconTip" @click="showAllCode">
             <Icon iconname="arrow-down" />
@@ -46,7 +42,7 @@ export default {
         titleId: String,
         desc: String,
         onlineHref: String,
-        demoCode: String
+        highlightedSourceCode: String
     },
     data() {
         return {
@@ -118,6 +114,12 @@ export default {
         box-sizing: border-box;
         border-left: 1px solid #ddd;
         flex: 0 0 50%;
+        pre {
+            margin: 0;
+        }
+        .hljs {
+            padding: 15px;
+        }
     }
     .show-all-code {
         position: absolute;
