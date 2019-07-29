@@ -1,15 +1,15 @@
 <template>
-    <div class="code">
+    <div class="document-code">
         <pre
-            class="code-pre"
+            class="document-code-pre"
         ><code class="hljs" :class="lang" v-html="highlightedCode"></code></pre>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.code {
+.document-code {
     overflow: auto;
-    .code-pre {
+    .document-code-pre {
         margin: 0;
     }
     .hljs {

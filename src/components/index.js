@@ -1,4 +1,17 @@
 import ComponentExampleContainer from './ComponentExampleContainer'
 import ComponentExample from './ComponentExample'
+import Document from './Document'
+import DocumentSection from './DocumentSection'
+import DocumentCode from './DocumentCode'
+import DocumentAnchor from './DocumentAnchor'
+import DocumentAnchorCollector from './DocumentAnchorCollector'
 
-export { ComponentExampleContainer, ComponentExample }
+export {
+    ComponentExampleContainer,
+    ComponentExample,
+    Document,
+    DocumentSection,
+    DocumentCode,
+    DocumentAnchor,
+    DocumentAnchorCollector
+}
