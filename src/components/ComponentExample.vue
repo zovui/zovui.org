@@ -50,13 +50,15 @@
 </style>
 
 <script>
-import ComponentAnchor from './ComponentAnchor'
+import DocumentAnchorCollector from './DocumentAnchorCollector'
+import DocumentAnchor from './DocumentAnchor'
 import shortId from 'shortid'
 import ComponentExampleCode from './Code'
 import ComponentExampleTools from './ComponentExampleTools'
 
 export default {
     name: 'ComponentExample',
+    mixins: [DocumentAnchorCollector],
     props: {
         example: {
             type: Object,
@@ -70,8 +72,10 @@ export default {
     },
     data() {
         return {
-            anchorId: shortId.generate(),
-            anchorTitle: this.example.__title,
+            anchor: {
+                id: shortId.generate(),
+                title: this.example.__title
+            },
             minHeight: 0,
             maxHeight: 0,
             containerStyles: null,
@@ -95,12 +99,6 @@ export default {
             }
         }
     },
-    created() {
-        this.ComponentExample.addExampleAnchor({
-            title: this.anchorTitle,
-            href: `#${this.anchorId}`
-        })
-    },
     mounted() {
         this.$nextTick(() => {
             const infoHeight = this.$refs.info.scrollHeight
@@ -118,7 +116,7 @@ export default {
     render(h) {
         const example = this.example
         return (
-            <ComponentAnchor id={this.anchorId} hidden-ref>
+            <DocumentAnchor id={this.anchor.id} hidden-ref>
                 <div class="example" style={this.containerStyles} ref="example">
                     <div class="example-info" ref="info">
                         <h3 class="example-title">{example.__title}</h3>
@@ -137,7 +135,7 @@ export default {
                         <Icon iconname={this.expandButtonIcon} />
                     </div>
                 </div>
-            </ComponentAnchor>
+            </DocumentAnchor>
         )
     }
 }

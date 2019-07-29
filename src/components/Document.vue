@@ -9,15 +9,15 @@
                 <Anchor show-ink>
                     <AnchorLink
                         v-for="anchor in anchorList"
-                        :key="anchor.href"
-                        :href="anchor.href"
+                        :key="anchor.id"
+                        :href="'#' + anchor.id"
                         :title="anchor.title"
                     >
                         <AnchorLink
                             v-if="anchor.children"
                             v-for="child in anchor.children"
-                            :key="child.href"
-                            :href="child.href"
+                            :key="child.id"
+                            :href="'#' + child.id"
                             :title="child.title"
                         />
                     </AnchorLink>
@@ -46,17 +46,14 @@
 </style>
 
 <script>
+import DocumentAnchorRoot from './DocumentAnchorRoot'
 export default {
     name: 'Document',
+    mixins: [DocumentAnchorRoot],
     props: {
         header: {
             required: true,
             type: String
-        }
-    },
-    data() {
-        return {
-            anchorList: []
         }
     }
 }
