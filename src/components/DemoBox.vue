@@ -6,7 +6,7 @@
                 <slot name="desc">{{ desc }}</slot>
             </div>
             <div class="example-case">
-                <slot name="demo"></slot>
+                <slot />
             </div>
             <div class="example-tools">
                 <a
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="example-code" ref="code">
-            <pre v-highlight><code class="xml" v-text="demoCode"></code></pre>
+            <pre><code class="xml hljs" v-html="highlightedSourceCode"></code></pre>
         </div>
         <div class="show-all-code" v-if="showIconTip" @click="showAllCode">
             <Icon iconname="arrow-down" />
@@ -42,7 +42,7 @@ export default {
         titleId: String,
         desc: String,
         onlineHref: String,
-        demoCode: String
+        highlightedSourceCode: String
     },
     data() {
         return {
