@@ -9,7 +9,10 @@
     overflow: hidden;
     display: flex;
     align-items: flex-start;
-    transition: 0.3s height ease;
+    transition: 0.3s height ease, 0.3s box-shadow ease;
+    &:hover {
+        box-shadow: 0 0 15px 0 var(--color-shadow);
+    }
     .example-info {
         position: relative;
         box-sizing: border-box;
@@ -38,10 +41,7 @@
         bottom: 0;
         width: 100%;
         text-align: center;
-        background: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 1)
-        );
+        background: var(--color-mask);
         cursor: pointer;
         font-size: 16px;
         color: var(--color-primary);
