@@ -53,7 +53,7 @@
 import DocumentAnchorCollector from './DocumentAnchorCollector'
 import DocumentAnchor from './DocumentAnchor'
 import shortId from 'shortid'
-import ComponentExampleCode from './Code'
+import ComponentExampleCode from './DocumentCode'
 import ComponentExampleTools from './ComponentExampleTools'
 
 export default {

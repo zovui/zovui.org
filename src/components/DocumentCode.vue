@@ -1,15 +1,16 @@
 <template>
-    <div class="code">
-        <pre
-            class="code-pre"
-        ><code class="hljs" :class="lang" v-html="highlightedCode"></code></pre>
+    <div class="document-code">
+        <pre class="document-code-pre"><code
+            class="hljs"
+            v-html="highlightedCode"
+        ></code></pre>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.code {
+.document-code {
     overflow: auto;
-    .code-pre {
+    .document-code-pre {
         margin: 0;
     }
     .hljs {
@@ -22,7 +23,6 @@
 export default {
     name: 'Code',
     props: {
-        lang: String,
         highlightedCode: String
     }
 }
