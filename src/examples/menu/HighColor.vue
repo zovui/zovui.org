@@ -38,7 +38,7 @@ export default {
     data() {
         return {
             mode: 'vertical',
-            isHighColor: false
+            isHighColor: true
         }
     }
 }
