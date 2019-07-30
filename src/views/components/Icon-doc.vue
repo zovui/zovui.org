@@ -1,74 +1,93 @@
 <template>
-    <div>
-        <section>
-            <h1>Icon 图标</h1>
-            <div class="anchor">
-                <h2 id="GS">概述</h2>
-                <a href="#GS">#</a>
-            </div>
-            <p>
-                Zov图标为语义化的矢量图形。
-            </p>
-            <div class="anchor">
-                <h2 id="GS">如何使用</h2>
-                <a href="#GS">#</a>
-            </div>
-            <p>
-                使用&lt;Icon /&gt;组件，指定图标对应的type属性，示例代码：
-            </p>
-            <div v-highlight>
-                <pre
-                    class="bg"
-                ><code class="xml">&lt;Icon type="analytics"/&gt;</code></pre>
-            </div>
-            <p>
-                渲染后为：
-            </p>
-            <div v-highlight>
-                <pre
-                    class="bg"
-                ><code class="xml">&lt;i class="zov-icon zov-icon-analytics"&gt;&lt;/i&gt;</code></pre>
-            </div>
-            <div class="anchor">
-                <h2 id="GS">API</h2>
-                <a href="#GS">#</a>
-            </div>
-            <div v-highlight>
-                <pre><code v-text="demoCode"></code></pre>
-            </div>
-            <Table></Table>
-        </section>
-
-        <div class="icon-header">
-            <Input
-                class="icon-search"
-                v-model="search"
-                size="large"
-                autofocus
-                placeholder="请输入英文关键词搜索，比如success"
-                suffix="search"
+    <Document header="Icon 图标">
+        <DocumentSection title="概述">
+            <DocumentParagraph>
+                矢量图标
+            </DocumentParagraph>
+        </DocumentSection>
+        <DocumentSection title="代码示例">
+            <ComponentExample
+                v-for="example of examples"
+                :example="example"
+                :key="example.__title"
             />
-        </div>
-        <h3>自定义Icon</h3>
-        <ul class="icon_lists" @click="copyIconCode">
-            <li>
-                <Icon custom="ion ion-load-a" />
-                <div class="name">ion-load-a</div>
-            </li>
-        </ul>
-        <h3>默认icon</h3>
-        <ul class="icon_lists" @click="copyIconCode">
-            <li v-for="(item, index) in searchResult" :key="index">
-                <Icon :iconname="item.name" />
-                <div class="name">{{ item.name }}</div>
-            </li>
-        </ul>
-    </div>
+        </DocumentSection>
+        <DocumentSection title="API">
+            <div class="icon-header">
+                <Input
+                    class="icon-search"
+                    v-model="search"
+                    size="large"
+                    autofocus
+                    placeholder="请输入英文关键词搜索，比如success"
+                    suffix="search"
+                />
+            </div>
+            <h3>自定义Icon</h3>
+            <ul class="icon_lists" @click="copyIconCode">
+                <li>
+                    <Icon custom="ion ion-load-a" />
+                    <div class="name">ion-load-a</div>
+                </li>
+            </ul>
+            <h3>默认icon</h3>
+            <ul class="icon_lists" @click="copyIconCode">
+                <li v-for="(item, index) in searchResult" :key="index">
+                    <Icon :iconname="item.name" />
+                    <div class="name">{{ item.name }}</div>
+                </li>
+            </ul>
+        </DocumentSection>
+    </Document>
 </template>
 
+<style lang="scss" scoped>
+@import url(https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css);
+.icon-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.icon-search {
+    &.zov-input {
+        width: 280px;
+    }
+}
+.icon_lists {
+    font-size: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    > li {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .name {
+        font-size: 16px;
+    }
+}
+</style>
+
 <script>
-import Table from '../../components/table'
+import {
+    Document,
+    DocumentSection,
+    ComponentExample,
+    DocumentParagraph
+} from '@/components'
+import Base from '@/examples/icon/Base.vue?demo'
+
 export default {
+    name: 'Icon-doc',
+    components: {
+        DocumentParagraph,
+        Document,
+        ComponentExample,
+        DocumentSection
+    },
     methods: {
         copyIconCode(e) {
             if (e.target.nodeName.toLowerCase() === 'li') {
@@ -78,9 +97,7 @@ export default {
     },
     data() {
         return {
-            demoCode: `
-				<Icon>lalala</Icon>
-			`,
+            examples: [Base],
             IconColumns: [
                 {
                     title: '属性',
@@ -851,33 +868,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-@import url(https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css);
-.icon-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.icon-search {
-    &.zov-input {
-        width: 280px;
-    }
-}
-.icon_lists {
-    font-size: 34px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-    > li {
-        margin: 5px;
-        padding: 10px;
-        border: 1px solid #dedede;
-        border-radius: 10px;
-        text-align: center;
-    }
-    .name {
-        font-size: 16px;
-    }
-}
-</style>
