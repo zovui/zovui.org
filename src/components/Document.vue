@@ -30,10 +30,11 @@
 <style lang="scss">
 .document {
     display: flex;
+    padding: 0 30px;
     .document-content {
         flex: 1 1 auto;
-        padding: 0 30px;
         min-width: 1px;
+        margin-right: 30px;
         .document-header {
             font-weight: 400;
             margin-bottom: 30px;
