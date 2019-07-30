@@ -30,6 +30,7 @@
 <style lang="scss" scoped>
 .section {
     margin: 20px 0;
+    overflow: hidden;
 }
 </style>
 

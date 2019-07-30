@@ -18,6 +18,7 @@ import Base from '@/examples/menu/Base.vue?demo'
 import Mode from '@/examples/menu/Mode.vue?demo'
 import HighColor from '@/examples/menu/HighColor.vue?demo'
 import Accordion from '@/examples/menu/Accordion.vue?demo'
+import Thumbnail from '@/examples/menu/Thumbnail.vue?demo'
 
 const api = [
     {
@@ -197,7 +198,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Mode, HighColor, Accordion],
+            examples: [Base, Mode, HighColor, Accordion, Thumbnail],
             api
         }
     }

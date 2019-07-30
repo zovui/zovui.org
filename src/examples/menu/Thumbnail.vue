@@ -1,14 +1,19 @@
-<title>手风琴</title>
+<title>略缩图模式</title>
 
 <desc>
-    手风琴仅仅在垂直模式下可用。<br/>
-    当使用手风琴模式时，展开其中其中一个菜单项，其他菜单项将会被关闭。
+    略缩图模式仅仅在垂直模式下可用。<br/>
+    略缩图模式下，菜单项仅会展示其图标，对于内容相对于偏阅读的场景下这将会非常有用。
 </desc>
 
 <template>
     <article>
         <section class="section">
-            <Menu :mode="mode" :high-color="isHighColor" :accordion="accordion">
+            <Menu
+                :mode="mode"
+                :high-color="isHighColor"
+                :accordion="accordion"
+                :thumbnail="thumbnail"
+            >
                 <MenuOption name="1">
                     <Icon iconname="home" thumbnail-icon />
                     首页
@@ -80,6 +85,10 @@
             <p>手风琴</p>
             <Switcher v-model="accordion" />
         </section>
+        <section class="section">
+            <p>略缩图模式</p>
+            <Switcher v-model="thumbnail" />
+        </section>
     </article>
 </template>
 
@@ -124,7 +133,8 @@ export default {
             ],
             mode: 'vertical',
             isHighColor: false,
-            accordion: true
+            accordion: false,
+            thumbnail: true
         }
     }
 }
