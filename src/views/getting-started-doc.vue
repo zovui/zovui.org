@@ -4,7 +4,10 @@
             <DocumentParagraph>
                 在开始之前，我们认为假设你已了解关于 HTML、CSS 和 JavaScript
                 的中级知识，熟悉 Vue 的开发方式，并且已经掌握了 Vue组件 和
-                单文件组件。如果你刚开始学习前端或者 Vue，将 UI
+                单文件组件。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                如果你刚开始学习前端或者 Vue，将 UI
                 框架作为你的第一步可能不是最好的主意。
             </DocumentParagraph>
         </DocumentSection>

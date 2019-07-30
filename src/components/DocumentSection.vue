@@ -10,8 +10,11 @@
 <style lang="scss">
 .document-section {
     margin: 20px 0;
+    .document-anchor {
+        margin: 15px 0;
+    }
     &-header {
-        margin: 10px 0;
+        margin: 0;
     }
 }
 </style>
