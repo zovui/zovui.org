@@ -3,7 +3,6 @@
     box-sizing: content-box;
     position: relative;
     margin-bottom: 40px;
-    padding-bottom: 24px;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -35,8 +34,12 @@
         border-left: 1px solid #ddd;
         flex: 0 0 50%;
         overflow: auto;
+        &--stretch {
+            align-self: stretch;
+        }
     }
-    .example-show-all {
+    .example-expand-handle {
+        display: none;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -45,6 +48,12 @@
         cursor: pointer;
         font-size: 16px;
         color: var(--color-primary);
+    }
+    &--expandable {
+        padding-bottom: 24px;
+        .example-expand-handle {
+            display: block;
+        }
     }
 }
 </style>
@@ -79,9 +88,29 @@ export default {
             minHeight: 0,
             maxHeight: 0,
             containerStyles: null,
+            // 是否可展开
+            isExpandable: false,
             // 是否展开
             isExpand: true,
+            // 是否让代码部分拉伸至容器高度
+            isStretchCode: false,
             expandButtonIcon: 'arrow-up'
+        }
+    },
+    computed: {
+        classes() {
+            const classes = ['example']
+            if (this.isExpandable) {
+                classes.push('example--expandable')
+            }
+            return classes
+        },
+        codeClasses() {
+            const classes = ['example-code']
+            if (this.isStretchCode) {
+                classes.push('example-code--stretch')
+            }
+            return classes
         }
     },
     watch: {
@@ -105,7 +134,21 @@ export default {
             const codeHeight = this.$refs.code.$el.scrollHeight
             this.minHeight = Math.min(infoHeight, codeHeight)
             this.maxHeight = Math.max(infoHeight, codeHeight)
-            this.isExpand = false
+            // 如果例子高度大于代码高度，则不需要展开功能
+            if (infoHeight >= codeHeight) {
+                // 不可展开
+                this.isExpandable = false
+                // 默认展开
+                this.isExpand = true
+                // 让代码高度与例子高度相同
+                this.isStretchCode = true
+            } else {
+                // 可展开
+                this.isExpandable = true
+                // 默认收起
+                this.isExpand = false
+                this.isStretchCode = false
+            }
         })
     },
     methods: {
@@ -117,7 +160,11 @@ export default {
         const example = this.example
         return (
             <DocumentAnchor id={this.anchor.id} hidden-ref>
-                <div class="example" style={this.containerStyles} ref="example">
+                <div
+                    class="example"
+                    style={this.containerStyles}
+                    class={this.classes}
+                    ref="example">
                     <div class="example-info" ref="info">
                         <h3 class="example-title">{example.__title}</h3>
                         <div class="example-desc">{example.__desc}</div>
@@ -127,11 +174,13 @@ export default {
                         />
                     </div>
                     <ComponentExampleCode
-                        class="example-code"
+                        class={this.codeClasses}
                         ref="code"
                         highlightedCode={example.__highlightedSourceCode}
                     />
-                    <div class="example-show-all" onClick={this.toggleExpand}>
+                    <div
+                        class="example-expand-handle"
+                        onClick={this.toggleExpand}>
                         <Icon iconname={this.expandButtonIcon} />
                     </div>
                 </div>
