@@ -1,9 +1,9 @@
 <template>
     <Document :header="componentName">
         <DocumentSection title="概述">
-            <p>
+            <DocumentParagragh>
                 <slot name="desc">{{ desc }}</slot>
-            </p>
+            </DocumentParagragh>
         </DocumentSection>
         <DocumentSection title="代码示例">
             <slot />
@@ -25,6 +25,7 @@
 import ComponentApi from './ComponentApi'
 import Document from './Document'
 import DocumentSection from './DocumentSection'
+import DocumentParagragh from './DocumentParagraph'
 
 export default {
     name: 'ComponentExampleContainer',
@@ -42,7 +43,8 @@ export default {
     components: {
         ComponentApi,
         Document,
-        DocumentSection
+        DocumentSection,
+        DocumentParagragh
     }
 }
 </script>
