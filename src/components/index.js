@@ -5,6 +5,7 @@ import DocumentSection from './DocumentSection'
 import DocumentCode from './DocumentCode'
 import DocumentAnchor from './DocumentAnchor'
 import DocumentAnchorCollector from './DocumentAnchorCollector'
+import DocumentParagraph from './DocumentParagraph'
 
 export {
     ComponentExampleContainer,
@@ -13,5 +14,6 @@ export {
     DocumentSection,
     DocumentCode,
     DocumentAnchor,
-    DocumentAnchorCollector
+    DocumentAnchorCollector,
+    DocumentParagraph
 }
