@@ -5205,6 +5205,14 @@ loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
+loader-utils@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
+  dependencies:
+    big.js "^5.2.2"
+    emojis-list "^2.0.0"
+    json5 "^1.0.1"
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/locate-path/download/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -6919,12 +6927,12 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-raw-loader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/raw-loader/download/raw-loader-3.0.0.tgz#9a660dc9cfbfb8324eede3ea3511454d2a5d0389"
+raw-loader@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
   dependencies:
     loader-utils "^1.1.0"
-    schema-utils "^1.0.0"
+    schema-utils "^2.0.1"
 
 rc@^1.2.7:
   version "1.2.8"
@@ -7399,6 +7407,13 @@ schema-utils@^1.0.0:
   dependencies:
     ajv "^6.1.0"
     ajv-errors "^1.0.0"
+    ajv-keywords "^3.1.0"
+
+schema-utils@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.0.1.tgz#1eec2e059556af841b7f3a83b61af13d7a3f9196"
+  dependencies:
+    ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
 scss-tokenizer@^0.2.3:

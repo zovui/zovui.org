@@ -16,47 +16,29 @@
         </DocumentSection>
         <DocumentSection title="引用zov">
             <p>一般在 webpack 入口页面 main.js 中如下配置：</p>
-            <DocumentCode lang="javascript">
-                import Vue from 'vue' import vueRouter from 'vue-router' import
-                App from './App.vue' import Routers from './router.js'; import
-                Zov from 'zov' import 'zov/dist/styles/zov.css';
-                Vue.use(vueRouter) Vue.use(Zov) const RouterConfig = { routes:
-                Routers }; const router = new VueRouter(RouterConfig); new Vue({
-                el: '#app', router: router, render: h => h(App) });
-            </DocumentCode>
+            <DocumentCode :highlighted-code="codeMap.Entry" />
         </DocumentSection>
         <DocumentSection title="按需引用">
-            <DocumentCode lang="bash">
-                npm install babel-plugin-import --save-dev
-            </DocumentCode>
-            <DocumentCode lang="json">
-                // .babelrc { "plugins": [["import", { "libraryName": "zov",
-                "libraryDirectory": "src/components" }]] }
-            </DocumentCode>
+            <DocumentCode :highlighted-code="codeMap.ImportSH" />
+            <p>babel配置：</p>
+            <DocumentCode :highlighted-code="codeMap.ImportBabelConfig" />
             <p>
                 然后这样按需引入组件，就可以减小体积了(按需引入仍需要导入样式)：
             </p>
-            <DocumentCode lang="javascript">
-                import { Button, Table } from 'zov'; Vue.component('Button',
-                Button); Vue.component('Table', Table);
-            </DocumentCode>
+            <DocumentCode :highlighted-code="codeMap.ImportJS" />
         </DocumentSection>
         <DocumentSection title="使用规范">
             <p>
                 使用 prop 传递数据格式为
                 数字、布尔值或函数时，必须带:(兼容String除外，具体看组件文档)，比如：
             </p>
-            <DocumentCode lang="html">
-                &lt;!-- Correct: --&gt; &lt;Page :current="1"
-                :total="100"&gt;&lt;/Page&gt; &lt;!-- Incorrect: --&gt; &lt;Page
-                current="1" total="100"&gt;&lt;/Page&gt;
-            </DocumentCode>
+            <DocumentCode :highlighted-code="codeMap.Specification" />
             <p>
                 在非 template/render 模式下（例如使用 CDN
                 引用时），组件名要分隔，例如 DatePicker 必须要写成 date-picker。
             </p>
             <p>
-                以下组件，在非 template/render 模式下，需要加前缀 i-：
+                以下组件，在非 template/render 模式下，需要加前缀 z-：
             </p>
             <ul class="list">
                 <li>Button: z-button</li>
@@ -76,12 +58,29 @@
 
 <script>
 import { Document, DocumentSection, DocumentCode } from '@/components'
+import Entry from './getting-started/entry.js?get-source-code'
+import ImportSH from './getting-started/import.sh?get-source-code'
+import ImportBabelConfig from './getting-started/babelConfig?get-source-code'
+import ImportJS from './getting-started/import?get-source-code'
+import Specification from './getting-started/Specification.html?get-source-code'
+
 export default {
     name: 'GettingStart-doc',
     components: {
         Document,
         DocumentSection,
         DocumentCode
+    },
+    data() {
+        return {
+            codeMap: {
+                Entry,
+                ImportSH,
+                ImportBabelConfig,
+                ImportJS,
+                Specification
+            }
+        }
     },
     routerOptions: {
         order: 2,
