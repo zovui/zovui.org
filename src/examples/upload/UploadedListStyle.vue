@@ -30,7 +30,6 @@
                 action="//jsonplaceholder.typicode.com/posts/"
                 :default-file-list="defaultFileList"
                 list-Type="picture-card"
-                :on-success="handleSuccess"
             >
                 <Button><Icon iconname="cloud-upload"></Icon>上传</Button>
             </Upload>
