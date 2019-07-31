@@ -18,6 +18,7 @@ import Base from '@/examples/upload/Base.vue?demo'
 import Disabled from '@/examples/upload/Disabled.vue?demo'
 import Multiple from '@/examples/upload/Multiple.vue?demo'
 import UploadedListStyle from '@/examples/upload/UploadedListStyle.vue?demo'
+import Drag from '@/examples/upload/Drag.vue?demo'
 
 const api = [
     {
@@ -252,7 +253,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Multiple, UploadedListStyle],
+            examples: [Base, Disabled, Multiple, UploadedListStyle, Drag],
             api
         }
     }
