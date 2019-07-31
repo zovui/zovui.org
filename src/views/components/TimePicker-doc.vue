@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/time-picker/Base.vue?demo'
+import Disabled from '@/examples/time-picker/Disabled.vue?demo'
 
 const api = [
     {
@@ -147,7 +148,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Disabled],
             api
         }
     }
