@@ -167,7 +167,10 @@ export default {
                     ref="example">
                     <div class="example-info" ref="info">
                         <h3 class="example-title">{example.__title}</h3>
-                        <div class="example-desc">{example.__desc}</div>
+                        <div
+                            class="example-desc"
+                            domPropsInnerHTML={example.__desc}
+                        />
                         <div class="example-case">{h(example)}</div>
                         <ComponentExampleTools
                             sourceCode={example.__sourceCode}
