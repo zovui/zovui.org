@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/steps/Base.vue?demo'
 import AlignCenter from '@/examples/steps/AlignCenter.vue?demo'
 import Status from '@/examples/steps/Status.vue?demo'
+import Vertical from '@/examples/steps/Vertical.vue?demo'
 
 const api = [
     {
@@ -121,7 +122,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, AlignCenter, Status],
+            examples: [Base, AlignCenter, Status, Vertical],
             api
         }
     }
