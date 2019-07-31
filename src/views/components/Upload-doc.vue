@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/upload/Base.vue?demo'
 import Disabled from '@/examples/upload/Disabled.vue?demo'
 import Multiple from '@/examples/upload/Multiple.vue?demo'
+import UploadedListStyle from '@/examples/upload/UploadedListStyle.vue?demo'
 
 const api = [
     {
@@ -251,7 +252,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Disabled, Multiple],
+            examples: [Base, Disabled, Multiple, UploadedListStyle],
             api
         }
     }
