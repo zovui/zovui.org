@@ -68,6 +68,55 @@ const api = [
                 default: '12小时下为hh:mm:ss a；24小时下为HH:mm:ss',
                 values: '-',
                 explain: '时间格式'
+            },
+            {
+                prop: 'disabled',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否禁用选择器'
+            },
+            {
+                prop: 'disabled-times',
+                type: 'object',
+                required: 'false',
+                default: '{h: [], m: [], s: []}',
+                values: '-',
+                explain:
+                    '限制禁止选中的时间，数据格式为： { h: [1, 2], m: [...], s: [...] }'
+            },
+            {
+                prop: 'hide-disabled-options',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否隐藏禁止选中的时间点'
+            },
+            {
+                prop: 'use12HourSystem',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否采用12小时制'
+            },
+            {
+                prop: 'size',
+                type: 'string',
+                required: 'false',
+                default: 'default',
+                values: ['small', 'default', 'large'].join(' | '),
+                explain: '选择器组件的大小'
+            },
+            {
+                prop: 'steps',
+                type: 'Array',
+                required: 'false',
+                default: '[1,1,1]',
+                values: '-',
+                explain: '时分秒的步长'
             }
         ]
     },
