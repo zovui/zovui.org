@@ -18,6 +18,7 @@ import Base from '@/examples/steps/Base.vue?demo'
 import AlignCenter from '@/examples/steps/AlignCenter.vue?demo'
 import Status from '@/examples/steps/Status.vue?demo'
 import Vertical from '@/examples/steps/Vertical.vue?demo'
+import Size from '@/examples/steps/Size.vue?demo'
 
 const api = [
     {
@@ -122,7 +123,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, AlignCenter, Status, Vertical],
+            examples: [Base, AlignCenter, Status, Vertical, Size],
             api
         }
     }
