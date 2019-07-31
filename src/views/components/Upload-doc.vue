@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/upload/Base.vue?demo'
+import Disabled from '@/examples/upload/Disabled.vue?demo'
 
 const api = [
     {
@@ -249,7 +250,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Disabled],
             api
         }
     }
