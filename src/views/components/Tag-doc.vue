@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Type from '@/examples/tag/Type.vue?demo'
 import Shape from '@/examples/tag/Shape.vue?demo'
 import Disabled from '@/examples/tag/Disabled.vue?demo'
+import Icon from '@/examples/tag/Icon.vue?demo'
 
 const api = []
 
@@ -28,7 +29,7 @@ export default {
     },
     data() {
         return {
-            examples: [Type, Shape, Disabled],
+            examples: [Type, Shape, Disabled, Icon],
             api
         }
     }
