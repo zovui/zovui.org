@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Type from '@/examples/tag/Type.vue?demo'
+import Shape from '@/examples/tag/Shape.vue?demo'
 
 const api = []
 
@@ -26,7 +27,7 @@ export default {
     },
     data() {
         return {
-            examples: [Type],
+            examples: [Type, Shape],
             api
         }
     }
