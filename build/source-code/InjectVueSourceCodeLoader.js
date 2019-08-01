@@ -9,12 +9,13 @@ module.exports = function(source, map) {
     const highlightedSourceCode = /<span class="xml">((.|\s)*)<\/span>/.exec(
         highlighted.value
     )[1]
-    source = JSON.stringify(source)
     this.callback(
         null,
         `export default function (Component) {
-          Component.options.__sourceCode = ${source};
-          Component.options.__highlightedSourceCode = \`${highlightedSourceCode}\`;
+          Component.options.__sourceCode = ${JSON.stringify(source)};
+          Component.options.__highlightedSourceCode = ${JSON.stringify(
+              highlightedSourceCode
+          )};
         }`,
         map
     )
