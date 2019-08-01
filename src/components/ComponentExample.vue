@@ -61,7 +61,7 @@
 <script>
 import DocumentAnchorCollector from './DocumentAnchorCollector'
 import DocumentAnchor from './DocumentAnchor'
-import shortId from 'shortid'
+import hash from 'hash-sum'
 import ComponentExampleCode from './DocumentCode'
 import ComponentExampleTools from './ComponentExampleTools'
 
@@ -82,7 +82,7 @@ export default {
     data() {
         return {
             anchor: {
-                id: shortId.generate(),
+                id: hash(this.example.__title),
                 title: this.example.__title
             },
             minHeight: 0,

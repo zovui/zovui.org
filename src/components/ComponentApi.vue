@@ -12,7 +12,7 @@
 import Table from './table'
 import DocumentAnchorCollector from './DocumentAnchorCollector'
 import DocumentAnchor from './DocumentAnchor'
-import shortId from 'shortid'
+import hash from 'hash-sum'
 import PropsTable from './PropsTable'
 import MethodsTable from './MethodsTable'
 import SlotsTable from './SlotsTable'
@@ -69,7 +69,7 @@ export default {
         return {
             TypeTableMap,
             anchor: {
-                id: shortId.generate(),
+                id: hash(this.title),
                 title: this.title
             }
         }

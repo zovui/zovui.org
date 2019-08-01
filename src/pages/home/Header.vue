@@ -11,10 +11,13 @@
 
 <style lang="scss" scoped>
 .home-header {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
+    z-index: 1;
 }
 .home-header-left {
     flex: 0 0 auto;
