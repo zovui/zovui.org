@@ -22,7 +22,7 @@
 <script>
 import DocumentAnchorCollector from './DocumentAnchorCollector'
 import DocumentAnchor from './DocumentAnchor'
-import shortId from 'shortid'
+import hash from 'hash-sum'
 
 export default {
     name: 'DocumentSection',
@@ -36,7 +36,7 @@ export default {
     data() {
         return {
             anchor: {
-                id: shortId.generate(),
+                id: hash(this.title),
                 title: this.title
             }
         }

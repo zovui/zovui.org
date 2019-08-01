@@ -1,9 +1,7 @@
 <template>
     <div id="home">
+        <Background />
         <Header>
-            <template #left>
-                <Brand />
-            </template>
             <template #right>
                 <Button
                     class="home-nav-button"
@@ -55,6 +53,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 1;
     }
     .home-nav-button {
         font-size: 20px;
@@ -70,6 +69,7 @@ import Actions from './Actions'
 import Description from './Description'
 import Brand from './Brand'
 import Header from './Header'
+import Background from './Background'
 
 export default {
     name: 'Home',
@@ -78,7 +78,8 @@ export default {
         Actions,
         Description,
         Brand,
-        Header
+        Header,
+        Background
     },
     methods: {
         toGithub() {
