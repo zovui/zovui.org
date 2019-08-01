@@ -9,8 +9,9 @@
     height: 100%;
     background-image: url('./bg.svg');
     background-repeat: repeat;
-    background-size: 100% 100%;
-    filter: blur(10px);
+    background-size: cover;
+    filter: blur(15px);
+    z-index: 0;
 }
 </style>
 

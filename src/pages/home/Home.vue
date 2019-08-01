@@ -2,9 +2,6 @@
     <div id="home">
         <Background />
         <Header>
-            <template #left>
-                <Brand />
-            </template>
             <template #right>
                 <Button
                     class="home-nav-button"
@@ -56,6 +53,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 1;
     }
     .home-nav-button {
         font-size: 20px;
