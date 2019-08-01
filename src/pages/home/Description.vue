@@ -15,7 +15,7 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.5);
 }
 @keyframes home-desc-in {
     0% {

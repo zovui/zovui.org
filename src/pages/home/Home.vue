@@ -1,5 +1,6 @@
 <template>
     <div id="home">
+        <Background />
         <Header>
             <template #left>
                 <Brand />
@@ -70,6 +71,7 @@ import Actions from './Actions'
 import Description from './Description'
 import Brand from './Brand'
 import Header from './Header'
+import Background from './Background'
 
 export default {
     name: 'Home',
@@ -78,7 +80,8 @@ export default {
         Actions,
         Description,
         Brand,
-        Header
+        Header,
+        Background
     },
     methods: {
         toGithub() {
