@@ -19,6 +19,7 @@ import Shape from '@/examples/tag/Shape.vue?demo'
 import Disabled from '@/examples/tag/Disabled.vue?demo'
 import Icon from '@/examples/tag/Icon.vue?demo'
 import Async from '@/examples/tag/Async.vue?demo'
+import NotText from '@/examples/tag/NotText.vue?demo'
 
 const api = []
 
@@ -30,7 +31,7 @@ export default {
     },
     data() {
         return {
-            examples: [Type, Shape, Disabled, Icon, Async],
+            examples: [Type, Shape, Disabled, Icon, Async, NotText],
             api
         }
     }
