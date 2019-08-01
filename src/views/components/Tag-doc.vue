@@ -21,6 +21,7 @@ import Icon from '@/examples/tag/Icon.vue?demo'
 import Async from '@/examples/tag/Async.vue?demo'
 import NotText from '@/examples/tag/NotText.vue?demo'
 import Delete from '@/examples/tag/Delete.vue?demo'
+import Size from '@/examples/tag/Size.vue?demo'
 
 const api = []
 
@@ -32,7 +33,16 @@ export default {
     },
     data() {
         return {
-            examples: [Type, Shape, Disabled, Icon, Async, NotText, Delete],
+            examples: [
+                Type,
+                Shape,
+                Disabled,
+                Icon,
+                Async,
+                NotText,
+                Delete,
+                Size
+            ],
             api
         }
     }
