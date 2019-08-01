@@ -2,7 +2,9 @@
 
 <template>
     <Affix :offset-top="50" @on-change="handleChange">
-        <div>固定在距离顶部50px触发</div>
+        <div class="demo">
+            固定在距离顶部50px触发
+        </div>
     </Affix>
 </template>
 
@@ -15,3 +17,14 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.demo {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2d8cf0;
+}
+</style>
