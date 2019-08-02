@@ -60,7 +60,7 @@ module.exports = {
 
     assetsDir: undefined,
     runtimeCompiler: undefined,
-    productionSourceMap: undefined,
+    productionSourceMap: false,
     parallel: undefined,
     css: undefined
 }
