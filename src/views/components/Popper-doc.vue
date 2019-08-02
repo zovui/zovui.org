@@ -1,14 +1,31 @@
 <template>
-    <div>
-        <div style="text-align: left;padding: 15px">
-            <h3>参数</h3>
-            <p>@placement [default: 'bottom'] 弹出所在的位置</p>
-            <p>@fix [default: true]，css是否为position:fixed</p>
-            <p>@no-arrow [default: false]，是否为无箭头</p>
-        </div>
-        <div class="box">
-            <div
-                v-for="item in [
+    <ComponentExampleContainer
+        component-name="Popper 气泡提示"
+        desc="Popper 与 Tooltip 类似，具有很多相同配置，不同点是 Popper 以卡片的形式承载了更多的内容，比如链接、表格、按钮等。"
+        :apiList="api"
+    >
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
+        />
+    </ComponentExampleContainer>
+</template>
+
+<script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+
+const api = [
+    {
+        title: 'Popper props',
+        type: 'props',
+        data: [
+            {
+                prop: 'placement',
+                type: 'string',
+                required: 'false',
+                default: 'bottom',
+                values: [
                     'left',
                     'right',
                     'top',
@@ -17,48 +34,40 @@
                     'right-top',
                     'left-bottom',
                     'right-bottom'
-                ]"
-                :key="item"
-                :class="['drop', 'drop-' + item]"
-            >
-                {{ item }}
-                <Popper>
-                    <div style="width:256px;padding:8px 12px">
-                        <h3>标题</h3>
-                        文本文本文本文本文本文本文本文本
-                    </div>
-                </Popper>
-            </div>
-        </div>
-    </div>
-</template>
-<style lang="scss" scoped>
-.box {
-    position: relative;
-    height: 1000px;
-    border: 3px dashed;
-}
-.drop {
-    position: absolute;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-    padding: 7px;
-    @each $x in left right {
-        &-#{$x} {
-            #{$x}: 15px;
-            top: 50%;
-        }
-        @each $y in top bottom {
-            &-#{$x}-#{$y} {
-                #{$x}: 15px;
-                #{$y}: 15px;
+                ].join(' |  '),
+                explain: '弹出所在的位置'
+            },
+            {
+                prop: 'fix',
+                type: 'boolean',
+                required: 'false',
+                default: 'true',
+                values: '-',
+                explain: 'popper是否使用fixed布局来定位'
+            },
+            {
+                prop: 'no-arrow',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '是否无箭头'
             }
-        }
+        ]
     }
-    @each $y in top bottom {
-        &-#{$y} {
-            #{$y}: 15px;
-            left: 50%;
+]
+
+export default {
+    name: 'Popper-doc',
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
+    data() {
+        return {
+            examples: [],
+            api
         }
     }
 }
-</style>
+</script>
