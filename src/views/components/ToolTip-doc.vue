@@ -16,6 +16,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/tooltip/Base.vue?demo'
 import Placement from '@/examples/tooltip/Placement.vue?demo'
+import Trigger from '@/examples/tooltip/Trigger.vue?demo'
 
 const api = [
     {
@@ -151,7 +152,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Placement],
+            examples: [Base, Placement, Trigger],
             api
         }
     }
