@@ -1,8 +1,6 @@
-<title>异步关闭</title>
+<title>异步内容区域</title>
 
-<desc>
-    confirmLoading配合on-confirm自定义事件使用
-</desc>
+<desc>contentLoading可以让弹窗内容显示loading效果，场景多见于弹窗内容异步加载的情况。</desc>
 
 <template>
     <article>
@@ -10,8 +8,8 @@
         <Modal
             v-model="show"
             bottom-align="right"
-            :confirmLoading="true"
-            @on-confirm="handleConfirmAsync"
+            :contentLoading="contentLoading"
+            @on-open="handleOpen"
             >这是一个Modal</Modal
         >
     </article>
@@ -21,13 +19,15 @@
 export default {
     data() {
         return {
-            show: false
+            show: false,
+            contentLoading: false
         }
     },
     methods: {
-        handleConfirmAsync() {
+        handleOpen() {
+            this.contentLoading = true
             setTimeout(() => {
-                this.show = false
+                this.contentLoading = false
             }, 3000)
         }
     }

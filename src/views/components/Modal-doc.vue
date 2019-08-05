@@ -37,6 +37,7 @@ import CustomHeaderAndFooter from '@/examples/modal/CustomHeaderAndFooter.vue?de
 import CustomButton from '@/examples/modal/CustomButton.vue?demo'
 import VerticalCentered from '@/examples/modal/VerticalCentered.vue?demo'
 import AsyncClose from '@/examples/modal/AsyncClose.vue?demo'
+import LoadingContent from '@/examples/modal/LoadingContent.vue?demo'
 
 const api = [
     {
@@ -411,7 +412,8 @@ export default {
                 CustomHeaderAndFooter,
                 CustomButton,
                 VerticalCentered,
-                AsyncClose
+                AsyncClose,
+                LoadingContent
             ],
             api,
             instanceApi,
