@@ -31,6 +31,7 @@ import {
     ComponentApi
 } from '@/components'
 import Base from '@/examples/modal/Base.vue?demo'
+import DisabledLayerClose from '@/examples/modal/DisabledLayerClose.vue?demo'
 
 const api = [
     {
@@ -398,7 +399,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, DisabledLayerClose],
             api,
             instanceApi,
             instanceConfigApi
