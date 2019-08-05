@@ -4,7 +4,7 @@
             <a href="/" class="org-layout-header-logo">
                 <img src="./assets/logo.png" />
             </a>
-            <div class="org-layout-header-title">Zov Design</div>
+            <div class="org-layout-header-title">ZOV UI</div>
             <Select
                 class="search-input"
                 placeholder="搜索组件"
