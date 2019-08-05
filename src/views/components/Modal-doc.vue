@@ -36,6 +36,7 @@ import HiddenCloseButton from '@/examples/modal/HiddenCloseButton.vue?demo'
 import CustomHeaderAndFooter from '@/examples/modal/CustomHeaderAndFooter.vue?demo'
 import CustomButton from '@/examples/modal/CustomButton.vue?demo'
 import VerticalCentered from '@/examples/modal/VerticalCentered.vue?demo'
+import AsyncClose from '@/examples/modal/AsyncClose.vue?demo'
 
 const api = [
     {
@@ -409,7 +410,8 @@ export default {
                 HiddenCloseButton,
                 CustomHeaderAndFooter,
                 CustomButton,
-                VerticalCentered
+                VerticalCentered,
+                AsyncClose
             ],
             api,
             instanceApi,
