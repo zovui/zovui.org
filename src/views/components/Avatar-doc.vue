@@ -17,6 +17,7 @@ import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/avatar/Base.vue?demo'
 import Size from '@/examples/avatar/Size.vue?demo'
 import Image from '@/examples/avatar/Image.vue?demo'
+import Custom from '@/examples/avatar/Custom.vue?demo'
 
 const api = [
     {
@@ -104,7 +105,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Size, Image],
+            examples: [Base, Size, Image, Custom],
             api
         }
     }
