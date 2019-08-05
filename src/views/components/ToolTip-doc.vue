@@ -144,6 +144,20 @@ const api = [
                 explain: '自动展开'
             }
         ]
+    },
+    {
+        title: 'Tooltip slots',
+        type: 'slots',
+        data: [
+            {
+                name: 'default',
+                explain: 'Tooltip的绑定的内容'
+            },
+            {
+                name: 'tooltip',
+                explain: '自定义tooltip弹出内容'
+            }
+        ]
     }
 ]
 
