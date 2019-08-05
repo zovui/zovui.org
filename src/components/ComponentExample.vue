@@ -15,7 +15,8 @@
     .example-info {
         position: relative;
         box-sizing: border-box;
-        flex: 0 0 50%;
+        flex: 1;
+        min-width: 1px;
         padding: 15px 15px 10px 15px;
         .example-title {
             font-weight: bold;
@@ -32,7 +33,8 @@
     .example-code {
         box-sizing: border-box;
         border-left: 1px solid #ddd;
-        flex: 0 0 50%;
+        flex: 1;
+        min-width: 1px;
         overflow: auto;
         &--stretch {
             align-self: stretch;
