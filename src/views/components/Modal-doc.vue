@@ -38,6 +38,7 @@ import CustomButton from '@/examples/modal/CustomButton.vue?demo'
 import VerticalCentered from '@/examples/modal/VerticalCentered.vue?demo'
 import AsyncClose from '@/examples/modal/AsyncClose.vue?demo'
 import LoadingContent from '@/examples/modal/LoadingContent.vue?demo'
+import Alert from '@/examples/modal/Alert.vue?demo'
 
 const api = [
     {
@@ -413,7 +414,8 @@ export default {
                 CustomButton,
                 VerticalCentered,
                 AsyncClose,
-                LoadingContent
+                LoadingContent,
+                Alert
             ],
             api,
             instanceApi,
