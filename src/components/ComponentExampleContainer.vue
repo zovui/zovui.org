@@ -9,6 +9,7 @@
             <slot />
         </DocumentSection>
         <DocumentSection title="API">
+            <slot name="before-api" />
             <ComponentApi
                 v-for="api of apiList"
                 :key="api.title"
@@ -17,6 +18,7 @@
                 :columns="api.columns"
                 :data="api.data"
             />
+            <slot name="after-api" />
         </DocumentSection>
     </Document>
 </template>
