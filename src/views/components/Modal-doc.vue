@@ -34,6 +34,7 @@ import Base from '@/examples/modal/Base.vue?demo'
 import DisabledLayerClose from '@/examples/modal/DisabledLayerClose.vue?demo'
 import HiddenCloseButton from '@/examples/modal/HiddenCloseButton.vue?demo'
 import CustomHeaderAndFooter from '@/examples/modal/CustomHeaderAndFooter.vue?demo'
+import CustomButton from '@/examples/modal/CustomButton.vue?demo'
 
 const api = [
     {
@@ -405,7 +406,8 @@ export default {
                 Base,
                 DisabledLayerClose,
                 HiddenCloseButton,
-                CustomHeaderAndFooter
+                CustomHeaderAndFooter,
+                CustomButton
             ],
             api,
             instanceApi,
