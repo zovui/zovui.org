@@ -9,11 +9,27 @@
             :example="example"
             :key="example.__title"
         />
+        <template #after-api>
+            <ComponentApi
+                :title="instanceApi.title"
+                :columns="instanceApi.columns"
+                :data="instanceApi.data"
+            />
+            <ComponentApi
+                :title="instanceConfigApi.title"
+                :type="instanceConfigApi.type"
+                :data="instanceConfigApi.data"
+            />
+        </template>
     </ComponentExampleContainer>
 </template>
 
 <script>
-import { ComponentExampleContainer, ComponentExample } from '@/components'
+import {
+    ComponentExampleContainer,
+    ComponentExample,
+    ComponentApi
+} from '@/components'
 
 const api = [
     {
@@ -209,16 +225,182 @@ const api = [
     }
 ]
 
+const instanceApi = {
+    title: 'Modal instance',
+    columns: [
+        {
+            title: '方法',
+            key: 'method'
+        },
+        {
+            title: '说明',
+            key: 'explain'
+        }
+    ],
+    data: [
+        {
+            method: 'this.$modal.alert(config)',
+            explain: '通知类单按钮弹窗'
+        },
+        {
+            method: 'this.$modal.info(config)',
+            explain: 'type为info的alert型弹窗'
+        },
+        {
+            method: 'this.$modal.success(config)',
+            explain: 'type为success的alert型弹窗'
+        },
+        {
+            method: 'this.$modal.error(config)',
+            explain: 'type为error的alert型弹窗'
+        },
+        {
+            method: 'this.$modal.warning(config)',
+            explain: 'type为warning的alert型弹窗'
+        },
+        {
+            method: 'this.$modal.confirm(config)',
+            explain: 'type为confirm，确认类双按钮弹窗'
+        },
+        {
+            method: 'this.$modal.remove()',
+            explain: '关闭对话框'
+        }
+    ]
+}
+
+const instanceConfigApi = {
+    title: 'Modal instance config',
+    type: 'props',
+    data: [
+        {
+            prop: 'type',
+            type: 'string',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '控制alert弹窗中的icon类型'
+        },
+        {
+            prop: 'title',
+            type: 'string',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '弹窗标题'
+        },
+        {
+            prop: 'content',
+            type: 'string',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '中间内容区块文案'
+        },
+        {
+            prop: 'render',
+            type: 'Function',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '弹窗中部内容区域的dom结构使用render函数渲染'
+        },
+        {
+            prop: 'width',
+            type: 'string | number',
+            required: 'false',
+            default: '400',
+            values: '-',
+            explain: '弹窗宽度'
+        },
+        {
+            prop: 'confirmText',
+            type: 'string',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '确认按钮文案'
+        },
+        {
+            prop: 'cancelText',
+            type: 'string',
+            required: 'false',
+            default: '-',
+            values: '-',
+            explain: '取消按钮文案'
+        },
+        {
+            prop: 'closable',
+            type: 'boolean',
+            required: 'false',
+            default: 'false',
+            values: '-',
+            explain: '是否展示关闭按钮'
+        },
+        {
+            prop: 'maskClosable',
+            type: 'boolean',
+            required: 'false',
+            default: 'false',
+            values: '-',
+            explain: '是否支持点击遮罩层关闭'
+        },
+        {
+            prop: 'confirmLoading',
+            type: 'boolean',
+            required: 'false',
+            default: 'false',
+            values: '-',
+            explain: '确认按钮点击时候是否展示为loading状态，配合onConfirm使用'
+        },
+        {
+            prop: 'bottomAlign',
+            type: 'string',
+            required: 'false',
+            default: 'center',
+            values: ['left', 'center', 'right'].join(' | '),
+            explain: '底部对其方式'
+        },
+        {
+            prop: 'onConfirm',
+            type: 'Function',
+            required: 'false',
+            default: '() => {}',
+            values: '-',
+            explain: '点击确定按钮时的回调'
+        },
+        {
+            prop: 'onCancel',
+            type: 'Function',
+            required: 'false',
+            default: '() => {}',
+            values: '-',
+            explain: '点击取消按钮时的回调'
+        },
+        {
+            prop: 'headerHide',
+            type: 'boolean',
+            required: 'false',
+            default: 'true',
+            values: '-',
+            explain: '隐藏头部'
+        }
+    ]
+}
+
 export default {
     name: 'Modal-doc',
     components: {
         ComponentExampleContainer,
-        ComponentExample
+        ComponentExample,
+        ComponentApi
     },
     data() {
         return {
             examples: [],
-            api
+            api,
+            instanceApi,
+            instanceConfigApi
         }
     }
 }
