@@ -12,16 +12,10 @@
 		"prettier": "prettier --write \"**/*.{js,vue,json}\""
 	},
 	"dependencies": {
-		"dayjs": "^1.8.6",
 		"hash-sum": "^2.0.0",
 		"highlight.js": "^9.15.8",
-		"lodash.debounce": "^4.0.8",
-		"popper.js": "^1.14.5",
-		"resize-observer-polyfill": "^1.5.1",
-		"tinycolor2": "^1.4.1",
-		"v-click-outside-x": "^3.5.5",
 		"vue": "^2.6.6",
-		"zov": "^0.9.0"
+		"zov": "^0.9.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^7.5.2",
