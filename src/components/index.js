@@ -1,5 +1,6 @@
 import ComponentExampleContainer from './ComponentExampleContainer'
 import ComponentExample from './ComponentExample'
+import ComponentApi from './ComponentApi'
 import Document from './Document'
 import DocumentSection from './DocumentSection'
 import DocumentCode from './DocumentCode'
@@ -10,6 +11,7 @@ import DocumentParagraph from './DocumentParagraph'
 export {
     ComponentExampleContainer,
     ComponentExample,
+    ComponentApi,
     Document,
     DocumentSection,
     DocumentCode,
