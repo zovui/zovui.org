@@ -30,6 +30,7 @@ import {
     ComponentExample,
     ComponentApi
 } from '@/components'
+import Base from '@/examples/modal/Base.vue?demo'
 
 const api = [
     {
@@ -397,7 +398,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Base],
             api,
             instanceApi,
             instanceConfigApi
