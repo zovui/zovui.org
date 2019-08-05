@@ -5,24 +5,22 @@
             <slot />
         </div>
         <div class="document-anchor-list">
-            <Affix>
-                <Anchor show-ink>
+            <Anchor show-ink>
+                <AnchorLink
+                    v-for="anchor in anchorList"
+                    :key="anchor.id"
+                    :href="'#' + anchor.id"
+                    :title="anchor.title"
+                >
                     <AnchorLink
-                        v-for="anchor in anchorList"
-                        :key="anchor.id"
-                        :href="'#' + anchor.id"
-                        :title="anchor.title"
-                    >
-                        <AnchorLink
-                            v-if="anchor.children"
-                            v-for="child in anchor.children"
-                            :key="child.id"
-                            :href="'#' + child.id"
-                            :title="child.title"
-                        />
-                    </AnchorLink>
-                </Anchor>
-            </Affix>
+                        v-if="anchor.children"
+                        v-for="child in anchor.children"
+                        :key="child.id"
+                        :href="'#' + child.id"
+                        :title="child.title"
+                    />
+                </AnchorLink>
+            </Anchor>
         </div>
     </article>
 </template>
