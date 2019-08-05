@@ -32,6 +32,7 @@ import {
 } from '@/components'
 import Base from '@/examples/modal/Base.vue?demo'
 import DisabledLayerClose from '@/examples/modal/DisabledLayerClose.vue?demo'
+import HiddenCloseButton from '@/examples/modal/HiddenCloseButton.vue?demo'
 
 const api = [
     {
@@ -399,7 +400,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, DisabledLayerClose],
+            examples: [Base, DisabledLayerClose, HiddenCloseButton],
             api,
             instanceApi,
             instanceConfigApi
