@@ -8,7 +8,7 @@
     <Anchor show-ink>
         <AnchorLink href="#6c40bd24" title="概述" />
         <AnchorLink href="#52a13c85" title="代码示例">
-            <AnchorLink ref="#56bf0c85" title="基础使用" />
+            <AnchorLink href="#56bf0c85" title="基础使用" />
             <AnchorLink href="#73329c7f" title="静态位置" />
         </AnchorLink>
         <AnchorLink href="#1a3a6644" title="API">
