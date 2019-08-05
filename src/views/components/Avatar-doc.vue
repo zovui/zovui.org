@@ -83,6 +83,16 @@ const api = [
                 explain: '加载图片不成功时触发'
             }
         ]
+    },
+    {
+        title: 'Avatar slots',
+        type: 'slots',
+        data: [
+            {
+                name: 'default',
+                explain: '自定义头像内容'
+            }
+        ]
     }
 ]
 
