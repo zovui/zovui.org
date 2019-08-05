@@ -39,6 +39,7 @@ import VerticalCentered from '@/examples/modal/VerticalCentered.vue?demo'
 import AsyncClose from '@/examples/modal/AsyncClose.vue?demo'
 import LoadingContent from '@/examples/modal/LoadingContent.vue?demo'
 import Alert from '@/examples/modal/Alert.vue?demo'
+import Confirm from '@/examples/modal/Confirm.vue?demo'
 
 const api = [
     {
@@ -415,7 +416,8 @@ export default {
                 VerticalCentered,
                 AsyncClose,
                 LoadingContent,
-                Alert
+                Alert,
+                Confirm
             ],
             api,
             instanceApi,
