@@ -19,6 +19,7 @@ import Placement from '@/examples/tooltip/Placement.vue?demo'
 import Trigger from '@/examples/tooltip/Trigger.vue?demo'
 import Delay from '@/examples/tooltip/Delay.vue?demo'
 import Close from '@/examples/tooltip/Close.vue?demo'
+import HighColor from '@/examples/tooltip/HighColor.vue?demo'
 
 const api = [
     {
@@ -154,7 +155,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, Placement, Trigger, Delay, Close],
+            examples: [Base, HighColor, Placement, Trigger, Delay, Close],
             api
         }
     }
