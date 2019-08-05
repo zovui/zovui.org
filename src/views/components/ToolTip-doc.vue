@@ -15,6 +15,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/tooltip/Base.vue?demo'
+import Placement from '@/examples/tooltip/Placement.vue?demo'
 
 const api = [
     {
@@ -51,14 +52,18 @@ const api = [
                 required: 'false',
                 default: 'bottom',
                 values: [
-                    'left',
-                    'right',
                     'top',
+                    'top-start',
+                    'top-end',
                     'bottom',
-                    'left-top',
-                    'right-top',
-                    'left-bottom',
-                    'right-bottom'
+                    'bottom-start',
+                    'bottom-end',
+                    'left',
+                    'left-start',
+                    'left-end',
+                    'right',
+                    'right-start',
+                    'right-end'
                 ].join(' |  '),
                 explain: '弹出所在的位置'
             },
@@ -146,7 +151,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, Placement],
             api
         }
     }
