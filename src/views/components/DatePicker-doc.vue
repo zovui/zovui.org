@@ -70,6 +70,7 @@ import {
     DocumentParagraph,
     ComponentApi
 } from '@/components'
+import Single from '@/examples/datepicker/Single.vue?demo'
 
 const api = [
     {
@@ -360,7 +361,7 @@ export default {
     },
     data() {
         return {
-            examples: [],
+            examples: [Single],
             api,
             formatApi
         }
