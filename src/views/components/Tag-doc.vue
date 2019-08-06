@@ -1,129 +1,113 @@
 <template>
-    <div style="text-align: center">
-        Tag组件是复用的Button组件，稍微做了调试改动。
-        <p>
-            size
-            <Tag size="large" @click="size = 'large'">large</Tag>
-            <Tag @click="size = 'default'">middle</Tag>
-            <Tag size="small" @click="size = 'small'">small</Tag>
-        </p>
-        <p>
-            type
-            <Tag :size="size">default</Tag>
-            <Tag :size="size" looks="primary">primary</Tag>
-            <Tag :size="size" looks="dashed">dashed</Tag>
-            <Tag :size="size" looks="text">text</Tag>
-            <Tag :size="size" looks="info">info</Tag>
-            <Tag :size="size" looks="success">success</Tag>
-            <Tag :size="size" looks="warning">warning</Tag>
-            <Tag :size="size" looks="error">error</Tag>
-        </p>
-        <p>
-            shape
-            <Tag :size="size" shape="circle">default</Tag>
-            <Tag :size="size" shape="circle" looks="primary">primary</Tag>
-            <Tag :size="size" shape="circle" looks="dashed">dashed</Tag>
-            <Tag :size="size" shape="circle" looks="text">text</Tag>
-            <Tag :size="size" shape="circle" looks="info">info</Tag>
-            <Tag :size="size" shape="circle" looks="success">success</Tag>
-            <Tag :size="size" shape="circle" looks="warning">warning</Tag>
-            <Tag :size="size" shape="circle" looks="error">error</Tag>
-        </p>
-        <p>
-            disabled
-            <Tag :size="size" shape="circle" disabled>default</Tag>
-            <Tag :size="size" shape="circle" looks="primary" disabled
-                >primary</Tag
-            >
-            <Tag :size="size" shape="circle" looks="dashed" disabled
-                >dashed</Tag
-            >
-            <Tag :size="size" shape="circle" looks="text" disabled>text</Tag>
-            <Tag :size="size" shape="circle" looks="info" disabled>info</Tag>
-            <Tag :size="size" shape="circle" looks="success" disabled
-                >success</Tag
-            >
-            <Tag :size="size" shape="circle" looks="warning" disabled
-                >warning</Tag
-            >
-            <Tag :size="size" shape="circle" looks="error" disabled>error</Tag>
-        </p>
-        <p>
-            Icon
-            <Tag looks="info" iconname="wifi">自定义icon</Tag>
-            <Tag loading iconname="download">自定义icon</Tag>
-        </p>
-        <p>
-            loading 异步
-            <Tag :loading="loading" @click="loading = !loading"
-                >点击我 等待</Tag
-            >
-            <Tag :loading="loading">loading</Tag>
-            <Tag :loading="loading" spinname="dbcircle">自定义loading</Tag>
-
-            <Tag :loading="loading" :size="size" shape="circle">default</Tag>
-            <Tag :loading="loading" :size="size" shape="circle" looks="primary"
-                >primary</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="dashed"
-                >dashed</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="text"
-                >text</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="info"
-                >info</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="success"
-                >success</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="warning"
-                >warning</Tag
-            >
-            <Tag :loading="loading" :size="size" shape="circle" looks="error"
-                >error</Tag
-            >
-        </p>
-        <p>
-            无文本 tag
-            <Tag loading />
-            <Tag looks="info" iconname="wifi" />
-            <Tag looks="success" shape="circle" iconname="wifi" />
-        </p>
-        ------------------------------------------------------------------------------------------------------------
-        <p>
-            一组tag
-            <Tag
-                v-for="(item, index) in tags"
-                :key="index"
-                @on-close="removeTage(index)"
-            >
-                {{ item.text }}
-            </Tag>
-        </p>
-    </div>
+    <ComponentExampleContainer
+        component-name="Tag 标签"
+        desc="进行标记和分类的小标签。"
+        :apiList="api"
+    >
+        <ComponentExample
+            v-for="example of examples"
+            :example="example"
+            :key="example.__title"
+        />
+    </ComponentExampleContainer>
 </template>
+
 <script>
+import { ComponentExampleContainer, ComponentExample } from '@/components'
+import Type from '@/examples/tag/Type.vue?demo'
+import Shape from '@/examples/tag/Shape.vue?demo'
+import Disabled from '@/examples/tag/Disabled.vue?demo'
+import Icon from '@/examples/tag/Icon.vue?demo'
+import Async from '@/examples/tag/Async.vue?demo'
+import NotText from '@/examples/tag/NotText.vue?demo'
+import Delete from '@/examples/tag/Delete.vue?demo'
+import Size from '@/examples/tag/Size.vue?demo'
+
+const api = [
+    {
+        title: 'Tag props',
+        type: 'props',
+        data: [
+            {
+                prop: 'looks',
+                type: 'string',
+                required: 'false',
+                default: 'default',
+                values:
+                    'default, primary, dashed, text, info, success, warning, error',
+                explain: '设置标签类型'
+            },
+            {
+                prop: 'shape',
+                type: 'string',
+                required: 'false',
+                default: 'default',
+                values: 'default, circle',
+                explain: '设置标签形状'
+            },
+            {
+                prop: 'loading',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '设置标签加载中状态'
+            },
+            {
+                prop: 'spinname',
+                type: 'string',
+                required: 'false',
+                default: 'loading',
+                values: 'loading, dbcircle',
+                explain: '加载中图标样式'
+            },
+            {
+                prop: 'iconname',
+                type: 'string',
+                required: 'false',
+                default: "''",
+                values: '-',
+                explain: '自定义图标名'
+            },
+            {
+                prop: 'disabled',
+                type: 'boolean',
+                required: 'false',
+                default: 'false',
+                values: '-',
+                explain: '禁用标签'
+            },
+            {
+                prop: 'tag',
+                type: 'string',
+                required: 'false',
+                default: 'button',
+                values: '-',
+                explain: '标签元素类型'
+            }
+        ]
+    }
+]
+
 export default {
+    name: 'Tag-doc',
+    components: {
+        ComponentExampleContainer,
+        ComponentExample
+    },
     data() {
         return {
-            size: 'default',
-            loading: false,
-            tags: (() => {
-                let d = []
-                for (let i = 0; i < 5; i++) {
-                    d.push({
-                        id: i,
-                        text: 'item#' + (i + 1)
-                    })
-                }
-                return d
-            })()
-        }
-    },
-    methods: {
-        removeTage(index) {
-            this.$delete(this.tags, index)
+            examples: [
+                Type,
+                Shape,
+                Disabled,
+                Icon,
+                Async,
+                NotText,
+                Delete,
+                Size
+            ],
+            api
         }
     }
 }
