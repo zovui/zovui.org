@@ -21,6 +21,7 @@
 <script>
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/big-data-list/Base.vue?demo'
+import BigData from '@/examples/big-data-list/BigData.vue?demo'
 
 const api = [
     {
@@ -144,7 +145,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base],
+            examples: [Base, BigData],
             api
         }
     }
