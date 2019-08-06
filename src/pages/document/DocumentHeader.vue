@@ -28,8 +28,6 @@
                 @on-change="handleNavChange"
             >
                 <MenuOption name="0">首页</MenuOption>
-                <MenuOption name="1">组件</MenuOption>
-                <MenuOption name="2">生态</MenuOption>
             </Menu>
             <Switcher
                 class="org-layout-header-theme-btn"
@@ -125,14 +123,8 @@ export default {
             this.$router.push(e.text.toLowerCase() + '-doc')
         },
         handleNavChange(e) {
-            switch (e) {
-                case '0':
-                    this.$router.push('/')
-                    break
-                case '1':
-                    this.$router.push('/install')
-                    break
-                default:
+            if (e === '0') {
+                this.$router.push('/')
             }
         }
     }
