@@ -7,7 +7,7 @@
             </template>
             <router-view />
         </DocumentContent>
-        <Footer></Footer>
+        <DocumentFooter />
         <BackTop :bottom="90"></BackTop>
     </Layout>
 </template>
@@ -22,12 +22,14 @@
 import DocumentHeader from './DocumentHeader'
 import DocumentContent from './DocumentContent'
 import DocumentSider from './DocumentSider'
+import DocumentFooter from './DocumentFooter'
 
 export default {
     components: {
         DocumentHeader,
         DocumentContent,
-        DocumentSider
+        DocumentSider,
+        DocumentFooter
     },
     beforeRouteUpdate(to, from, next) {
         this.menuActiveName = to.path.slice(1)
