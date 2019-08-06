@@ -7,9 +7,7 @@
 <template>
     <article>
         <section class="section">
-            <RadioGroup v-model="mode" connected>
-                <ColorPicker v-model="color" />
-            </RadioGroup>
+            <ColorPicker v-model="color" />
         </section>
         <section class="section">
             <Timeline>
