@@ -1,24 +1,15 @@
 <template>
     <Layout>
-        <DocumentSider />
+        <slot name="sider" />
         <Content>
-            <router-view />
+            <slot />
         </Content>
     </Layout>
 </template>
 
 <style lang="scss" scoped>
 .zov-layout {
-    padding: 20px 0;
+    padding: 30px 0;
     flex-direction: row;
 }
 </style>
-
-<script>
-import DocumentSider from './DocumentSider'
-export default {
-    components: {
-        DocumentSider
-    }
-}
-</script>

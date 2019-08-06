@@ -1,7 +1,12 @@
 <template>
     <Layout class="org-layout">
         <DocumentHeader />
-        <DocumentContent />
+        <DocumentContent>
+            <template #sider>
+                <DocumentSider :menu-active-name="menuActiveName" />
+            </template>
+            <router-view />
+        </DocumentContent>
         <Footer></Footer>
         <BackTop :bottom="90"></BackTop>
     </Layout>
@@ -16,11 +21,22 @@
 <script>
 import DocumentHeader from './DocumentHeader'
 import DocumentContent from './DocumentContent'
+import DocumentSider from './DocumentSider'
 
 export default {
     components: {
         DocumentHeader,
-        DocumentContent
+        DocumentContent,
+        DocumentSider
+    },
+    beforeRouteUpdate(to, from, next) {
+        this.menuActiveName = to.path.slice(1)
+        next()
+    },
+    data() {
+        return {
+            menuActiveName: this.$route.path.slice(1)
+        }
     }
 }
 </script>

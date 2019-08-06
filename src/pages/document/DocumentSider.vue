@@ -25,7 +25,7 @@
                     <MenuOption
                         v-for="(j, index) in i.groupList"
                         :key="index"
-                        :name="j.disc"
+                        :name="j.path"
                         @click="$router.push({ path: j.path })"
                     >
                         {{ j.disc }}
@@ -36,14 +36,17 @@
     </Sider>
 </template>
 
-<style lang="scss"></style>
-
 <script>
 export default {
+    props: {
+        menuActiveName: {
+            required: true,
+            type: String
+        }
+    },
     data() {
         return {
             collapsed: false,
-            menuActiveName: this.$route.path,
             siderList: [
                 {
                     groupName: '基础',
@@ -233,9 +236,6 @@ export default {
                 }
             ]
         }
-    },
-    mounted() {
-        this.menuActiveName = this.$route.path
     }
 }
 </script>
