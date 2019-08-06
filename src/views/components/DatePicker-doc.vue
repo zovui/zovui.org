@@ -71,6 +71,7 @@ import {
     ComponentApi
 } from '@/components'
 import Single from '@/examples/datepicker/Single.vue?demo'
+import Multiple from '@/examples/datepicker/Multiple.vue?demo'
 
 const api = [
     {
@@ -361,7 +362,7 @@ export default {
     },
     data() {
         return {
-            examples: [Single],
+            examples: [Single, Multiple],
             api,
             formatApi
         }
