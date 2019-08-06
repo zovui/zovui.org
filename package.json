@@ -4,11 +4,9 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lib": "vue-cli-service build --mode lib",
 		"commit": "git-cz",
 		"release": "standard-version",
 		"lint": "vue-cli-service lint",
-		"test:unit": "vue-cli-service test:unit",
 		"prettier": "prettier --write \"**/*.{js,vue,json}\""
 	},
 	"dependencies": {

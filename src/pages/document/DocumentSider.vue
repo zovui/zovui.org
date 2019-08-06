@@ -1,109 +1,52 @@
 <template>
-    <Layout class="org-layout">
-        <Header class="org-layout-header">
-            <a href="/" class="org-layout-header-logo">
-                <img src="./assets/logo.png" />
-            </a>
-            <div class="org-layout-header-title">ZOV UI</div>
-            <Select
-                class="search-input"
-                placeholder="搜索组件"
-                :data="selectData"
-                v-model="selectValue"
-                prefix="search"
-                width="300"
-                value-name="id"
-                label-name="text"
-                :filterable="true"
-                @on-change="handleSelect"
+    <Sider v-model="collapsed" breakpoint="md" width="300">
+        <Menu
+            :thumbnail="collapsed"
+            :active-name="menuActiveName"
+            :accordion="true"
+        >
+            <MenuOption
+                v-for="(item, index) in $router.options.routes[1].children"
+                :key="index"
+                :name="item.path"
+                @click="$router.push({ path: item.path })"
             >
-                <div slot-scope="{ props }">
-                    {{ props.item.text }}
-                </div>
-            </Select>
-            <div class="org-layout-header-nav">
-                <Menu
-                    class="nav-box"
-                    mode="horizontal"
-                    style="width: auto;"
-                    @on-change="handleNavChange"
-                >
-                    <MenuOption name="0">首页</MenuOption>
-                    <MenuOption name="1">组件</MenuOption>
-                    <MenuOption name="2">生态</MenuOption>
-                </Menu>
-                <Switcher
-                    class="org-layout-header-theme-btn"
-                    v-model="isdark"
-                    size="small"
-                >
-                    <span slot="open">
-                        <Icon iconname="moon"></Icon>
+                <Icon :iconname="item.routerOptions.iconname" thumbnail-icon />
+                {{ item.routerOptions.disc }}
+            </MenuOption>
+            <MenuSub name="components">
+                <template #title>
+                    组件
+                </template>
+                <MenuGroup v-for="(i, index) in siderList" :key="index">
+                    <span slot="title">
+                        {{ i.groupName }}
                     </span>
-                    <span slot="close">
-                        <Icon iconname="sunny"></Icon>
-                    </span>
-                </Switcher>
-            </div>
-        </Header>
-        <Layout class="org-layout-main">
-            <Sider v-model="collapsed" breakpoint="md" width="300">
-                <Menu
-                    :thumbnail="collapsed"
-                    :active-name="menuActiveName"
-                    :accordion="true"
-                >
                     <MenuOption
-                        v-for="(item, index) in $router.options.routes[1]
-                            .children"
+                        v-for="(j, index) in i.groupList"
                         :key="index"
-                        :name="item.path"
-                        @click="$router.push({ path: item.path })"
+                        :name="j.path"
+                        @click="$router.push({ path: j.path })"
                     >
-                        <Icon
-                            :iconname="item.routerOptions.iconname"
-                            thumbnail-icon
-                        />
-                        {{ item.routerOptions.disc }}
+                        {{ j.disc }}
                     </MenuOption>
-                    <MenuSub name="components">
-                        <template #title>
-                            组件
-                        </template>
-                        <MenuGroup v-for="(i, index) in siderList" :key="index">
-                            <span slot="title">
-                                {{ i.groupName }}
-                            </span>
-                            <MenuOption
-                                v-for="(j, index) in i.groupList"
-                                :key="index"
-                                :name="j.disc"
-                                @click="$router.push({ path: j.path })"
-                            >
-                                {{ j.disc }}
-                            </MenuOption>
-                        </MenuGroup>
-                    </MenuSub>
-                </Menu>
-            </Sider>
-            <Content>
-                <router-view @on-setAnchorNav="setAnchorNav" />
-            </Content>
-            <BackTop :bottom="90"></BackTop>
-        </Layout>
-        <Footer class="org-layout-footer"> </Footer>
-    </Layout>
+                </MenuGroup>
+            </MenuSub>
+        </Menu>
+    </Sider>
 </template>
+
 <script>
 export default {
+    props: {
+        menuActiveName: {
+            required: true,
+            type: String
+        }
+    },
     data() {
         return {
             collapsed: false,
-            isdark: false,
-            menuActiveName: this.$route.path,
-            selectValue: '',
-            anchorNavList: [],
-            // selectData: this.$router.options.routes[2].map(i=>i),
             siderList: [
                 {
                     groupName: '基础',
@@ -266,10 +209,6 @@ export default {
                         }
                     ]
                 },
-                // {
-                // 	groupName: '图表',
-                // 	groupList: []
-                // },
                 {
                     groupName: '其它',
                     groupList: [
@@ -297,67 +236,6 @@ export default {
                 }
             ]
         }
-    },
-    computed: {
-        selectData() {
-            let arr = []
-            // console.log('rout',this.$router.options.routes[2]);
-            this.$router.options.routes[2].children.map((i, j) =>
-                arr.push({
-                    id: j,
-                    text: i.routerOptions.discEn
-                })
-            )
-            return arr
-        }
-    },
-    watch: {
-        isdark(val) {
-            val
-                ? this.$Dark.open(() => {
-                      localStorage.setItem('zov-theme', 'dark')
-                  })
-                : this.$Dark.close(() => {
-                      localStorage.setItem('zov-theme', '')
-                  })
-        }
-    },
-    methods: {
-        setAnchorNav(list) {
-            this.anchorNavList = list
-        },
-        handleSelect(e) {
-            this.$router.push(e.text.toLowerCase() + '-doc')
-            this.menuActiveName = this.$route.path
-        },
-        handleNavChange(e) {
-            switch (e) {
-                case '0':
-                    this.$router.push('/')
-                    break
-                case '1':
-                    this.$router.push('/install')
-                    break
-                default:
-            }
-        }
-    },
-    mounted() {
-        this.isdark = localStorage.getItem('zov-theme') === 'dark'
-        this.menuActiveName = this.$route.path
     }
 }
 </script>
-<style lang="scss">
-$pre: org;
-.#{$pre} {
-    &-layout {
-        &-sider {
-            // position: relative;
-            &-trigger {
-                // position: absolute;
-            }
-        }
-    }
-}
-</style>
