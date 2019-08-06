@@ -1,9 +1,13 @@
 <template>
-    <Header class="org-layout-header">
-        <a href="/" class="org-layout-header-logo">
-            <img alt="logo" src="../../assets/logo.png" />
+    <Header>
+        <a href="/" class="org-brand">
+            <img
+                class="org-brand-logo"
+                alt="logo"
+                src="../../assets/logo.png"
+            />
+            <span class="org-brand-title">ZOV UI</span>
         </a>
-        <div class="org-layout-header-title">ZOV UI</div>
         <Select
             class="search-input"
             placeholder="搜索组件"
@@ -20,11 +24,10 @@
                 {{ props.item.text }}
             </div>
         </Select>
-        <div class="org-layout-header-nav">
+        <div class="org-nav">
             <Menu
-                class="nav-box"
+                class="org-nav-menu"
                 mode="horizontal"
-                style="width: auto;"
                 @on-change="handleNavChange"
             >
                 <MenuOption name="0">首页</MenuOption>
@@ -46,39 +49,41 @@
 </template>
 
 <style lang="scss" scoped>
-.org-layout-header {
+.zov-layout-header {
     border-color: transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.org-brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
     &-logo {
         width: 80px;
-        height: 100%;
-        img {
-            height: 100%;
-        }
     }
     &-title {
-        height: 100%;
         font-weight: bold;
         font-size: 18px;
+        color: var(--color-title);
     }
-    .search-input {
-        width: 300px;
-        margin-left: 50px;
-        border: none;
-    }
-    &-nav {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        .nav-box {
+}
+.search-input {
+    width: 300px;
+    margin-left: 50px;
+    border: none;
+}
+.org-nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-menu {
+        & > * {
             float: right;
-            a {
-            }
         }
     }
 }
