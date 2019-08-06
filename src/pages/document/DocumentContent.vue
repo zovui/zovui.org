@@ -12,4 +12,7 @@
     padding: 30px 0;
     flex-direction: row;
 }
+.zov-layout-content {
+    min-width: 1px;
+}
 </style>
