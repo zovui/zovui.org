@@ -22,6 +22,7 @@
 import { ComponentExampleContainer, ComponentExample } from '@/components'
 import Base from '@/examples/big-data-list/Base.vue?demo'
 import BigData from '@/examples/big-data-list/BigData.vue?demo'
+import Multiple from '@/examples/big-data-list/Multiple.vue?demo'
 
 const api = [
     {
@@ -145,7 +146,7 @@ export default {
     },
     data() {
         return {
-            examples: [Base, BigData],
+            examples: [Base, BigData, Multiple],
             api
         }
     }
