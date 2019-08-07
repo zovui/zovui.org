@@ -3,6 +3,7 @@
         <Menu
             :thumbnail="collapsed"
             :active-name="menuActiveName"
+            :open-names="['components']"
             :accordion="true"
         >
             <MenuOption
