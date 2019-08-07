@@ -28,7 +28,7 @@
                 <li>字体</li>
                 <li>圆角</li>
                 <li>超链接样式</li>
-                <li>响应式屏幕断电</li>
+                <li>响应式屏幕断点</li>
                 <li>部分组件可配置变量</li>
             </ul>
             <DocumentCode :highlighted-code="codeMap.CustomScss" />
