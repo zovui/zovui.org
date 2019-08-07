@@ -1,11 +1,16 @@
 <template>
     <Document header="Changelog" disabled-anchor>
+        <Spin cover v-if="loading" />
         <Timeline>
             <TimelineItem v-for="node of data" :key="node.version">
                 <p class="node-version">版本：{{ node.version }}</p>
                 <p class="node-date">发布日期：{{ node.date }}</p>
                 <template v-if="node.events.length">
-                    <div v-for="event of node.events" class="node-event">
+                    <div
+                        v-for="event of node.events"
+                        class="node-event"
+                        :key="event.name"
+                    >
                         <p class="node-event-name">{{ event.name }}</p>
                         <ul
                             v-if="event.eventList.length"
@@ -13,6 +18,7 @@
                         >
                             <li
                                 v-for="eventNode of event.eventList"
+                                :key="eventNode"
                                 v-html="eventNode"
                             ></li>
                         </ul>
@@ -89,7 +95,8 @@ export default {
     },
     data() {
         return {
-            data: []
+            data: [],
+            loading: false
         }
     },
     methods: {
@@ -145,8 +152,18 @@ export default {
         },
         // 生成changelog
         async genChangelog() {
-            const changelogText = await this.fetchChangelog()
-            this.data = await this.parseChangelogMarkdown(changelogText)
+            this.loading = true
+            try {
+                const changelogText = await this.fetchChangelog()
+                this.data = await this.parseChangelogMarkdown(changelogText)
+            } catch (e) {
+                this.$Message.error({
+                    title: e.message,
+                    duration: 0
+                })
+            } finally {
+                this.loading = false
+            }
         }
     }
 }
