@@ -60,8 +60,8 @@ export default {
                 if (navigator.clipboard) {
                     await navigator.clipboard.writeText(this.sourceCode)
                 } else {
-                    const input = document.createElement('input')
-                    input.type = 'text'
+                    const input = document.createElement('textarea')
+                    const scrollTop = window.pageYOffset
                     input.value = this.sourceCode
                     input.readOnly = true
                     document.body.appendChild(input)
@@ -72,6 +72,7 @@ export default {
                         throw new Error('Failed to copy text.')
                     }
                     input.blur()
+                    window.scrollTo(window.pageXOffset, scrollTop)
                     document.body.removeChild(input)
                 }
                 this.$Message.success({
