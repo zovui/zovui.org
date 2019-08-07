@@ -54,11 +54,11 @@ export default {
                     groupList: [
                         {
                             disc: 'Button 按钮',
-                            path: 'button-doc'
+                            path: '/button-doc'
                         },
                         {
                             disc: 'Icon 图标',
-                            path: 'icon-doc'
+                            path: '/icon-doc'
                         }
                     ]
                 },
@@ -67,15 +67,15 @@ export default {
                     groupList: [
                         {
                             disc: 'Grid 栅格',
-                            path: 'grid-doc'
+                            path: '/grid-doc'
                         },
                         {
                             disc: 'Layout 布局',
-                            path: 'layout-doc'
+                            path: '/layout-doc'
                         },
                         {
                             disc: 'Divider 分割线',
-                            path: 'divider-doc'
+                            path: '/divider-doc'
                         }
                     ]
                 },
@@ -84,39 +84,39 @@ export default {
                     groupList: [
                         {
                             disc: 'Menu 导航菜单',
-                            path: 'menu-doc'
+                            path: '/menu-doc'
                         },
                         {
                             disc: 'Tabs 标签页',
-                            path: 'tabs-doc'
+                            path: '/tabs-doc'
                         },
                         {
                             disc: 'Anchor 锚点',
-                            path: 'anchor-doc'
+                            path: '/anchor-doc'
                         },
                         {
                             disc: 'Badge 徽标数',
-                            path: 'badge-doc'
+                            path: '/badge-doc'
                         },
                         {
                             disc: 'Breadcrumb 面包屑',
-                            path: 'breadcrumb-doc'
+                            path: '/breadcrumb-doc'
                         },
                         {
                             disc: 'Drop 下拉菜单',
-                            path: 'drop-doc'
+                            path: '/drop-doc'
                         },
                         {
                             disc: 'LoadingBar 加载进度条',
-                            path: 'loadingbar-doc'
+                            path: '/loadingbar-doc'
                         },
                         {
                             disc: 'Steps 步骤条',
-                            path: 'steps-doc'
+                            path: '/steps-doc'
                         },
                         {
                             disc: 'Page 分页',
-                            path: 'Page-doc'
+                            path: '/Page-doc'
                         }
                     ]
                 },
@@ -125,47 +125,47 @@ export default {
                     groupList: [
                         {
                             disc: 'Input 输入框',
-                            path: 'input-doc'
+                            path: '/input-doc'
                         },
                         {
                             disc: 'Radio 单选框',
-                            path: 'radio-doc'
+                            path: '/radio-doc'
                         },
                         {
                             disc: 'Cascader 级联选择',
-                            path: 'cascader-doc'
+                            path: '/cascader-doc'
                         },
                         {
                             disc: 'Select 选择器',
-                            path: 'select-doc'
+                            path: '/select-doc'
                         },
                         {
                             disc: 'Checkbox 多选框',
-                            path: 'checkbox-doc'
+                            path: '/checkbox-doc'
                         },
                         {
                             disc: 'Switch 开关',
-                            path: 'switch-doc'
+                            path: '/switch-doc'
                         },
                         {
                             disc: 'Slider 滑块',
-                            path: 'slider-doc'
+                            path: '/slider-doc'
                         },
                         {
                             disc: 'DatePicker 日期选择器',
-                            path: 'datepicker-doc'
+                            path: '/datepicker-doc'
                         },
                         {
                             disc: 'ColorPicker 颜色选择器',
-                            path: 'colorpicker-doc'
+                            path: '/colorpicker-doc'
                         },
                         {
                             disc: 'TimePicker 时间选择器',
-                            path: 'timepicker-doc'
+                            path: '/timepicker-doc'
                         },
                         {
                             disc: 'Upload 上传',
-                            path: 'upload-doc'
+                            path: '/upload-doc'
                         }
                     ]
                 },
@@ -174,39 +174,39 @@ export default {
                     groupList: [
                         {
                             disc: 'Avatar 头像',
-                            path: 'avatar-doc'
+                            path: '/avatar-doc'
                         },
                         {
                             disc: 'Message 全局提示',
-                            path: 'message-doc'
+                            path: '/message-doc'
                         },
                         {
                             disc: 'Notice 通知提醒',
-                            path: 'notice-doc'
+                            path: '/notice-doc'
                         },
                         {
                             disc: 'Modal 对话框',
-                            path: 'modal-doc'
+                            path: '/modal-doc'
                         },
                         {
                             disc: 'Popper 气泡',
-                            path: 'popper-doc'
+                            path: '/popper-doc'
                         },
                         {
                             disc: 'ToolTip 气泡提示',
-                            path: 'tooltip-doc'
+                            path: '/tooltip-doc'
                         },
                         {
                             disc: 'Progress 进度条',
-                            path: 'progress-doc'
+                            path: '/progress-doc'
                         },
                         {
                             disc: 'Tag 标签',
-                            path: 'tag-doc'
+                            path: '/tag-doc'
                         },
                         {
                             disc: 'Timeline 时间轴',
-                            path: 'Timeline-doc'
+                            path: '/Timeline-doc'
                         }
                     ]
                 },
@@ -215,23 +215,23 @@ export default {
                     groupList: [
                         {
                             disc: 'Affix 图钉',
-                            path: 'affix-doc'
+                            path: '/affix-doc'
                         },
                         {
                             disc: 'BackTop 返回顶部',
-                            path: 'backtop-doc'
+                            path: '/backtop-doc'
                         },
                         {
                             disc: 'Spin 加载中',
-                            path: 'spin-doc'
+                            path: '/spin-doc'
                         },
                         {
                             disc: 'LongList 无限滚动',
-                            path: 'longlist-doc'
+                            path: '/longlist-doc'
                         },
                         {
                             disc: 'BigDataList 长列表',
-                            path: 'bigdatalist-doc'
+                            path: '/bigdatalist-doc'
                         }
                     ]
                 }

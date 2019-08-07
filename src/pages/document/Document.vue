@@ -32,12 +32,12 @@ export default {
         DocumentFooter
     },
     beforeRouteUpdate(to, from, next) {
-        this.menuActiveName = to.path.slice(1)
+        this.menuActiveName = to.path
         next()
     },
     data() {
         return {
-            menuActiveName: this.$route.path.slice(1)
+            menuActiveName: this.$route.path
         }
     }
 }
