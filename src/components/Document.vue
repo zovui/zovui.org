@@ -49,6 +49,10 @@ export default {
         header: {
             required: true,
             type: String
+        },
+        disabledAnchor: {
+            type: Boolean,
+            default: false
         }
     },
     render(h) {
@@ -62,7 +66,9 @@ export default {
                     <h1 class="document-header">{this.header}</h1>
                     {this.$slots.default}
                 </div>
-                <div class="document-anchor-list">{genAnchorTree(h, root)}</div>
+                <div class="document-anchor-list">
+                    {this.disabledAnchor ? '' : genAnchorTree(h, root)}
+                </div>
             </article>
         )
     }
