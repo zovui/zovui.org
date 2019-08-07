@@ -38,16 +38,20 @@
                 因为sass的!default变量能力，使得变量可被修改变成可能。
             </DocumentParagraph>
             <DocumentParagraph>
-                在业务代码中这样写即可以自定义zov主题
+                具体的覆盖流程如下：
             </DocumentParagraph>
-            <DocumentCode :highlighted-code="codeMap.CustomThemeScss" />
-            <DocumentParagraph>
-                将 zov原生主题导入值变量赋值的后面。
-            </DocumentParagraph>
-            <DocumentParagraph>
-                原理是zov中变量定义均为 $color-primary : green !default;
-                防止覆盖业务代码中的变量。
-            </DocumentParagraph>
+            <ul class="list">
+                <li>
+                    新建一个custom-theme.scss文件
+                </li>
+                <li>
+                    <DocumentParagraph>写入：</DocumentParagraph>
+                    <DocumentCode :highlighted-code="codeMap.CustomThemeScss" />
+                </li>
+                <li>
+                    保存后导入到入口的js中
+                </li>
+            </ul>
         </DocumentSection>
     </Document>
 </template>
@@ -57,6 +61,7 @@
     margin-bottom: 20px;
     list-style-type: disc !important;
     li {
+        margin: 10px 0;
         list-style-type: disc !important;
     }
     padding-left: 25px;
