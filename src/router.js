@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Zov from 'zov'
 import Home from './pages/home'
-import Menu from './Menu'
+import Document from './pages/document'
 Vue.use(Router)
 let routerObject = {
     routes: [
@@ -12,12 +12,12 @@ let routerObject = {
         },
         {
             path: '/menu',
-            component: Menu,
+            component: Document,
             children: []
         },
         {
             path: '/component',
-            component: Menu,
+            component: Document,
             children: []
         }
     ]

@@ -18,7 +18,13 @@
                     <li>5</li>
                 </ul>
             </div>
-            <div class="box" v-zov-spin="show">
+            <div
+                class="box"
+                v-zov-spin="{
+                    show: show,
+                    spinname: 'dbcircle'
+                }"
+            >
                 我是组件
                 <ul class="ul">
                     <li>1</li>

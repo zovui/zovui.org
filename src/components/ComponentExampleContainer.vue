@@ -1,14 +1,15 @@
 <template>
     <Document :header="componentName">
         <DocumentSection title="概述">
-            <DocumentParagragh>
+            <DocumentParagraph>
                 <slot name="desc">{{ desc }}</slot>
-            </DocumentParagragh>
+            </DocumentParagraph>
         </DocumentSection>
         <DocumentSection title="代码示例">
             <slot />
         </DocumentSection>
         <DocumentSection title="API">
+            <slot name="before-api" />
             <ComponentApi
                 v-for="api of apiList"
                 :key="api.title"
@@ -17,6 +18,7 @@
                 :columns="api.columns"
                 :data="api.data"
             />
+            <slot name="after-api" />
         </DocumentSection>
     </Document>
 </template>
@@ -25,7 +27,7 @@
 import ComponentApi from './ComponentApi'
 import Document from './Document'
 import DocumentSection from './DocumentSection'
-import DocumentParagragh from './DocumentParagraph'
+import DocumentParagraph from './DocumentParagraph'
 
 export default {
     name: 'ComponentExampleContainer',
@@ -44,7 +46,7 @@ export default {
         ComponentApi,
         Document,
         DocumentSection,
-        DocumentParagragh
+        DocumentParagraph
     }
 }
 </script>

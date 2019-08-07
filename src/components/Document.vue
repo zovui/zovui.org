@@ -1,32 +1,3 @@
-<template>
-    <article class="document">
-        <div class="document-content">
-            <h1 class="document-header">{{ header }}</h1>
-            <slot />
-        </div>
-        <div class="document-anchor-list">
-            <Affix>
-                <Anchor show-ink>
-                    <AnchorLink
-                        v-for="anchor in anchorList"
-                        :key="anchor.id"
-                        :href="'#' + anchor.id"
-                        :title="anchor.title"
-                    >
-                        <AnchorLink
-                            v-if="anchor.children"
-                            v-for="child in anchor.children"
-                            :key="child.id"
-                            :href="'#' + child.id"
-                            :title="child.title"
-                        />
-                    </AnchorLink>
-                </Anchor>
-            </Affix>
-        </div>
-    </article>
-</template>
-
 <style lang="scss">
 .document {
     display: flex;
@@ -48,6 +19,29 @@
 
 <script>
 import DocumentAnchorRoot from './DocumentAnchorRoot'
+import { Anchor, AnchorLink } from 'zov'
+
+function genAnchorTree(h, node) {
+    if (!node) {
+        return ''
+    }
+    let children = ''
+    if (Array.isArray(node.children) && node.children.length) {
+        children = node.children.map(childrenNode =>
+            genAnchorTree(h, childrenNode)
+        )
+    }
+    if (node.isRoot) {
+        return <Anchor show-ink>{children}</Anchor>
+    } else {
+        return (
+            <AnchorLink href={'#' + node.id} title={node.title}>
+                {children}
+            </AnchorLink>
+        )
+    }
+}
+
 export default {
     name: 'Document',
     mixins: [DocumentAnchorRoot],
@@ -55,7 +49,28 @@ export default {
         header: {
             required: true,
             type: String
+        },
+        disabledAnchor: {
+            type: Boolean,
+            default: false
         }
+    },
+    render(h) {
+        const root = {
+            isRoot: true,
+            children: this.anchorList
+        }
+        return (
+            <article class="document">
+                <div class="document-content">
+                    <h1 class="document-header">{this.header}</h1>
+                    {this.$slots.default}
+                </div>
+                <div class="document-anchor-list">
+                    {this.disabledAnchor ? '' : genAnchorTree(h, root)}
+                </div>
+            </article>
+        )
     }
 }
 </script>

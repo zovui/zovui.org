@@ -57,13 +57,31 @@ export default {
     methods: {
         async copyCode() {
             try {
-                await navigator.clipboard.writeText(this.sourceCode)
+                if (navigator.clipboard) {
+                    await navigator.clipboard.writeText(this.sourceCode)
+                } else {
+                    const input = document.createElement('textarea')
+                    const scrollTop = window.pageYOffset
+                    input.value = this.sourceCode
+                    input.readOnly = true
+                    document.body.appendChild(input)
+                    input.focus()
+                    input.setSelectionRange(0, this.sourceCode.length)
+                    const result = document.execCommand('copy')
+                    if (result === false) {
+                        throw new Error('Failed to copy text.')
+                    }
+                    input.blur()
+                    window.scrollTo(window.pageXOffset, scrollTop)
+                    document.body.removeChild(input)
+                }
                 this.$Message.success({
                     title: '复制成功！'
                 })
             } catch (e) {
                 this.$Message.error({
-                    title: '复制失败，请先授权剪切板访问权限!'
+                    title: '复制失败！',
+                    text: e.message
                 })
             }
         }

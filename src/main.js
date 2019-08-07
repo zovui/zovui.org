@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import router from './router'
-import './app.scss'
 import Zov from 'zov'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'zov/lib/zov.min.css'
