@@ -16,6 +16,7 @@ module.exports = function(api) {
             .resourceQuery(/blockType=sourcecode/)
             .use('InjectVueSourceCodeLoader')
             .loader(path.resolve(__dirname, './InjectVueSourceCodeLoader.js'))
+        // 高亮其他类型的文件
         config.module
             .rule('get-source-code')
             .resourceQuery(/get-source-code/)
@@ -32,5 +33,8 @@ module.exports = function(api) {
             .resourceQuery(/get-source-code/)
             .use('HighlightLoader')
             .loader(path.resolve(__dirname, './HighlightLoader'))
+        config.module.rule('scss').resourceQuery({
+            not: [/get-source-code/]
+        })
     })
 }

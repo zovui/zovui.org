@@ -1,0 +1,11 @@
+// custom-theme.scss 自定义主题scss
+
+// 主题色
+$color-primary              :   green;
+// 辅助色
+$color-info                 :   #2db7f5;
+$color-success              :   #19be6b;
+$color-warning              :   #ff9900;
+$color-error                :   #ed4014;
+// 引入zov样式表
+@import "~zov/core/index.scss";
