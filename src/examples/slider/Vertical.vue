@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="slider-demo">
         <section>
             <p class="props">当前值: {{ vertical.value1 }}</p>
             <div class="vertical-demo">
@@ -49,8 +49,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.vertical-demo {
+<style>
+.slider-demo .vertical-demo {
     height: 300px;
 }
 </style>
