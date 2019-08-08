@@ -5,18 +5,21 @@
 </desc>
 
 <template>
-    <Row>
-        <Col span="18" push="6">col-18 | push-6</Col>
-        <Col span="6" pull="18">col-6 | pull-18</Col>
-    </Row>
+    <article class="grid-demo">
+        <Row>
+            <Col span="18" push="6">col-18 | push-6</Col>
+            <Col span="6" pull="18">col-6 | pull-18</Col>
+        </Row>
+    </article>
 </template>
 
-<style lang="scss" scoped>
-.zov-col {
+<style>
+.grid-demo .zov-col {
     padding: 30px 0;
     background: #2aa198;
-    &:nth-of-type(2n) {
-        background: #1cd779;
-    }
+}
+
+.grid-demo .zov-col:nth-of-type(2n) {
+    background: #1cd779;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <ComponentExampleContainer
         component-name="Grid 栅格"
-        desc="布局组件，将布局分为12份来进行布局"
+        desc="布局组件，将布局分为24份来进行布局"
         :api-list="apiList"
     >
         <ComponentExample
