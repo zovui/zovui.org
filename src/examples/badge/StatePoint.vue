@@ -23,13 +23,3 @@
         <Badge status="warning" text="Warning" />
     </div>
 </template>
-
-<style lang="scss" scoped>
-.demo-badge {
-    width: 42px;
-    height: 42px;
-    background: #eee;
-    border-radius: 6px;
-    display: inline-block;
-}
-</style>

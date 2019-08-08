@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <div>
+    <div class="badge-demo">
         <span>
             <Badge text="new">
                 <a href="#" class="demo-badge"></a>
@@ -19,15 +19,16 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
-span {
+<style>
+.badge-demo span {
     margin: 0 5px 0;
-    .demo-badge {
-        width: 42px;
-        height: 42px;
-        background: #eee;
-        border-radius: 6px;
-        display: inline-block;
-    }
+}
+
+.badge-demo .demo-badge {
+    width: 42px;
+    height: 42px;
+    background: #eee;
+    border-radius: 6px;
+    display: inline-block;
 }
 </style>

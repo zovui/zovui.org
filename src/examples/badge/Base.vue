@@ -10,7 +10,7 @@
     </Badge>
 </template>
 
-<style lang="scss" scoped>
+<style>
 .demo-badge {
     width: 42px;
     height: 42px;
