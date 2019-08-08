@@ -50,13 +50,13 @@ export default {
     border-spacing: 0;
     margin: 20px 0;
     width: 100%;
-    border: 1px solid #e9e9e9;
+    border: 1px solid var(--color-border);
     thead {
-        background-color: #f7f7f7;
+        background-color: var(--color-border);
     }
     th,
     td {
-        border: 1px solid #e9e9e9;
+        border: 1px solid var(--color-border);
         vertical-align: middle;
         height: 36px;
         text-align: center;
