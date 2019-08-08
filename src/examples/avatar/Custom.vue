@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="avatar-demo">
         <Avatar class="avatar" iconname="person" />
         <Avatar class="avatar">Z</Avatar>
         <Avatar class="avatar">ZOV</Avatar>
@@ -13,19 +13,13 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.avatar {
+<style>
+.avatar-demo .avatar {
     margin-right: 10px;
 }
 
-.custom-avatar-color {
+.avatar-demo .custom-avatar-color {
     color: #f56a00;
     background-color: #fde3cf;
 }
 </style>
-
-<script>
-export default {
-    name: 'Custom'
-}
-</script>
