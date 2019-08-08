@@ -10,7 +10,7 @@
 </desc>
 
 <template>
-    <article class="article">
+    <article class="tooltip-demo">
         <section class="section">
             <ToolTip
                 title="提示"
@@ -48,11 +48,11 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.article {
+<style>
+.tooltip-demo {
     text-align: center;
 }
-.section {
+.tooltip-demo .section {
     margin-bottom: 150px;
 }
 </style>
