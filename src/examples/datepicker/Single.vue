@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="datepicker-demo">
         <section class="section">
             日：
             <DatePicker placeholder="日" v-model="a1" format="YYYY年MM月DD日" />
@@ -21,8 +21,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.datepicker-demo .section {
     margin-bottom: 20px;
 }
 </style>

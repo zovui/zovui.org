@@ -6,7 +6,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="menu-demo">
         <section class="section">
             <Menu
                 :mode="mode"
@@ -100,8 +100,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.menu-demo .section {
     margin: 20px 0;
     overflow: hidden;
 }

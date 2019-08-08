@@ -13,7 +13,7 @@
     </Drop>
 </template>
 
-<style lang="scss" scoped>
+<style>
 .drop-content {
     width: 200px;
     height: 200px;

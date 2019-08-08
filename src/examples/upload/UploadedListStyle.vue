@@ -3,7 +3,7 @@
 <desc>展现已上传的文件列表能让用户感知已经完成上传的文件有哪些，提升用户体验</desc>
 
 <template>
-    <article>
+    <article class="upload-demo">
         <section class="section">
             <p class="section-header">text</p>
             <Upload
@@ -37,11 +37,11 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.upload-demo .section {
     margin-bottom: 20px;
 }
-.section-header {
+.upload-demo .section-header {
     margin: 10px 0;
 }
 </style>

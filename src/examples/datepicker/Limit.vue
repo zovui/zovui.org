@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="datepicker-demo">
         <section class="section">
             <DatePicker
                 multiple
@@ -66,8 +66,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.datepicker-demo .section {
     margin-bottom: 20px;
 }
 </style>

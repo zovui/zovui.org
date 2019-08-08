@@ -3,7 +3,7 @@
 <desc>可以同时选择多个日期，月份，年等</desc>
 
 <template>
-    <article>
+    <article class="datepicker-demo">
         <section class="section">
             日：
             <DatePicker multiple placeholder="日" v-model="d1" />
@@ -33,8 +33,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.datepicker-demo .section {
     margin-bottom: 20px;
 }
 </style>

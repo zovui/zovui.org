@@ -5,25 +5,18 @@
 </desc>
 
 <template>
-    <div>
+    <div class="badge-demo">
         <span>
             <Badge :count="10"></Badge>
         </span>
         <span>
-            <Badge :count="20" class-name="demo-badge-alone"></Badge>
+            <Badge :count="20"></Badge>
         </span>
     </div>
 </template>
 
-<style lang="scss" scoped>
-span {
+<style>
+.badge-demo span {
     margin: 0 5px 0;
-    .demo-badge {
-        width: 42px;
-        height: 42px;
-        background: #eee;
-        border-radius: 6px;
-        display: inline-block;
-    }
 }
 </style>
