@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <div>
+    <div class="switch-demo">
         <Switcher v-model="value">
             <template #open
                 >这是开的状态</template
@@ -21,8 +21,8 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
-.zov-switch {
+<style>
+.switch-demo .zov-switch {
     margin-right: 20px;
 }
 </style>

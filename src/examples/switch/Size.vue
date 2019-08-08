@@ -5,15 +5,15 @@
 </desc>
 
 <template>
-    <div>
+    <div class="switch-demo">
         <Switcher v-model="value" size="large"></Switcher>
         <Switcher v-model="value"></Switcher>
         <Switcher v-model="value" size="small"></Switcher>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.zov-switch {
+<style>
+.switch-demo .zov-switch {
     margin-right: 20px;
 }
 </style>

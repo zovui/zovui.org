@@ -5,14 +5,14 @@
 </desc>
 
 <template>
-    <div>
+    <div class="switch-demo">
         <Switcher :value="true" disabled />
         <Switcher :value="false" disabled />
     </div>
 </template>
 
-<style lang="scss" scoped>
-.zov-switch {
+<style lang="scss">
+.switch-demo .zov-switch {
     margin-right: 20px;
 }
 </style>
