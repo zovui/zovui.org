@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="timeline-demo">
         <section class="section">
             <ColorPicker v-model="color" />
         </section>
@@ -24,8 +24,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.timeline-demo .section {
     margin-bottom: 20px;
 }
 </style>
