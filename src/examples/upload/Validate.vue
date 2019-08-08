@@ -23,8 +23,6 @@
     </Upload>
 </template>
 
-<style lang="scss"></style>
-
 <script>
 export default {
     data() {

@@ -7,14 +7,14 @@
 </desc>
 
 <template>
-    <div>
+    <div class="spin-demo">
         <Spin />
         <Spin spinname="dbcircle" />
     </div>
 </template>
 
-<style lang="scss" scoped>
-.zov-spin {
+<style>
+.spin-demo .zov-spin {
     font-size: 12 * 3px;
     margin-right: 20px;
 }

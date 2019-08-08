@@ -1,6 +1,6 @@
 <title>左右布局</title>
 <template>
-    <div class="demo">
+    <div class="layout-demo">
         <Layout class="container">
             <Sider></Sider>
             <Layout>
@@ -12,27 +12,20 @@
     </div>
 </template>
 
-<style lang="scss">
-.demo {
-    $color-primary: #2d8cf0;
-    $layout-header-background: lighten($color-primary, 10%);
-    $layout-content-background: lighten($color-primary, 25%);
-    $layout-footer-background: $layout-header-background;
-    $layout-sider-background: $color-primary;
-    .zov-layout-header {
-        background: $layout-header-background;
-    }
-    .zov-layout-content {
-        background: $layout-content-background;
-    }
-    .zov-layout-sider {
-        background: $layout-sider-background;
-    }
-    .zov-layout-footer {
-        background: $layout-footer-background;
-    }
+<style>
+.layout-demo .zov-layout-header {
+    background: #5da6f3;
 }
-.container {
+.layout-demo .zov-layout-content {
+    background: #a4cdf8;
+}
+.layout-demo .zov-layout-sider {
+    background: #2d8cf0;
+}
+.layout-demo .zov-layout-footer {
+    background: #5da6f3;
+}
+.layout-demo .container {
     height: 400px;
     margin-top: 15px;
 }

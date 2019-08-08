@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="timeline-demo">
         <section class="section">
             <RadioGroup v-model="mode" connected>
                 <Radio
@@ -38,8 +38,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.timeline-demo .section {
     margin-bottom: 20px;
 }
 </style>

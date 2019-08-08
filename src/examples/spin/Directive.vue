@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <div>
+    <div class="spin-demo">
         <Switcher v-model="show" />
         <div class="container">
             <div class="box" v-zov-spin="show">
@@ -38,24 +38,27 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
-.container {
+<style>
+.spin-demo .container {
     display: flex;
 }
-.box {
+.spin-demo .box {
     flex: 1;
     border: none;
     margin: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
-.ul {
+.spin-demo .ul {
     border: 1px solid #ccc;
-    li {
-        padding: 15px 0;
-        &:not(:nth-of-type(1)) {
-            border-top: 1px solid #ccc;
-        }
-    }
+}
+
+.spin-demo .ul li {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.spin-demo .ul li:not(:nth-of-type(1)) {
+    border-top: 1px solid #ccc;
 }
 </style>
 

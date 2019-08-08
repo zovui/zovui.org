@@ -1,7 +1,7 @@
 <title>基础使用</title>
 
 <template>
-    <article>
+    <article class="long-list-demo">
         <section>
             <p class="controller">修改窗口高度 <Input v-model="v" /></p>
             <p class="controller">修改子项高度 <Input v-model="v1" /></p>
@@ -33,26 +33,30 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.controller {
+<style>
+.long-list-demo .controller {
     margin-bottom: 20px;
 }
-.item {
+
+.long-list-demo .item {
     overflow: hidden;
     padding: 15px;
-    & > * {
-        float: left;
-    }
-    & > img {
-        width: 35px;
-        height: 35px;
-    }
     border-bottom: 1px solid #ccc;
-    &::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+}
+
+.long-list-demo .item:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.long-list-demo .item > * {
+    float: left;
+}
+
+.long-list-demo .item > img {
+    width: 35px;
+    height: 35px;
 }
 </style>
 

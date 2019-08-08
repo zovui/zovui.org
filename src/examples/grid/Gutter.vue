@@ -5,21 +5,24 @@
 </desc>
 
 <template>
-    <Row :gutter="16">
-        <Col span="6" v-for="item in 4" :key="item">
-            <div style="height: 100%;background: rgba(0,0,0,0.65)">
-                {{ item }}
-            </div>
-        </Col>
-    </Row>
+    <article class="grid-demo">
+        <Row :gutter="16">
+            <Col span="6" v-for="item in 4" :key="item">
+                <div style="height: 100%;background: rgba(0,0,0,0.65)">
+                    {{ item }}
+                </div>
+            </Col>
+        </Row>
+    </article>
 </template>
 
-<style lang="scss" scoped>
-.zov-col {
+<style>
+.grid-demo .zov-col {
     padding: 30px 0;
     background: #2aa198;
-    &:nth-of-type(2n) {
-        background: #1cd779;
-    }
+}
+
+.grid-demo .zov-col:nth-of-type(2n) {
+    background: #1cd779;
 }
 </style>

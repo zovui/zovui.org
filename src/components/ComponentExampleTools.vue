@@ -1,6 +1,6 @@
 <template>
     <div class="example-tools">
-        <a class="example-tool" :href="onlineURL" target="_blank">
+        <a class="example-tool" href="javascript:void(0)" @click="run">
             <ToolTip
                 class="example-online-run-tooltip"
                 title="在线演示"
@@ -51,7 +51,6 @@
 export default {
     name: 'ComponentExampleTools',
     props: {
-        onlineURL: String,
         sourceCode: String
     },
     methods: {
@@ -84,6 +83,10 @@ export default {
                     text: e.message
                 })
             }
+        },
+        run() {
+            window.name = this.sourceCode
+            window.open('http://zovrun.thephenix.cn', '_self')
         }
     }
 }

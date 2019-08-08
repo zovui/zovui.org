@@ -5,7 +5,7 @@
 </desc>
 
 <template>
-    <article>
+    <article class="menu-demo">
         <section class="section">
             <Menu active-name="2" :mode="mode">
                 <MenuOption v-for="i in 6" :name="'' + i" :key="i"
@@ -22,8 +22,8 @@
     </article>
 </template>
 
-<style lang="scss" scoped>
-.section {
+<style>
+.menu-demo .section {
     margin: 20px 0;
     overflow: hidden;
 }
