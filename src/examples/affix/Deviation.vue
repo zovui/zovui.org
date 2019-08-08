@@ -7,16 +7,16 @@
 <template>
     <div>
         <Affix :offset-top="100">
-            <div class="demo">
+            <div class="affix-demo">
                 固定在距离顶部100px触发
             </div>
         </Affix>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.demo {
-    width: 200px;
+<style>
+.affix-demo {
+    width: 130px;
     height: 40px;
     line-height: 40px;
     text-align: center;

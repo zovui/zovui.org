@@ -7,13 +7,13 @@
 <template>
     <div>
         <Affix>
-            <div class="demo">固定在最顶部</div>
+            <div class="affix-demo">固定在最顶部</div>
         </Affix>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.demo {
+<style>
+.affix-demo {
     width: 130px;
     height: 40px;
     line-height: 40px;
