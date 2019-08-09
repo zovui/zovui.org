@@ -27,9 +27,20 @@
             </DocumentParagraph>
             <DocumentCode :highlighted-code="codeMap.PrimaryColor" />
             <DocumentParagraph>
-                以下为颜色相关配置及说明：
+                <DocumentProp>$toning-ratio</DocumentProp
+                >变量决定了<DocumentProp>Light Primary</DocumentProp
+                >和<DocumentProp>Dark Primary</DocumentProp>颜色最终色值。
             </DocumentParagraph>
-            <DocumentCode :highlighted-code="codeMap.ColorScss" />
+            <DocumentParagraph>
+                对于<DocumentProp>lighten</DocumentProp>函数来说，亮度变量的值越高，对于的颜色的亮度越亮。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                对于<DocumentProp>darken</DocumentProp>函数来说，亮度变量的值越高，对于的颜色的亮度越暗。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                <DocumentProp>$toning-ratio</DocumentProp
+                >在一般情况下<DocumentProp>不建议</DocumentProp>直接去修改。
+            </DocumentParagraph>
         </DocumentSection>
         <DocumentSection title="中性色">
             <DocumentParagraph>
@@ -76,6 +87,10 @@
                 />
             </DocumentColorList>
             <DocumentParagraph>
+                它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
+            </DocumentParagraph>
+            <DocumentCode :highlighted-code="codeMap.DefaultNeutralColors" />
+            <DocumentParagraph>
                 主要涉及以下几个方面：
             </DocumentParagraph>
             <DocumentList>
@@ -85,7 +100,6 @@
                 <DocumentListItem>响应式屏幕断点</DocumentListItem>
                 <DocumentListItem>部分组件可配置变量</DocumentListItem>
             </DocumentList>
-            <DocumentCode :highlighted-code="codeMap.CustomScss" />
         </DocumentSection>
         <DocumentSection title="辅助色">
             <DocumentParagraph>
@@ -141,8 +155,7 @@ import {
 } from '@/components'
 import PrimaryColor from './customize-theme/PrimaryColor.scss?get-source-code'
 import HelperColor from './customize-theme/HelperColor.scss?get-source-code'
-import ColorScss from 'zov/core/styles/colors.scss?get-source-code'
-import CustomScss from 'zov/core/styles/custom.scss?get-source-code'
+import DefaultNeutralColors from './customize-theme/DefaultNeutralColors.scss?get-source-code'
 import CustomThemeScss from './customize-theme/Custom.scss?get-source-code'
 
 export default {
@@ -165,11 +178,10 @@ export default {
     data() {
         return {
             codeMap: {
-                ColorScss,
-                CustomScss,
                 CustomThemeScss,
                 PrimaryColor,
-                HelperColor
+                HelperColor,
+                DefaultNeutralColors
             }
         }
     },
