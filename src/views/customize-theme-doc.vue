@@ -90,16 +90,6 @@
                 它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
             </DocumentParagraph>
             <DocumentCode :highlighted-code="codeMap.DefaultNeutralColors" />
-            <DocumentParagraph>
-                主要涉及以下几个方面：
-            </DocumentParagraph>
-            <DocumentList>
-                <DocumentListItem>字体</DocumentListItem>
-                <DocumentListItem>圆角</DocumentListItem>
-                <DocumentListItem>超链接</DocumentListItem>
-                <DocumentListItem>响应式屏幕断点</DocumentListItem>
-                <DocumentListItem>部分组件可配置变量</DocumentListItem>
-            </DocumentList>
         </DocumentSection>
         <DocumentSection title="辅助色">
             <DocumentParagraph>
@@ -116,8 +106,60 @@
             </DocumentParagraph>
             <DocumentCode :highlighted-code="codeMap.HelperColor" />
         </DocumentSection>
-        <DocumentSection title="Dark模式"></DocumentSection>
-        <DocumentSection title="建议配色方案"></DocumentSection>
+        <DocumentSection title="Dark模式">
+            <DocumentParagraph>
+                Dark模式也叫暗色模式。Dark模式下色调会取逆值。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                可以点击本站点<DocumentProp>右上角</DocumentProp>进行明暗主题切换，然后查看本章<DocumentProp>中性色颜色示例</DocumentProp>部分，可观察到颜色色值的变化。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                Dark模式相对于普通的亮色主题来说，主要区别在于<DocumentProp>中性色</DocumentProp>和<DocumentProp>主题色</DocumentProp>上。
+            </DocumentParagraph>
+            <DocumentSection title="Dark的主题色">
+                <DocumentParagraph>
+                    对于<DocumentProp>主题色</DocumentProp>而言，ZOV的做法是把原来的亮色系定义逆反过来。
+                </DocumentParagraph>
+                <DocumentParagraph>
+                    <DocumentProp>Primary</DocumentProp>色值不变。<DocumentProp
+                        >Light Primary</DocumentProp
+                    >和<DocumentProp>Dark Primary</DocumentProp>色值互换。
+                </DocumentParagraph>
+            </DocumentSection>
+            <DocumentSection title="Dark的中性色">
+                <DocumentParagraph>
+                    对于<DocumentProp>中性色</DocumentProp>而言，ZOV的做法是把原来的亮色系定义逆反过来。
+                </DocumentParagraph>
+                <DocumentParagraph>例子: </DocumentParagraph>
+                <DocumentList>
+                    <DocumentListItem
+                        ><DocumentProp>标题</DocumentProp
+                        >的颜色和<DocumentProp>背景</DocumentProp>的颜色互换</DocumentListItem
+                    >
+                    <DocumentListItem
+                        ><DocumentProp>正文</DocumentProp
+                        >的颜色和<DocumentProp>分隔线</DocumentProp>的颜色互换</DocumentListItem
+                    >
+                    <DocumentListItem>以此类推...</DocumentListItem>
+                </DocumentList>
+            </DocumentSection>
+            <DocumentSection title="Dark的配色建议">
+                <DocumentParagraph>
+                    如果业务需求里有暗色主题的需求时，在自定义颜色的时候，请务必调试好颜色，以免出现在亮色系下颜色正常，暗色系配色糟糕的问题。
+                </DocumentParagraph>
+            </DocumentSection>
+        </DocumentSection>
+        <DocumentSection title="其他配置">
+            <DocumentParagraph>
+                其他可配置部分主要涉及以下几个方面：
+            </DocumentParagraph>
+            <DocumentList>
+                <DocumentListItem>字体</DocumentListItem>
+                <DocumentListItem>圆角</DocumentListItem>
+                <DocumentListItem>超链接</DocumentListItem>
+                <DocumentListItem>部分组件可配置变量</DocumentListItem>
+            </DocumentList>
+        </DocumentSection>
         <DocumentSection title="覆盖样式">
             <DocumentParagraph>
                 因为sass的!default变量能力，使得变量可被修改变成可能。
