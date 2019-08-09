@@ -6,7 +6,10 @@
                 主题，并且可以在一定程度上定制新主题，以满足业务和品牌上的多样化视觉需求。
             </DocumentParagraph>
             <DocumentParagraph>
-                ZOV组件库的样式是基于scss进行开发。默认以前缀<DocumentProp>.zov-</DocumentProp>作为命名空间。定义了一些有用的变量，方便开发者在自定义主题的配置。
+                ZOV组件库的样式是基于scss进行开发。默认以前缀<DocumentProp>.zov-</DocumentProp>作为命名空间。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                ZOV组件库定义了一些有用的变量，方便开发者在自定义主题的配置。
             </DocumentParagraph>
         </DocumentSection>
         <DocumentSection title="主题色">
@@ -28,13 +31,13 @@
             <DocumentParagraph>
                 主要涉及以下几个方面：
             </DocumentParagraph>
-            <ul class="list">
-                <li>字体</li>
-                <li>圆角</li>
-                <li>超链接样式</li>
-                <li>响应式屏幕断点</li>
-                <li>部分组件可配置变量</li>
-            </ul>
+            <DocumentList>
+                <DocumentListItem>字体</DocumentListItem>
+                <DocumentListItem>圆角</DocumentListItem>
+                <DocumentListItem>超链接</DocumentListItem>
+                <DocumentListItem>响应式屏幕断点</DocumentListItem>
+                <DocumentListItem>部分组件可配置变量</DocumentListItem>
+            </DocumentList>
             <DocumentCode :highlighted-code="codeMap.CustomScss" />
         </DocumentSection>
         <DocumentSection title="辅助色"> </DocumentSection>
@@ -47,33 +50,21 @@
             <DocumentParagraph>
                 具体的覆盖流程如下：
             </DocumentParagraph>
-            <ul class="list">
-                <li>
-                    新建一个custom-theme.scss文件
-                </li>
-                <li>
+            <DocumentList>
+                <DocumentListItem
+                    >新建一个<DocumentProp>custom-theme.scss</DocumentProp>文件</DocumentListItem
+                >
+                <DocumentListItem>
                     <DocumentParagraph>写入：</DocumentParagraph>
                     <DocumentCode :highlighted-code="codeMap.CustomThemeScss" />
-                </li>
-                <li>
+                </DocumentListItem>
+                <DocumentListItem>
                     保存后导入到入口的js中
-                </li>
-            </ul>
+                </DocumentListItem>
+            </DocumentList>
         </DocumentSection>
     </Document>
 </template>
-
-<style lang="scss" scoped>
-.list {
-    margin-bottom: 20px;
-    list-style-type: disc !important;
-    li {
-        margin: 10px 0;
-        list-style-type: disc !important;
-    }
-    padding-left: 25px;
-}
-</style>
 
 <script>
 import {
@@ -81,7 +72,9 @@ import {
     DocumentSection,
     DocumentParagraph,
     DocumentCode,
-    DocumentProp
+    DocumentProp,
+    DocumentList,
+    DocumentListItem
 } from '@/components'
 import ColorScss from 'zov/core/styles/colors.scss?get-source-code'
 import CustomScss from 'zov/core/styles/custom.scss?get-source-code'
@@ -93,7 +86,9 @@ export default {
         Document,
         DocumentParagraph,
         DocumentCode,
-        DocumentProp
+        DocumentProp,
+        DocumentList,
+        DocumentListItem
     },
     routerOptions: {
         order: 3,
