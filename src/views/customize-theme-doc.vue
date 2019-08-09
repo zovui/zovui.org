@@ -2,10 +2,14 @@
     <Document header="定制主题">
         <DocumentSection title="概述">
             <DocumentParagraph>
-                ZOV组件库主题基于scss进行开发。定义了一些有用的变量，方便开发者在自定义主题的配置。
+                ZOV 默认提供了一套 UI
+                主题，并且可以在一定程度上定制新主题，以满足业务和品牌上的多样化视觉需求。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                ZOV组件库的样式是基于scss进行开发。默认以前缀<DocumentProp>.zov-</DocumentProp>作为命名空间。定义了一些有用的变量，方便开发者在自定义主题的配置。
             </DocumentParagraph>
         </DocumentSection>
-        <DocumentSection title="颜色">
+        <DocumentSection title="主题色">
             <DocumentParagraph>
                 zov支持配置主题色，通过scss颜色函数进行了一些颜色校准。
             </DocumentParagraph>
@@ -17,7 +21,7 @@
             </DocumentParagraph>
             <DocumentCode :highlighted-code="codeMap.ColorScss" />
         </DocumentSection>
-        <DocumentSection title="其他变量">
+        <DocumentSection title="中性色">
             <DocumentParagraph>
                 其他变量中主要包含UI组件库里一些常见的样式配置。
             </DocumentParagraph>
@@ -33,6 +37,9 @@
             </ul>
             <DocumentCode :highlighted-code="codeMap.CustomScss" />
         </DocumentSection>
+        <DocumentSection title="辅助色"> </DocumentSection>
+        <DocumentSection title="Dark模式"></DocumentSection>
+        <DocumentSection title="建议配色方案"></DocumentSection>
         <DocumentSection title="覆盖样式">
             <DocumentParagraph>
                 因为sass的!default变量能力，使得变量可被修改变成可能。
@@ -73,14 +80,21 @@ import {
     Document,
     DocumentSection,
     DocumentParagraph,
-    DocumentCode
+    DocumentCode,
+    DocumentProp
 } from '@/components'
 import ColorScss from 'zov/core/styles/colors.scss?get-source-code'
 import CustomScss from 'zov/core/styles/custom.scss?get-source-code'
 import CustomThemeScss from './customize-theme/Custom.scss?get-source-code'
 
 export default {
-    components: { DocumentSection, Document, DocumentParagraph, DocumentCode },
+    components: {
+        DocumentSection,
+        Document,
+        DocumentParagraph,
+        DocumentCode,
+        DocumentProp
+    },
     routerOptions: {
         order: 3,
         disc: '定制主题',
