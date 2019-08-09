@@ -14,11 +14,18 @@
         </DocumentSection>
         <DocumentSection title="主题色">
             <DocumentParagraph>
-                zov支持配置主题色，通过scss颜色函数进行了一些颜色校准。
+                ZOV使用较为安全的蓝色作为主色调，其中 Light Primary 常用于
+                hover，Dark Primary 常用于 active。
             </DocumentParagraph>
+            <DocumentColorList>
+                <DocumentColor name="Primary" color="#2d8cf0" />
+                <DocumentColor name="Light Primary" color="#479af2" />
+                <DocumentColor name="Dark Primary" color="#137eee" />
+            </DocumentColorList>
             <DocumentParagraph>
-                凡是带有 !default 都是可以自定义的。
+                它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
             </DocumentParagraph>
+            <DocumentCode :highlighted-code="codeMap.PrimaryColor" />
             <DocumentParagraph>
                 以下为颜色相关配置及说明：
             </DocumentParagraph>
@@ -26,8 +33,48 @@
         </DocumentSection>
         <DocumentSection title="中性色">
             <DocumentParagraph>
-                其他变量中主要包含UI组件库里一些常见的样式配置。
+                中性色常用于文本、背景、边框、阴影等，可以体现出页面的层次结构。
             </DocumentParagraph>
+            <DocumentParagraph>
+                ZOV默认内置了以下的中性色
+            </DocumentParagraph>
+            <DocumentColorList>
+                <DocumentColor name="标题 Title" :color="neutralColors.title" />
+                <DocumentColor
+                    name="正文 Content"
+                    :color="neutralColors.content"
+                />
+                <DocumentColor
+                    name="辅助/图标 Sub Color"
+                    :color="neutralColors.sub"
+                />
+                <DocumentColor
+                    name="占位文字 Placeholder"
+                    :color="neutralColors.placeholder"
+                />
+            </DocumentColorList>
+            <DocumentColorList>
+                <DocumentColor
+                    name="失效 Disabled"
+                    :color="neutralColors.disabled"
+                    dark
+                />
+                <DocumentColor
+                    name="边框 Border"
+                    :color="neutralColors.border"
+                    dark
+                />
+                <DocumentColor
+                    name="分割线 Divider"
+                    :color="neutralColors.divider"
+                    dark
+                />
+                <DocumentColor
+                    name="背景 Background"
+                    :color="neutralColors.background"
+                    dark
+                />
+            </DocumentColorList>
             <DocumentParagraph>
                 主要涉及以下几个方面：
             </DocumentParagraph>
@@ -40,7 +87,21 @@
             </DocumentList>
             <DocumentCode :highlighted-code="codeMap.CustomScss" />
         </DocumentSection>
-        <DocumentSection title="辅助色"> </DocumentSection>
+        <DocumentSection title="辅助色">
+            <DocumentParagraph>
+                辅助色是具有代表性的颜色，常用于信息提示，比如成功、警告和失败。
+            </DocumentParagraph>
+            <DocumentColorList>
+                <DocumentColor name="Info" color="#2db7f5" />
+                <DocumentColor name="Success" color="#19be6b" />
+                <DocumentColor name="Warning" color="#ff9900" />
+                <DocumentColor name="Error" color="#ed4014" />
+            </DocumentColorList>
+            <DocumentParagraph>
+                它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
+            </DocumentParagraph>
+            <DocumentCode :highlighted-code="codeMap.HelperColor" />
+        </DocumentSection>
         <DocumentSection title="Dark模式"></DocumentSection>
         <DocumentSection title="建议配色方案"></DocumentSection>
         <DocumentSection title="覆盖样式">
@@ -74,14 +135,20 @@ import {
     DocumentCode,
     DocumentProp,
     DocumentList,
-    DocumentListItem
+    DocumentListItem,
+    DocumentColorList,
+    DocumentColor
 } from '@/components'
+import PrimaryColor from './customize-theme/PrimaryColor.scss?get-source-code'
+import HelperColor from './customize-theme/HelperColor.scss?get-source-code'
 import ColorScss from 'zov/core/styles/colors.scss?get-source-code'
 import CustomScss from 'zov/core/styles/custom.scss?get-source-code'
 import CustomThemeScss from './customize-theme/Custom.scss?get-source-code'
 
 export default {
     components: {
+        DocumentColor,
+        DocumentColorList,
         DocumentSection,
         Document,
         DocumentParagraph,
@@ -100,7 +167,35 @@ export default {
             codeMap: {
                 ColorScss,
                 CustomScss,
-                CustomThemeScss
+                CustomThemeScss,
+                PrimaryColor,
+                HelperColor
+            }
+        }
+    },
+    computed: {
+        neutralColors() {
+            if (this.$store.state.isDark) {
+                return {
+                    background: '#262626',
+                    divider: '#404040',
+                    border: '#777777',
+                    disabled: '#7f7f7f',
+                    placeholder: '#cbcbcb',
+                    sub: '#e4e4e4',
+                    content: '#eaeaea',
+                    title: '#fcfcfc'
+                }
+            }
+            return {
+                title: '#262626',
+                content: '#404040',
+                sub: '#777777',
+                placeholder: '#7f7f7f',
+                disabled: '#cbcbcb',
+                border: '#e4e4e4',
+                divider: '#eaeaea',
+                background: '#fcfcfc'
             }
         }
     }

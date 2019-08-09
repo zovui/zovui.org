@@ -10,6 +10,8 @@ import DocumentParagraph from './DocumentParagraph'
 import DocumentProp from './DocumentProp'
 import DocumentList from './DocumentList'
 import DocumentListItem from './DocumentListItem'
+import DocumentColorList from './DocumentColorList'
+import DocumentColor from './DocumentColor'
 
 export {
     ComponentExampleContainer,
@@ -23,5 +25,7 @@ export {
     DocumentParagraph,
     DocumentProp,
     DocumentList,
-    DocumentListItem
+    DocumentListItem,
+    DocumentColorList,
+    DocumentColor
 }
