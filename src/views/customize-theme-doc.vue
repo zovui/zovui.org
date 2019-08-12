@@ -189,6 +189,33 @@
                 </DocumentParagraph>
             </DocumentSection>
         </DocumentSection>
+        <DocumentSection title="CSS变量">
+            <DocumentParagraph
+                >ZOV是优先基于CSS变量来定制颜色的组件库。</DocumentParagraph
+            >
+            <DocumentParagraph
+                >对于支持CSS变量的浏览器，你可以在<DocumentProp>body</DocumentProp>元素上看到如下定义：</DocumentParagraph
+            >
+            <DocumentCode :highlighted-code="codeMap.CSSVariable" />
+            <DocumentParagraph>CSS变量分为三部分：</DocumentParagraph>
+            <DocumentList>
+                <DocumentListItem>使用值</DocumentListItem>
+                <DocumentListItem
+                    >Light模式定义，仅作为颜色定义，用于明暗模式切换。</DocumentListItem
+                >
+                <DocumentListItem
+                    >Dark模式定义，仅作为颜色定义，用于明暗模式切换。</DocumentListItem
+                >
+            </DocumentList>
+            <DocumentParagraph
+                >对于可以使用CSS变量的需求，推荐直接使用<DocumentProp
+                    >使用值</DocumentProp
+                ></DocumentParagraph
+            >
+            <DocumentParagraph
+                >不要直接去修改<DocumentProp>Light模式定义</DocumentProp>和<DocumentProp>Dark模式定义</DocumentProp>，如果有个性化颜色需求，请结合<DocumentProp>之前小节</DocumentProp>去定制主题。</DocumentParagraph
+            >
+        </DocumentSection>
         <DocumentSection title="其他配置">
             <DocumentParagraph>
                 其他可配置部分主要涉及以下几个方面：
@@ -240,6 +267,7 @@ import HelperColor from './customize-theme/HelperColor.scss?get-source-code'
 import DefaultNeutralColors from './customize-theme/DefaultNeutralColors.scss?get-source-code'
 import UsageNeutralColors from './customize-theme/UsageNeutralColors.scss?get-source-code'
 import CustomThemeScss from './customize-theme/Custom.scss?get-source-code'
+import CSSVariable from './customize-theme/CSSVariable.scss?get-source-code'
 
 export default {
     components: {
@@ -265,7 +293,8 @@ export default {
                 PrimaryColor,
                 HelperColor,
                 DefaultNeutralColors,
-                UsageNeutralColors
+                UsageNeutralColors,
+                CSSVariable
             }
         }
     },
