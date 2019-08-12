@@ -1,0 +1,48 @@
+body{
+    /*
+    * 使用值
+    */
+    --color-primary                             :   #{$color-primary};
+    --color-light-primary                       :   #{$color-light-primary};
+    --color-dark-primary                        :   #{$color-dark-primary};
+    --color-title                               :   #{$color-title};
+    --color-text                                :   #{$color-text};
+    --color-sub                                 :   #{$color-sub};
+    --color-placeholder                         :   #{$color-placeholder};
+    --color-disabled                            :   #{$color-disabled};
+    --color-border                              :   #{$color-border};
+    --color-divider                             :   #{$color-divider};
+    --color-background                          :   #{$color-background};
+    --color-shadow                              :   rgba(0,0,0,0.25);
+    --color-mask                                :   rgba(0,0,0,0.25);
+    /*
+    * light
+    */
+    --light-color-light-primary                 :   #{$color-light-primary};
+    --light-color-dark-primary                  :   #{$color-dark-primary};
+    --light-color-title                         :   #{$color-title};
+    --light-color-text                          :   #{$color-text};
+    --light-color-sub                           :   #{$color-sub};
+    --light-color-placeholder                   :   #{$color-placeholder};
+    --light-color-disabled                      :   #{$color-disabled};
+    --light-color-border                        :   #{$color-border};
+    --light-color-divider                       :   #{$color-divider};
+    --light-color-background                    :   #{$color-background};
+    --light-color-shadow                        :   rgba(0,0,0,0.25);
+    --light-color-mask                          :   rgba(0,0,0,0.25);
+    /*
+    * dark
+    */
+    --dark-color-light-primary                  :   #{$color-dark-primary};
+    --dark-color-dark-primary                   :   #{$color-light-primary};
+    --dark-color-title                          :   #{$color-background};
+    --dark-color-text                           :   #{$color-divider};
+    --dark-color-sub                            :   #{$color-border};
+    --dark-color-placeholder                    :   #{$color-disabled};
+    --dark-color-disabled                       :   #{$color-placeholder};
+    --dark-color-border                         :   #{$color-sub};
+    --dark-color-divider                        :   #{$color-text};
+    --dark-color-background                     :   #{$color-title};
+    --dark-color-shadow                         :   rgba(0,0,0,0.75);
+    --dark-color-mask                           :   rgba(255,255,255,0.25);
+}

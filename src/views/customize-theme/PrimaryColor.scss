@@ -1,0 +1,8 @@
+// 主题色
+$color-primary                      :   #2d8cf0 !default;
+//  亮度
+$toning-ratio                       :   5.5% !default;
+// 亮色主题色, 常用于 hover 状态
+$color-light-primary                :   lighten($color-primary, $toning-ratio) !default;
+// 暗色主题色, 常用于 active 状态
+$color-dark-primary                 :   darken($color-primary, $toning-ratio) !default;
