@@ -1,0 +1,16 @@
+// 标题色(title)
+$color-title            :   adjust-hue(saturate($color-default-title, $color-neutral-saturate), $color-primary-hue) !default;
+// 正文色(text)
+$color-text             :   adjust-hue(saturate($color-default-text, $color-neutral-saturate), $color-primary-hue) !default;
+// 辅助色/图标色(sub)
+$color-sub              :   adjust-hue(saturate($color-default-sub, $color-neutral-saturate), $color-primary-hue) !default;
+// 占位符(placeholder)
+$color-placeholder      :   adjust-hue(saturate($color-default-placeholder, $color-neutral-saturate), $color-primary-hue) !default;
+// 失效色(disabled)
+$color-disabled         :   adjust-hue(saturate($color-default-disabled, $color-neutral-saturate), $color-primary-hue) !default;
+// 边框(border)
+$color-border           :   adjust-hue(saturate($color-default-border, $color-neutral-saturate), $color-primary-hue) !default;
+// 分割线(dirvider)
+$color-divider          :   adjust-hue(saturate($color-default-divider, $color-neutral-saturate), $color-primary-hue) !default;
+// 背景色(background)
+$color-background       :   adjust-hue(saturate($color-default-background, $color-neutral-saturate), $color-primary-hue) !default;

@@ -119,6 +119,7 @@ export default {
                     : this.$Dark.close(() => {
                           localStorage.setItem('zov-theme', '')
                       })
+                this.$store.commit('setDarkMode', isDark)
             },
             immediate: true
         }

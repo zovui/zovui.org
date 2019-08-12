@@ -7,6 +7,11 @@ import DocumentCode from './DocumentCode'
 import DocumentAnchor from './DocumentAnchor'
 import DocumentAnchorCollector from './DocumentAnchorCollector'
 import DocumentParagraph from './DocumentParagraph'
+import DocumentProp from './DocumentProp'
+import DocumentList from './DocumentList'
+import DocumentListItem from './DocumentListItem'
+import DocumentColorList from './DocumentColorList'
+import DocumentColor from './DocumentColor'
 
 export {
     ComponentExampleContainer,
@@ -17,5 +22,10 @@ export {
     DocumentCode,
     DocumentAnchor,
     DocumentAnchorCollector,
-    DocumentParagraph
+    DocumentParagraph,
+    DocumentProp,
+    DocumentList,
+    DocumentListItem,
+    DocumentColorList,
+    DocumentColor
 }
