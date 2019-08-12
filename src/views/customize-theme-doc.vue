@@ -224,8 +224,15 @@
                 <DocumentListItem>字体</DocumentListItem>
                 <DocumentListItem>圆角</DocumentListItem>
                 <DocumentListItem>超链接</DocumentListItem>
+                <DocumentListItem>间隙</DocumentListItem>
                 <DocumentListItem>部分组件可配置变量</DocumentListItem>
             </DocumentList>
+            <DocumentParagraph>
+                它们被定义在zov组件库的<DocumentProp>custom.scss</DocumentProp>中
+            </DocumentParagraph>
+            <DocumentParagraph>
+                可根据需求，自行替换其变量的值。
+            </DocumentParagraph>
         </DocumentSection>
         <DocumentSection title="覆盖样式">
             <DocumentParagraph>
