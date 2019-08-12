@@ -19,8 +19,11 @@
             </DocumentParagraph>
             <DocumentColorList>
                 <DocumentColor name="Primary" color="#2d8cf0" />
-                <DocumentColor name="Light Primary" color="#479af2" />
-                <DocumentColor name="Dark Primary" color="#137eee" />
+                <DocumentColor
+                    name="Light Primary"
+                    :color="themeColors.light"
+                />
+                <DocumentColor name="Dark Primary" :color="themeColors.dark" />
             </DocumentColorList>
             <DocumentParagraph>
                 它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
@@ -306,6 +309,18 @@ export default {
         }
     },
     computed: {
+        themeColors() {
+            if (this.$store.state.isDark) {
+                return {
+                    light: '#137eee',
+                    dark: '#479af2'
+                }
+            }
+            return {
+                light: '#479af2',
+                dark: '#137eee'
+            }
+        },
         neutralColors() {
             if (this.$store.state.isDark) {
                 return {
