@@ -89,7 +89,47 @@
             <DocumentParagraph>
                 它们被定义在zov组件库的<DocumentProp>color.scss</DocumentProp>中
             </DocumentParagraph>
+            <DocumentParagraph
+                >以下是<DocumentProp>默认值</DocumentProp></DocumentParagraph
+            >
             <DocumentCode :highlighted-code="codeMap.DefaultNeutralColors" />
+            <DocumentParagraph>
+                实际使用的中性色是经过<DocumentProp>色相</DocumentProp>计算的
+            </DocumentParagraph>
+            <DocumentParagraph
+                >以下是<DocumentProp
+                    >实际使用的值</DocumentProp
+                ></DocumentParagraph
+            >
+            <DocumentCode :highlighted-code="codeMap.UsageNeutralColors" />
+            <DocumentParagraph>
+                这里涉及两个个变量，它们分别是：
+            </DocumentParagraph>
+            <DocumentList>
+                <DocumentListItem>
+                    <DocumentProp>$color-neutral</DocumentProp
+                    >中性色基准色，默认为主题色，即<DocumentProp
+                        >$color-primary</DocumentProp
+                    >
+                </DocumentListItem>
+                <DocumentListItem>
+                    <DocumentProp>$color-primary-hue</DocumentProp
+                    >用来获取主题色相。依赖<DocumentProp>$color-neutral</DocumentProp>。
+                </DocumentListItem>
+                <DocumentListItem>
+                    <DocumentProp>$color-neutral-saturate</DocumentProp
+                    >中性色饱和度，当值为0%时则饱和度为0，色阶为黑白灰。当值向大调时中性色将混入一定饱和度的主题色。
+                </DocumentListItem>
+            </DocumentList>
+            <DocumentParagraph>
+                中性色在ZOV里分为两处来定义，一个是<DocumentProp>默认值</DocumentProp>，一个是<DocumentProp>实际使用值</DocumentProp>。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                它们的区别是一个是固定色系，一个是经过色相计算的。
+            </DocumentParagraph>
+            <DocumentParagraph>
+                一般对于没有高级需求的颜色定义，推荐直接去修改<DocumentProp>实际使用值</DocumentProp>变量的值，而不要去修改<DocumentProp>默认值</DocumentProp>。
+            </DocumentParagraph>
         </DocumentSection>
         <DocumentSection title="辅助色">
             <DocumentParagraph>
@@ -198,6 +238,7 @@ import {
 import PrimaryColor from './customize-theme/PrimaryColor.scss?get-source-code'
 import HelperColor from './customize-theme/HelperColor.scss?get-source-code'
 import DefaultNeutralColors from './customize-theme/DefaultNeutralColors.scss?get-source-code'
+import UsageNeutralColors from './customize-theme/UsageNeutralColors.scss?get-source-code'
 import CustomThemeScss from './customize-theme/Custom.scss?get-source-code'
 
 export default {
@@ -223,7 +264,8 @@ export default {
                 CustomThemeScss,
                 PrimaryColor,
                 HelperColor,
-                DefaultNeutralColors
+                DefaultNeutralColors,
+                UsageNeutralColors
             }
         }
     },
