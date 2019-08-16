@@ -8934,9 +8934,9 @@ yup@^0.26.10:
     synchronous-promise "^2.0.5"
     toposort "^2.0.2"
 
-zov@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/zov/-/zov-0.9.1.tgz#dc158ac8206a3bcd0d8bfbdbe47bfcdfdda97b85"
+zov@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/zov/-/zov-0.10.0.tgz#938602fb5c5999a8ce8ae7be14ea6cc8191ddcec"
   dependencies:
     dayjs "^1.8.6"
     lodash.debounce "^4.0.8"

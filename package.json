@@ -15,7 +15,7 @@
 		"marked": "^0.7.0",
 		"vue": "^2.6.6",
 		"vuex": "^3.1.1",
-		"zov": "^0.9.1"
+		"zov": "^0.10.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^7.5.2",
