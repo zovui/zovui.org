@@ -20,6 +20,7 @@ import Trigger from '@/examples/tooltip/Trigger.vue?demo'
 import Delay from '@/examples/tooltip/Delay.vue?demo'
 import Close from '@/examples/tooltip/Close.vue?demo'
 import HighColor from '@/examples/tooltip/HighColor.vue?demo'
+import Directive from '@/examples/tooltip/Directive.vue?demo'
 
 const api = [
     {
@@ -169,7 +170,15 @@ export default {
     },
     data() {
         return {
-            examples: [Base, HighColor, Placement, Trigger, Delay, Close],
+            examples: [
+                Base,
+                HighColor,
+                Placement,
+                Trigger,
+                Delay,
+                Close,
+                Directive
+            ],
             api
         }
     }
